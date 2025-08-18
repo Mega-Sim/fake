@@ -1,0 +1,36 @@
+; Code Composer Project File, Version 2.0 (do not modify or remove this line)
+
+[Project Settings]
+ProjectDir="D:\project\SMR\SSMR-Lib\filter\"
+ProjectType=Library
+CPUFamily=TMS320C67XX
+Tool="Archiver"
+Tool="Compiler"
+Tool="DspBiosBuilder"
+Config="Debug"
+Config="Release"
+
+[Source Files]
+Source="amc_filter.c"
+
+[Generated Files]
+Source="Debug\amc_filter.obj"
+
+["Archiver" Settings: "Debug"]
+Options=-r -o..\Lib\amc_filter.lib
+
+["Archiver" Settings: "Release"]
+Options=-r -o..\Lib\amc_filter.lib
+
+["Compiler" Settings: "Debug"]
+Options=-g -q -fg -fr"D:\project\SMR\SSMR-Lib\filter\Debug" -d"_DEBUG" -ml3 -mv6710
+
+["Compiler" Settings: "Release"]
+Options=-q -o3 -fg -fr"D:\project\SMR\SSMR-Lib\filter\Release" -ml3 -mv6710
+
+["DspBiosBuilder" Settings: "Debug"]
+Options=-v6x
+
+["DspBiosBuilder" Settings: "Release"]
+Options=-v6x
+

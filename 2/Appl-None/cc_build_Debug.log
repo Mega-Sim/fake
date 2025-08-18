@@ -1,0 +1,7 @@
+---------------------------  Appl-None.pjt - Debug  ---------------------------
+"c:\ti\c6000\cgtools\bin\cl6x" -g -q -fg -fr"D:/jsh/180830/A78/Appl-None/Debug" -i"../Appl-include" -i"../Include" -i"../dsp-include" -d"_DEBUG" -ml3 -mv6710 -@"Debug.lkf" "Appl-None.cpp"
+
+"c:\ti\c6000\cgtools\bin\cl6x" -@"Debug.lkf"
+
+Build Complete,
+  0 Errors, 0 Warnings, 0 Remarks.

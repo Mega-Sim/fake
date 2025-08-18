@@ -1,0 +1,4 @@
+-r
+"D:\project\SMR\SSMR-Lib\Lib\cts_eeprom.lib"
+"D:\project\SMR\SSMR-Lib\eeprom\Release\crc32.obj"
+"D:\project\SMR\SSMR-Lib\eeprom\Release\eeprom.obj"

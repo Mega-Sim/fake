@@ -1,0 +1,9 @@
+--------------------------  FileSystem.pjt - Release  --------------------------
+"c:\ti\c6000\cgtools\bin\cl6x" -q -o3 -fg -fr"C:/proj/dsp/2.5&2.8/SSMR-Lib-2.5.23-2.8.05-20111026/fs/Release" -i"../dsp-include" -i"../Include" -mv6710 -@"Release.lkf" "fs.cpp"
+
+"c:\ti\c6000\cgtools\bin\ar6x" @"Release.lkf"
+  ==>  new archive 'C:\proj\dsp\2.5&2.8\SSMR-Lib-2.5.23-2.8.05-20111026\lib\cts_fs.lib'
+  ==>  building archive 'C:\proj\dsp\2.5&2.8\SSMR-Lib-2.5.23-2.8.05-20111026\lib\cts_fs.lib'
+
+Build Complete,
+  0 Errors, 0 Warnings, 0 Remarks.

@@ -1,0 +1,38 @@
+; Code Composer Project File, Version 2.0 (do not modify or remove this line)
+
+[Project Settings]
+ProjectDir="Z:\SSMR-Lib\eeprom\"
+ProjectType=Library
+CPUFamily=TMS320C67XX
+Tool="Archiver"
+Tool="Compiler"
+Tool="DspBiosBuilder"
+Config="Debug"
+Config="Release"
+
+[Source Files]
+Source="..\Src\eeprom\crc32.c"
+Source="..\Src\eeprom\eeprom.c"
+
+[Generated Files]
+Source="Debug\crc32.obj"
+Source="Debug\eeprom.obj"
+
+["Archiver" Settings: "Debug"]
+Options=-r -o..\Lib\cts_eeprom.lib
+
+["Archiver" Settings: "Release"]
+Options=-r -o..\Lib\cts_eeprom.lib
+
+["Compiler" Settings: "Debug"]
+Options=-g -q -fg -fr"Z:\SSMR-Lib\eeprom\Debug" -i"..\Include" -i"..\dsp-include" -i"..\..\Include" -i"..\..\dsp-include" -d"_DEBUG" -mv6700
+
+["Compiler" Settings: "Release"]
+Options=-q -o3 -fg -fr"Z:\SSMR-Lib\eeprom\Release" -i"..\Include" -i"..\dsp-include" -i"..\..\Include" -i"..\..\dsp-include" -mv6700
+
+["DspBiosBuilder" Settings: "Debug"]
+Options=-v6x
+
+["DspBiosBuilder" Settings: "Release"]
+Options=-v6x
+

@@ -1,0 +1,2824 @@
+******************************************************************************
+          TMS320C6x COFF Linker PC Version 4.32                
+******************************************************************************
+>> Linked Sun Feb 13 15:15:36 2011
+
+OUTPUT FILE NAME:   <./Debug/Appl.out>
+ENTRY POINT SYMBOL: "_c_int00"  address: 8008e400
+
+
+MEMORY CONFIGURATION
+
+                  name            origin    length      used    attr    fill
+         ----------------------  --------  ---------  --------  ----  --------
+         IRAM                    00000400   0003fc00  00000380  RWIX
+         SDRAM                   80040000   00fc0000  00a3ab20  RWIX
+         SDRAM2                  81000000   01000000  00c00000  RWIX
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.system    0    80040000    00000000     UNINITIALIZED
+
+.data      0    80040000    00000000     UNINITIALIZED
+
+.vectors   0    80040000    00000260     
+                  80040000    00000260     IconLabKernel1714.lib : vectors.obj (.vectors)
+
+.text      0    80040260    0004e460     
+                  80040260    0000b680     cts_smr.lib : AXISDPR.obj (.text)
+                  8004b8e0    00008800                 : dsp_if_adv.obj (.text)
+                  800540e0    00008420                 : AXISMAIN.obj (.text)
+                  8005c500    00004d60                 : internalFuncs.obj (.text)
+                  80061260    000036a0                 : dsp_if_plimit.obj (.text)
+                  80064900    00002fc0                 : hardware.obj (.text)
+                  800678c0    00002a00     rts6701.lib : _printfi.obj (.text)
+                  8006a2c0    00002640     IconLabKernel1714.lib : serialport_554.obj (.text)
+                  8006c900    00002400     cts_smr.lib : dsp_if_pmove.obj (.text)
+                  8006ed00    00002340     IconLabKernel1714.lib : filesystem.obj (.text)
+                  80071040    00002140     cts_fs.lib : fs.obj (.text)
+                  80073180    00001b00     IconLabKernel1714.lib : usb.obj (.text)
+                  80074c80    00001560     cts_smr.lib : AXISINT.obj (.text)
+                  800761e0    000012e0     IconLabKernel1714.lib : system.obj (.text)
+                  800774c0    00001020     rts6701.lib : memory.obj (.text)
+                  800784e0    00000fe0     cts_smr.lib : AxisGlb.obj (.text)
+                  800794c0    00000f60                 : dsp_if_petc.obj (.text)
+                  8007a420    00000f40     rts6701.lib : lowlev.obj (.text)
+                  8007b360    00000e40     Appl-Main.obj (.text)
+                  8007c1a0    00000e40     amc_filter.lib : amc_filter.obj (.text)
+                  8007cfe0    00000de0     rts6701.lib : trgdrv.obj (.text)
+                  8007ddc0    00000c40     cts_eeprom.lib : eeprom.obj (.text)
+                  8007ea00    00000c20     cts_smr.lib : axisctrl.obj (.text)
+                  8007f620    00000ba0                 : dsp_if_pgain.obj (.text)
+                  800801c0    00000b00                 : dsp_if_stop.obj (.text)
+                  80080cc0    00000a60     IconLabKernel1714.lib : SysDatManager.obj (.text)
+                  80081720    00000a20     cts_smr.lib : axiscap.obj (.text)
+                  80082140    00000a00     rts6701.lib : pow.obj (.text)
+                  80082b40    00000980     cts_smr.lib : dsp_if_pint.obj (.text)
+                  800834c0    00000820     IconLabKernel1714.lib : i28f128x16.obj (.text)
+                  80083ce0    000007a0     cts_smr.lib : dsp_if_traj.obj (.text)
+                  80084480    000006c0     cts_i2c.lib : i2c.obj (.text)
+                  80084b40    00000600     cts_smr.lib : dsp_if_pio.obj (.text)
+                  80085140    00000600                 : dsp_if_status.obj (.text)
+                  80085740    00000540     amc_otf.lib : otf_filter.obj (.text)
+                  80085c80    00000520     IconLabKernel1714.lib : ndok1714.obj (.text)
+                  800861a0    00000520     cts_smr.lib : dsp_if_filter.obj (.text)
+                  800866c0    000004c0     rts6701.lib : array.obj (.text)
+                  80086b80    000004c0                 : fopen.obj (.text)
+                  80087040    000004c0                 : imath40.obj (.text)
+                  80087500    00000480                 : fcvt.obj (.text)
+                  80087980    00000480                 : fputs.obj (.text)
+                  80087e00    00000480                 : ecvt.obj (.text)
+                  80088280    00000460     IconLabKernel1714.lib : UsbDispModule.obj (.text)
+                  800886e0    00000420     rts6701.lib : tan.obj (.text)
+                  80088b00    00000400                 : cos.obj (.text)
+                  80088f00    000003c0                 : sin.obj (.text)
+                  800892c0    00000340                 : sinh.obj (.text)
+                  80089600    00000340     cts_smr.lib : dsp_if_pacfg.obj (.text)
+                  80089940    00000300     rts6701.lib : frcdivd.obj (.text)
+                  80089c40    000002c0     cts_eeprom.lib : crc32.obj (.text)
+                  80089f00    000002c0     rts6701.lib : atan.obj (.text)
+                  8008a1c0    000002a0     cts_smr.lib : dsp_if_panalog.obj (.text)
+                  8008a460    000002a0     rts6701.lib : sqrt.obj (.text)
+                  8008a700    00000280                 : exp.obj (.text)
+                  8008a980    00000260                 : log.obj (.text)
+                  8008abe0    00000240                 : memcpy62.obj (.text)
+                  8008ae20    00000240     cts_callback.lib : callback.obj (.text)
+                  8008b060    00000240     rts6701.lib : divd.obj (.text)
+                  8008b2a0    00000220                 : exit.obj (.text)
+                  8008b4c0    000001e0                 : round.obj (.text)
+                  8008b6a0    000001e0                 : fflush.obj (.text)
+                  8008b880    000001e0     cts_softdog.lib : watchdog.obj (.text)
+                  8008ba60    000001c0     rts6701.lib : _io_perm.obj (.text)
+                  8008bc20    000001c0                 : sqrtf.obj (.text)
+                  8008bde0    000001c0                 : setvbuf.obj (.text)
+                  8008bfa0    000001a0                 : atan2.obj (.text)
+                  8008c140    00000180                 : ldexp.obj (.text)
+                  8008c2c0    00000180                 : atoi.obj (.text)
+                  8008c440    00000180                 : divf.obj (.text)
+                  8008c5c0    00000180                 : fgetc.obj (.text)
+                  8008c740    00000180                 : fputc.obj (.text)
+                  8008c8c0    00000160     IconLabKernel1714.lib : fmmu.obj (.text)
+                  8008ca20    00000160     rts6701.lib : sprintf.obj (.text)
+                  8008cb80    00000160                 : _bufread.obj (.text)
+                  8008cce0    00000160                 : trgmsg.obj (.text)
+                  8008ce40    00000140                 : fclose.obj (.text)
+                  8008cf80    00000140                 : ldexpf.obj (.text)
+                  8008d0c0    00000140                 : frexp.obj (.text)
+                  8008d200    00000140                 : ltoa.obj (.text)
+                  8008d340    00000140                 : rand.obj (.text)
+                  8008d480    00000120                 : memset.obj (.text)
+                  8008d5a0    00000120                 : divi.obj (.text)
+                  8008d6c0    00000100                 : frcdivf.obj (.text)
+                  8008d7c0    00000100                 : autoinit.obj (.text)
+                  8008d8c0    00000100                 : remi.obj (.text)
+                  8008d9c0    00000100                 : fseek.obj (.text)
+                  8008dac0    00000100                 : frexpf.obj (.text)
+                  8008dbc0    00000100     cts_smr.lib : dsp_if_pframe.obj (.text)
+                  8008dcc0    000000e0     rts6701.lib : strasg.obj (.text)
+                  8008dda0    000000e0                 : modf.obj (.text)
+                  8008de80    000000c0                 : printf.obj (.text)
+                  8008df40    000000c0                 : new_sof.obj (.text)
+                  8008e000    000000c0                 : divu.obj (.text)
+                  8008e0c0    000000c0                 : fixdu.obj (.text)
+                  8008e180    000000c0                 : fixdli.obj (.text)
+                  8008e240    000000a0                 : remu.obj (.text)
+                  8008e2e0    000000a0                 : memccpy.obj (.text)
+                  8008e380    00000080                 : fltlif.obj (.text)
+                  8008e400    00000080                 : boot.obj (.text)
+                  8008e480    00000060                 : strlen.obj (.text)
+                  8008e4e0    00000060                 : ceil.obj (.text)
+                  8008e540    00000040                 : _lock.obj (.text)
+                  8008e580    00000040                 : del_sof.obj (.text)
+                  8008e5c0    00000040                 : new_.obj (.text)
+                  8008e600    00000040                 : trunc.obj (.text)
+                  8008e640    00000020                 : fabsf.obj (.text)
+                  8008e660    00000020                 : remove.obj (.text)
+                  8008e680    00000020                 : new_af.obj (.text)
+                  8008e6a0    00000020                 : del_af.obj (.text)
+
+.cio       0    8008e6c0    00000120     UNINITIALIZED
+                  8008e6c0    00000120     rts6701.lib : trgmsg.obj (.cio)
+
+.far       0    8008e7e0    009986ac     UNINITIALIZED
+                  8008e7e0    00898464     cts_smr.lib : AxisGlb.obj (.far)
+                  80926c44    00000001     rts6701.lib : new_.obj (.far)
+                  80926c48    000cb284     cts_smr.lib : axisctrl.obj (.far)
+                  809f1ecc    00030010     IconLabKernel1714.lib : UsbDispModule.obj (.far)
+                  80a21edc    00003148                           : serialport_554.obj (.far)
+                  80a25024    00000a0c                           : ndok1714.obj (.far)
+                  80a25a30    00000374     rts6701.lib : defs.obj (.far)
+                  80a25da4    0000021a     cts_smr.lib : axiscap.obj (.far)
+                  80a25fc0    000001c0                 : dsp_if.obj (.far)
+                  80a26180    000001bc                 : AXISDPR.obj (.far)
+                  80a2633c    00000190     rts6701.lib : _printfi.obj (.far)
+                  80a264cc    00000190                 : fcvt.obj (.far)
+                  80a26660    00000120                 : pow.obj (.far)
+                  80a26780    0000011c                 : lowlev.obj (.far)
+                  80a2689c    000000d0                 : trgdrv.obj (.far)
+                  80a2696c    000000c4     IconLabKernel1714.lib : system.obj (.far)
+                  80a26a30    0000008c     rts6701.lib : exit.obj (.far)
+                  80a26abc    00000064                 : ecvt.obj (.far)
+                  80a26b20    00000064     cts_smr.lib : AXISINT.obj (.far)
+                  80a26b88    00000060     rts6701.lib : atan.obj (.far)
+                  80a26be8    00000054     cts_smr.lib : hardware.obj (.far)
+                  80a26c3c    00000044     IconLabKernel1714.lib : filesystem.obj (.far)
+                  80a26c80    00000040     rts6701.lib : cos.obj (.far)
+                  80a26cc0    00000040                 : sin.obj (.far)
+                  80a26d00    00000038                 : sinh.obj (.far)
+                  80a26d38    00000038                 : tan.obj (.far)
+                  80a26d70    00000034     IconLabKernel1714.lib : usb.obj (.far)
+                  80a26da8    00000030     rts6701.lib : exp.obj (.far)
+                  80a26dd8    00000030                 : log.obj (.far)
+                  80a26e08    00000030     Appl-Main.obj (.far)
+                  80a26e38    00000024     cts_callback.lib : callback.obj (.far)
+                  80a26e5c    00000010     cts_smr.lib : AXISMAIN.obj (.far)
+                  80a26e6c    00000008     rts6701.lib : _lock.obj (.far)
+                  80a26e74    00000008                 : memory.obj (.far)
+                  80a26e80    00000008                 : rand.obj (.far)
+                  80a26e88    00000004                 : errno.obj (.far)
+
+.pinit     0    80a26e8c    0000000c     
+                  80a26e8c    00000004     cts_smr.lib : AXISMAIN.obj (.pinit)
+                  80a26e90    00000004                 : AxisGlb.obj (.pinit)
+                  80a26e94    00000004     --HOLE-- [fill = 0]
+
+.cinit     0    80a26e98    00001344     
+                  80a26e98    00000468     cts_smr.lib : AxisGlb.obj (.cinit)
+                  80a27300    0000034c                 : AXISDPR.obj (.cinit)
+                  80a2764c    00000004     --HOLE-- [fill = 0]
+                  80a27650    00000244     rts6701.lib : defs.obj (.cinit)
+                  80a27894    00000004     --HOLE-- [fill = 0]
+                  80a27898    00000140                 : pow.obj (.cinit)
+                  80a279d8    00000104     cts_smr.lib : AXISINT.obj (.cinit)
+                  80a27adc    00000004     --HOLE-- [fill = 0]
+                  80a27ae0    000000e4     IconLabKernel1714.lib : system.obj (.cinit)
+                  80a27bc4    00000004     --HOLE-- [fill = 0]
+                  80a27bc8    000000cc     cts_smr.lib : hardware.obj (.cinit)
+                  80a27c94    00000004     --HOLE-- [fill = 0]
+                  80a27c98    000000ac     IconLabKernel1714.lib : usb.obj (.cinit)
+                  80a27d44    00000004     --HOLE-- [fill = 0]
+                  80a27d48    00000070     rts6701.lib : atan.obj (.cinit)
+                  80a27db8    0000005c                 : lowlev.obj (.cinit)
+                  80a27e14    00000004     --HOLE-- [fill = 0]
+                  80a27e18    00000050     Appl-Main.obj (.cinit)
+                  80a27e68    00000048     rts6701.lib : sin.obj (.cinit)
+                  80a27eb0    00000048                 : tan.obj (.cinit)
+                  80a27ef8    00000048                 : sinh.obj (.cinit)
+                  80a27f40    00000048                 : cos.obj (.cinit)
+                  80a27f88    00000040                 : exp.obj (.cinit)
+                  80a27fc8    00000040                 : log.obj (.cinit)
+                  80a28008    0000003c     cts_smr.lib : AXISMAIN.obj (.cinit)
+                  80a28044    00000004     --HOLE-- [fill = 0]
+                  80a28048    0000002c     rts6701.lib : exit.obj (.cinit)
+                  80a28074    00000004     --HOLE-- [fill = 0]
+                  80a28078    0000002c     IconLabKernel1714.lib : filesystem.obj (.cinit)
+                  80a280a4    00000004     --HOLE-- [fill = 0]
+                  80a280a8    00000020     cts_fs.lib : fs.obj (.cinit)
+                  80a280c8    0000001c     rts6701.lib : sysmem.obj (.cinit)
+                  80a280e4    00000004     --HOLE-- [fill = 0]
+                  80a280e8    0000001c     cts_smr.lib : axisctrl.obj (.cinit)
+                  80a28104    00000004     --HOLE-- [fill = 0]
+                  80a28108    0000001c     rts6701.lib : _lock.obj (.cinit)
+                  80a28124    00000004     --HOLE-- [fill = 0]
+                  80a28128    00000010                 : rand.obj (.cinit)
+                  80a28138    0000000c                 : memory.obj (.cinit)
+                  80a28144    00000004     --HOLE-- [fill = 0]
+                  80a28148    0000000c     cts_callback.lib : callback.obj (.cinit)
+                  80a28154    00000004     --HOLE-- [fill = 0]
+                  80a28158    0000000c     cts_eeprom.lib : crc32.obj (.cinit:c)
+                  80a28164    00000004     --HOLE-- [fill = 0]
+                  80a28168    0000000c     IconLabKernel1714.lib : UsbDispModule.obj (.cinit)
+                  80a28174    00000004     --HOLE-- [fill = 0]
+                  80a28178    0000000c     rts6701.lib : errno.obj (.cinit)
+                  80a28184    00000004     --HOLE-- [fill = 0]
+                  80a28188    0000000c                 : array.obj (.cinit:c)
+                  80a28194    00000004     --HOLE-- [fill = 0]
+                  80a28198    0000000c     IconLabKernel1714.lib : serialport_554.obj (.cinit)
+                  80a281a4    00000004     --HOLE-- [fill = 0]
+                  80a281a8    0000000c     rts6701.lib : new_.obj (.cinit:c)
+                  80a281b4    00000004     --HOLE-- [fill = 0]
+                  80a281b8    0000000c     cts_smr.lib : dsp_if.obj (.cinit)
+                  80a281c4    00000004     --HOLE-- [fill = 0]
+                  80a281c8    0000000c     IconLabKernel1714.lib : ndok1714.obj (.cinit)
+                  80a281d4    00000008     --HOLE-- [fill = 0]
+
+.const     0    80a281dc    00000d3c     
+                  80a281dc    0000012c     cts_smr.lib : hardware.obj (.const)
+                  80a28308    00000101     rts6701.lib : ctype.obj (.const)
+                  80a28409    00000002                 : fputs.obj (.const)
+                  80a2840b    00000001     --HOLE-- [fill = 0]
+                  80a2840c    00000089     Appl-Main.obj (.const)
+                  80a28495    00000003     --HOLE-- [fill = 0]
+                  80a28498    00000088     IconLabKernel1714.lib : descriptors.obj (.const)
+                  80a28520    00000032                           : serialport_554.obj (.const)
+                  80a28552    000005c3     cts_smr.lib : AXISMAIN.obj (.const)
+                  80a28b15    000001c3                 : AXISDPR.obj (.const)
+                  80a28cd8    00000149     cts_fs.lib : fs.obj (.const)
+                  80a28e21    00000051     IconLabKernel1714.lib : SysDatManager.obj (.const)
+                  80a28e72    0000003c     cts_smr.lib : dsp_if_adv.obj (.const)
+                  80a28eae    0000002a     rts6701.lib : _printfi.obj (.const)
+                  80a28ed8    0000001e     cts_smr.lib : internalFuncs.obj (.const)
+                  80a28ef6    0000001c     IconLabKernel1714.lib : ndok1714.obj (.const)
+                  80a28f12    00000006                           : filesystem.obj (.const)
+
+.switch    0    80a28f18    00000024     
+                  80a28f18    00000024     cts_smr.lib : AXISMAIN.obj (.switch)
+
+.bss       0    80a28f3c    000004dc     UNINITIALIZED
+                  80a28f3c    00000400     cts_eeprom.lib : crc32.obj (.bss)
+                  80a2933c    000000cc     cts_fs.lib : fs.obj (.bss)
+                  80a29408    00000004     rts6701.lib : array.obj (.bss:c)
+                  80a2940c    00000004                 : new_.obj (.bss:c)
+                  80a29410    00000004     cts_i2c.lib : i2c.obj (.bss)
+                  80a29414    00000004     cts_eeprom.lib : crc32.obj (.bss:c)
+
+.stack     0    80a29418    00040000     UNINITIALIZED
+                  80a29418    00000008     rts6701.lib : boot.obj (.stack)
+
+.user      0    80a69420    000071c0     
+                  80a69420    00006ed0     cts_smr.lib : AxisGlb.obj (.user) [fill = 0]
+                  80a702f0    00000004                 : dsp_if.obj (.user) [fill = 0]
+                  80a702f4    0000000c     --HOLE-- [fill = 0]
+                  80a70300    000002e0                 : AXISDPR.obj (.user)
+
+.user_dpr 
+*          0    80a705e0    000002d8     UNINITIALIZED
+                  80a705e0    000002d8     cts_smr.lib : AXISDPR.obj (.user_dpr)
+
+.user_int 
+*          0    80a708c0    00003f80     
+                  80a708c0    00003f80     cts_smr.lib : AXISINT.obj (.user_int)
+
+.user_ctrl 
+*          0    80a74840    000037a0     
+                  80a74840    000037a0     cts_smr.lib : axisctrl.obj (.user_ctrl)
+
+.user_main 
+*          0    80a77fe0    000029e0     
+                  80a77fe0    000029e0     cts_smr.lib : AXISMAIN.obj (.user_main)
+
+.user_dbgcmd 
+*          0    80a7a9c0    00000070     UNINITIALIZED
+                  80a7a9c0    00000070     cts_smr.lib : AXISMAIN.obj (.user_dbgcmd)
+
+.user_dbgmsg 
+*          0    80a7aa30    00000100     UNINITIALIZED
+                  80a7aa30    00000100     cts_smr.lib : AXISMAIN.obj (.user_dbgmsg)
+
+.sysmem    0    81000000    00c00000     UNINITIALIZED
+
+.crit_code 
+*          0    00000400    00000380     
+                  00000400    00000380     IconLabKernel1714.lib : serialport_554.obj (.crit_code)
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address    name
+--------   ----
+80a28f3c   $bss
+80a28f3c   .bss
+80040000   .data
+80040260   .text
+8008b4b4   C$$EXIT
+8008cd80   C$$IO$$
+80a26300   _ABS_command
+8004b318   _AMCFilteringGet__Fv
+8004b164   _AMCFilteringSet__Fv
+8004b4cc   _AMCStatusGet__Fv
+80a71338   _AMC_Int1ms__Fv
+80a70990   _AMC_Int5ms__Fv
+8005b270   _AMPEnableTesting__Fv
+8005b118   _AMPFaultTesting__Fv
+800590b8   _AMPResetLevelTesting__Fv
+8004917c   _AcceptString__Fv
+80a25fc0   _Active_Axis_Num
+800427d8   _Alarm_Reset__Fv
+80042828   _Alarm_Set__Fv
+80a76e18   _AmpFaultReset__FP10CONTROLBUF
+80a76e60   _AmpFaultSet__FP10CONTROLBUF
+8007bb3c   _Appl_Body_Main__Fv
+8007bb44   _Appl_Int10__Fv
+8007b360   _Appl_Int1__Fv
+8007bbe4   _Appl_Prev_Main__Fv
+80a28234   _AxisDPRAM
+80a25fc8   _AxisDpram
+80a28250   _AxisInfo
+80077428   _Beep__Fi
+80a69420   _BootPara
+80926c40   _Boot_Checksum_Flag
+80081c0c   _CAP_ClearPtBuf__Fv
+80081ce8   _CAP_Disable__Fv
+80081e4c   _CAP_DoCapture__Fv
+80081ccc   _CAP_Enable__Fv
+80081930   _CAP_GetAx__Fv
+800818ec   _CAP_GetBitNo__Fv
+80081b38   _CAP_GetFilledQ__Fv
+80081dc0   _CAP_GetFilteredSig__Fc
+80081b50   _CAP_GetLeftQ__Fv
+80081a18   _CAP_GetPt__FPiPc
+80081720   _CAP_Init__Fv
+80081bbc   _CAP_IsEmpty__Fv
+80081b84   _CAP_IsFull__Fv
+80081948   _CAP_PutPt__Fic
+80081d04   _CAP_ReadIO__Fv
+80081904   _CAP_SetAx__Fi
+80081894   _CAP_SetBitNo__Fi
+800818c0   _CAP_SetFlag__Fi
+80a25f44   _CAP_bEdge
+80a25da4   _CAP_bOn
+80a25fbc   _CAP_bSignal
+80a25fb4   _CAP_bUserIOState
+80a25db4   _CAP_lPt
+80a25da8   _CAP_lPtNo
+80a25dac   _CAP_nAx
+80a25db0   _CAP_nBit
+80a25fb8   _CAP_nCount
+80a25fb0   _CAP_nFlag
+80a25fa8   _CAP_nHead
+80a25fac   _CAP_nTail
+80a69700   _CBuf
+80040a38   _CP_Line_Move__Fv
+80041578   _CP_Move__Fv
+80074c94   _CheckAndClear_PauseRst__FP10CONTROLBUFi
+80a76964   _CheckEnvelope__FP10CONTROLBUF
+80a74608   _CheckGuideSensor__Fv
+8007f194   _CheckInPosSignal__FP10CONTROLBUFi
+80a7338c   _CheckInPos__Fv
+80a73af4   _CheckPause__Fi
+80a77e50   _CheckSWInPos__FP10CONTROLBUFi
+80a7596c   _CheckSWLimit__FP10CONTROLBUFiT2
+80a75e70   _CheckSWPauseCondition__FP10CONTROLBUFi
+80a76edc   _CheckSensor__FP10CONTROLBUFi
+80a76ac8   _CheckServo__FP10CONTROLBUFi
+8007f354   _CheckUserIOInt__Fi
+8007ed54   _ChkHomeLimit__FP10CONTROLBUFi
+8007ee28   _ChkHomeReset__FP10CONTROLBUF
+8007ee74   _ChkHomeSet__FP10CONTROLBUF
+80a771d4   _ChkNegLimit__FP10CONTROLBUFi
+8007ec90   _ChkNegReset__FP10CONTROLBUF
+8007ecd8   _ChkNegSet__FP10CONTROLBUF
+80a77030   _ChkPosLimit__FP10CONTROLBUFi
+80a77104   _ChkPosReset__FP10CONTROLBUF
+80a77150   _ChkPosSet__FP10CONTROLBUF
+80064efc   _ClearDPRInt__Fv
+800751fc   _ClearPauseFlag__Fi
+80075008   _ClearSWPauseFlag__Fi
+80042878   _Clear_Status__Fv
+8004422c   _Clear_Stop__Fv
+80a28230   _CommDPRAM
+80a25fc4   _CommDpram
+80a78378   _CommandQueueParsing__Fi
+800834c0   _ControlFLASH__FiT1
+80064e70   _ControlIdle__Fv
+80059fb0   _ControlLoopSetting__Fv
+80a75fb8   _ControlPosition__FP10CONTROLBUFi
+80a774d0   _ControlServo__FP10CONTROLBUF
+8007eef8   _ControlStepper__FP10CONTROLBUF
+80a74f00   _ControlVelocity__FP10CONTROLBUFi
+80a74840   _Control_Int200us__Fv
+8006a2e8   _Conv__FcUc
+8007f22c   _ConvertTorque__FP10CONTROLBUF
+80046b20   _Copy_BootPara_2_Para__Fv
+80045e28   _Copy_Para_2_BootPara__Fv
+8005b5d8   _DACOffsetTesting__Fv
+8005a1d0   _DACPolSetting__Fv
+80a269f0   _DMAIsrTable
+80076388   _DMA_ISR__Fv
+80a2696c   _DMA_STATUS_REG
+8004b670   _DPRAMTest__Fv
+80058bdc   _DSPLibTesting__Fv
+800764a4   _Delay__Fi
+8004a304   _DnloadParamFromIPC__Fv
+80a70414   _DoCmdIfExist__Fv
+80a70300   _Dpr_Int__Fv
+80076380   _DumXIsr__Fv
+800761e0   _DummyIsr__Fv
+80071850   _DumpFat__Fv
+80071858   _DumpFileTbl__Fv
+80071860   _DumpSysData__Fv
+80a70270   _Dwell_Flag
+80a70280   _Dwell_Value
+80065970   _EchoCommand__Fi
+8007e470   _EepromReady__FUi
+8005bf10   _Eeprom_Test__Fv
+80076668   _EnableInterrupt__FiT1
+80058ed4   _EncoderOffsetTesting__Fv
+800452c0   _Exist_Check__Fv
+800761e8   _ExtIsr__Fv
+80083ca4   _FLASH_BeginRead__FUi
+800837e4   _FLASH_EraseBlock__Fi
+800835e8   _FLASH_Erase__FUi
+80083c8c   _FLASH_GetPhysicalAddr__FUi
+800835a4   _FLASH_Init__Fv
+80083c38   _FLASH_Read__FUiPvi
+80083ad8   _FLASH_Write__FUiPCvi
+8008c9f4   _FMMU_EraseFileSystemBlock__FUi
+8008c924   _FMMU_EraseSystemDataBlock__Fv
+8008c8c0   _FMMU_GetBlockSize__Fv
+8008c8d0   _FMMU_GetBootLoaderBase__Fv
+8008c8ec   _FMMU_GetFPGABase__Fv
+8008c90c   _FMMU_GetSystemDataBase__Fv
+8008c950   _FMMU_InitializeFileSystem__Fv
+8008c9bc   _FMMU_ReadFileSystemMem__FUiPvi
+8008c8e4   _FMMU_WriteBootLoader__FPvUi
+8008c904   _FMMU_WriteFPGA__FPvUi
+8008c9d8   _FMMU_WriteFileSystemMem__FUiPCvi
+8008c938   _FMMU_WriteSystemDataMem__FUiPCvi
+80071a28   _FSExchange__Fv
+8005a0bc   _FeedbackSetting__Fv
+80070748   _FileClose__FUi
+8006fcdc   _FileDelete__FPCc
+80070c54   _FileGetSize__FUi
+8006fe28   _FileOpen__FPCcUi
+80070500   _FileRead__FUiPvT1
+8007027c   _FileWrite__FUiPCvT1
+8006f57c   _FindEmptyCluster__Fv
+8006f6b0   _FindEmptyFileDesc__Fv
+8006fb84   _FindFile__FPCc
+80071040   _FlashWriteEnable__Fi
+8006ed00   _FormatBlankFunc__Fi
+80a26c3c   _FormatCallBack
+8006fad8   _FormatFileSystem__Fv
+80080d6c   _FormatSystemData__Fv
+80059340   _FrameBufferTest__Fv
+80a696c8   _GBuf
+80042148   _GET_Boot_Memory__Fv
+80041edc   _GET_Error_Limit__Fv
+800416c4   _GET_Gain__Fv
+800422e4   _GET_IO_Port__Fv
+80041d90   _GET_In_Position__Fv
+80041ac0   _GET_Position__Fv
+80042618   _GET_Stepper__Fv
+80041964   _GET_VGain__Fv
+80076df0   _GIdisable__Fv
+80076e04   _GIenable__Fv
+80a696c4   _G_fSampling_Time
+8005a478   _GainSetting__Fv
+8007fb44   _Gain_RW
+800773b0   _GenChkSum__FPUci
+80a777dc   _GenerateOutput__FP10CONTROLBUFi
+80a7980c   _Generation_Profile__FiN31f
+80066430   _GetAxisStatus__Fi
+80a7a3fc   _GetDS__Fi
+800886b4   _GetDisplayFrame__Fv
+800886d0   _GetDisplayHeight__Fv
+800886c4   _GetDisplayWidth__Fv
+8004aa9c   _GetEncoderDirection__Fv
+800659b8   _GetEncoderHwDirection__Fi
+80061128   _GetEncoderOffset__Fv
+80070e10   _GetFileName__FiPcT1
+80a75ed4   _GetGoalDist__FP10CONTROLBUF
+80047b84   _GetITPQ__Fi
+80047ce4   _GetLeftQ__Fi
+8006c5a4   _GetLength__FPc
+8004adb4   _GetMovexCmd__Fv
+80070d4c   _GetNumberOfDeletedFile__Fv
+80070c88   _GetNumberOfFile__Fv
+800592ac   _GetOutIOTest__Fv
+8006f7e0   _GetRemainSpace__Fv
+8004acfc   _GetSwPauseCheckBit__Fv
+8004abb0   _GetSwPauseEvent__Fv
+80080e08   _GetSystemData__Fv
+80a74e78   _GetValueWithLimit__FfT1
+80064900   _GetVersionString__Fv
+8004525c   _Get_Abs_Encoder__Fv
+8004372c   _Get_Amp_Fault_Level__Fv
+8004361c   _Get_Amp_Fault__Fv
+80043f20   _Get_Amp_On_Level__Fv
+80043838   _Get_Amp_Reset_Level__Fv
+80043d4c   _Get_Axis_Boot_Memory__Fv
+80043e18   _Get_Closed_Loop__Fv
+80041b4c   _Get_Command__Fv
+80044e44   _Get_Compensation_Pos__Fv
+800447b0   _Get_Control_Cfg__Fv
+80043940   _Get_Dac_Offset__Fv
+80042a6c   _Get_E_Stop_Event__Fv
+80042abc   _Get_E_Stop_Rate__Fv
+80043b38   _Get_Feedback_Device__Fv
+80043d9c   _Get_Frames_Clear__Fv
+80044acc   _Get_GearRatio__Fv
+80043100   _Get_Home_Level__Fv
+80042ff8   _Get_Home_Sn_Event__Fv
+8004402c   _Get_IO_Int_Enable__Fv
+80044354   _Get_IO_Trigger__Fv
+8004320c   _Get_Index_Req__Fv
+800433f0   _Get_Int_E_Stop__Fv
+8004347c   _Get_Int_PcIRQ__Fv
+80043320   _Get_Int_Stop__Fv
+800451ac   _Get_Interpolation__Fv
+80042eec   _Get_Neg_Level__Fv
+80042cd8   _Get_Neg_Sn_Event__Fv
+800448b8   _Get_PosImode__Fv
+80042de0   _Get_Pos_Level__Fv
+80042bcc   _Get_Pos_Sn_Event__Fv
+80044e4c   _Get_Pulse_Mode__Fv
+80045098   _Get_Pulse_Ratio__Fv
+80045660   _Get_Resolution__Fv
+8004459c   _Get_SW_Lower_Limit__Fv
+8004441c   _Get_SW_Upper_Limit__Fv
+8004290c   _Get_Stop_Event__Fv
+8004295c   _Get_Stop_Rate__Fv
+80044d1c   _Get_SyncGain__Fv
+80044c14   _Get_SyncMap__Fv
+80044ce4   _Get_SyncOff__Fv
+80044cac   _Get_SyncOn__Fv
+800440c4   _Get_Userio_Int_Edge__Fv
+800449c0   _Get_VelImode__Fv
+80043c40   _Get_Voltage_Device__Fv
+8005b7d4   _GuideTesting__Fv
+8007dcd4   _HOSTclock
+8007d180   _HOSTclose
+8007d504   _HOSTlseek
+8007cfe0   _HOSTopen
+8007d274   _HOSTread
+8007d7b8   _HOSTrename
+8007dbec   _HOSTtime
+8007d668   _HOSTunlink
+8007d3c4   _HOSTwrite
+8005ae7c   _HomeSensorTesting__Fv
+80084a04   _I2C_Init0__Fv
+800848e4   _I2C_Init1__Fv
+800847b0   _I2C_IsrSendBytes0__Fv
+80084678   _I2C_IsrSendBytes1__Fv
+80084578   _I2C_Triggering0__Fv
+80084480   _I2C_Triggering1__Fv
+8005bbbc   _ICon_IOTesting__Fv
+8005bad4   _ICon_OutTesting__Fv
+80045948   _IEEE2TMS__Fi
+8005aad0   _INPositionSetTesting__Fv
+8004249c   _IO_Mode_Put__Fv
+8004243c   _IO_Mode_Set__Fv
+8005b828   _InTesting__Fv
+800543cc   _InitBdParameter__Fv
+80048234   _InitBootParam__FP10_UBOOTPARA
+800650cc   _InitDA__Fv
+8004b524   _InitDbgCmdBuff__Fi
+80a708c0   _InitDbgLed__Fv
+8006f894   _InitFileSystem__Fv
+80076110   _InitGuideSensorPort__Fi
+80064a14   _InitHardware__Fv
+800478fc   _InitITPQ__Fi
+80076784   _InitJtagPort__Fv
+80064d68   _InitMotorParameters__Fv
+80046ac4   _InitOtfFilter__Fi
+80064fa4   _InitPIDGain__Fv
+80076b10   _InitPLL__Fv
+80054cd0   _InitPara__Fv
+80046968   _InitPositionFilter__Fi
+80065130   _InitPosition__Fv
+80076e18   _InitSystem__FUi
+80088280   _InitUsbDispModule__Fv
+80046a1c   _InitVelocityFilter__Fi
+8007e97c   _Init_eeprom__Fv
+80080cc0   _InitialSystemDataDesc__FP14_SYS_DATA_DESC
+8007181c   _InitializeFileSystemFunction__Fv
+80a73e4c   _Interpolation_10msec__FP10CONTROLBUFi
+80a70260   _Interpolation_Flag
+80055b20   _Interpolation__Fv
+80040000   _InterruptVectors
+800886a0   _IsDispConnect__Fv
+8007021c   _IsEndOfFile__FUi
+80047d24   _IsQEmpty__Fi
+80a26970   _IsrTable
+80a6a9b4   _JpcMovSt
+80a700a0   _Last_Pos
+8005ac58   _LimitEventTesting__Fv
+80059bf4   _LimitSwitchTesting__Fv
+8005b6f8   _LimitTesting__Fv
+80a76548   _LinearInterpolation__FP10CONTROLBUFi
+80049070   _LoadLongBlockFromEeprom__FUiPcPUiT3i
+80a26bf0   _MOTOR_DIRECTION_CONTROL
+80a70160   _M_J_Command
+800442c4   _Main_Delay__Fv
+8006ef10   _MakeFullFileName__FPCcT1Pc
+80a702a0   _Max_Smpcnt
+80a26050   _Mdisp
+80a25fd8   _Mf
+80076558   _MicroDelay__Fi
+80059de4   _MotorTypeSetting__Fv
+80a77fe0   _NdokMain__Fv
+80058bcc   _NdokOnIdleEvent__Fv
+80058bd4   _NdokOnLowIdleEvent__Fv
+80058bb0   _NdokOnSerialEvent__FPCUci
+80040788   _NoOperation__Fv
+8005b8a8   _OutTesting__Fv
+80055974   _PTPMove__FiT1
+80040810   _PTP_Move__Fv
+80041bdc   _PUT_Curr_Pos__Fv
+8004205c   _PUT_Empty_Frame__Fv
+80041fa0   _PUT_Error_Limit__Fv
+80041cec   _PUT_Error_Pls__Fv
+80041580   _PUT_Gain__Fv
+80041e38   _PUT_In_Position__Fv
+80041c64   _PUT_Position__Fv
+80045a74   _PUT_Query__Fv
+80042590   _PUT_Stepper__Fv
+80041820   _PUT_VGain__Fv
+80a6aaa0   _Pause
+80a6fff0   _PauseRstrt
+80a702a4   _Pid_Dividend
+800562dc   _PlanAsymTrapezoidal__FiN31fT1
+80056f4c   _PlanAsymTrapezoidal_old__FiN31fT1
+80056284   _PlanTrapezoidal__FiN21fT1
+8005633c   _PlanTrapezoidal_old__FiN21fT1
+80a702a8   _Pos_Limit
+80a702ac   _Pos_Stepper_Limit
+8005980c   _PositionSetting__Fv
+80059514   _Position_Command_Setting__Fv
+8007ea00   _PowerOffState__FP10CONTROLBUF
+80082b40   _ProcessBootPara__FiN21
+80085c80   _ProcessUserCommand__FPc
+8005a2dc   _PulseRatioSetting__Fv
+800716e4   _PushAck__FP11FILECMD_ACK
+8004b570   _PushDbgCmdBuff__FiT1fN23T1
+8006a7a0   _PutHexa2__Fc
+8006a740   _PutHexa8__FPci
+8006a874   _PutHexa8__Fi
+80047a5c   _PutITPQ__FiT1
+800452c8   _Put_ASIC__Fv
+800437b4   _Put_Amp_Fault_Level__Fv
+800436a4   _Put_Amp_Fault__Fv
+80043fa4   _Put_Amp_On_Level__Fv
+800438bc   _Put_Amp_Reset_Level__Fv
+80043594   _Put_Axis_Source__Fv
+80043508   _Put_Axis_Stat__Fv
+800441a0   _Put_Buf_Position__Fv
+800454c8   _Put_Captured_Position__Fv
+80043e9c   _Put_Closed_Loop__Fv
+80044834   _Put_Control_Cfg__Fv
+80043a50   _Put_Dac_Offset__Fv
+80042b44   _Put_E_Stop_Rate__Fv
+800451dc   _Put_Empty_Interpolation__Fv
+80044f58   _Put_Encoder__Fv
+80043bbc   _Put_Feedback_Device__Fv
+80044b70   _Put_GearRatio__Fv
+80043184   _Put_Home_Level__Fv
+8004307c   _Put_Home_Sn_Event__Fv
+8004471c   _Put_IO_Out_Data__Fv
+8004329c   _Put_Index_Req__Fv
+80042f74   _Put_Neg_Level__Fv
+80042d5c   _Put_Neg_Sn_Event__Fv
+8004493c   _Put_PosImode__Fv
+80042e64   _Put_Pos_Level__Fv
+80042c54   _Put_Pos_Sn_Event__Fv
+80044ed4   _Put_Pulse_Mode__Fv
+80045124   _Put_Pulse_Ratio__Fv
+80045844   _Put_Resolution__Fv
+80044660   _Put_SW_Lower_Limit__Fv
+800444e0   _Put_SW_Upper_Limit__Fv
+800429e4   _Put_Stop_Rate__Fv
+80044fe0   _Put_SyncEncoder__Fv
+80044db8   _Put_SyncGain__Fv
+80044154   _Put_Userio_Int_Edge__Fv
+80044a44   _Put_VelImode__Fv
+80043cc4   _Put_Voltage_Device__Fv
+80a6aaf0   _Q_Buf
+80a70250   _Q_in_num
+80a70240   _Q_out_num
+80041570   _RECT_Move__Fv
+800423dc   _RESET_IO_Bit__Fv
+80048020   _ReadBootParam__FP10_UBOOTPARA
+8006652c   _ReadChannel1__FPci
+80066578   _ReadChannel2__FPci
+80066648   _ReadChannel__FPci
+8006594c   _ReadCommandAxis__Fv
+800658f4   _ReadCommand__Fv
+80a772a8   _ReadCurPos__FP10CONTROLBUFi
+8007e950   _ReadEepromChar__FUi
+8007e924   _ReadEepromInt__FUi
+8007e8f8   _ReadEepromShort__FUi
+8007e744   _ReadEepromString__FUiPci
+800663d8   _ReadInPos__Fi
+80064d34   _ReadInnerCounter__Fi
+800768b0   _ReadJtagTDO__Fv
+80066840   _ReadMem1__FPci
+80066880   _ReadMem2__FPci
+80066958   _ReadMem__FPci
+800661a8   _ReadSensor__Fi
+80085e50   _ReadSerialPort__Fv
+800660f0   _ReadServoAlarm__Fi
+8006614c   _ReadServoSRdy__Fi
+80065bc0   _ReadUserIn__Fv
+800660b8   _ReadZValue__Fv
+80045c74   _Read_Memory__Fv
+8006559c   _RearmZInt__Fv
+8006f194   _RearrangeCluster__Fv
+8006f074   _RearrangeFileTable__Fv
+8004b870   _ReloadEncoderPos__Fv
+800440bc   _Reserved_Function__Fv
+80064dcc   _ResetEncCounter__Fv
+800676e0   _ResetEncoderTiming__Fi
+80064f44   _ResetPulseOut__Fv
+80074cdc   _RestartFromPause__Fi
+80049994   _RunConfigSaveFromIPC__Fv
+80049524   _RunConfigUploadToIPC__Fv
+80088580   _RunUsbDispModule__Fv
+8006c140   _SERIALEX_Close__Fi
+8006c380   _SERIALEX_Control__Fi
+8006c404   _SERIALEX_GetStatus__FiPUc
+8006c120   _SERIALEX_Open__Fi
+8006c450   _SERIALEX_ReadBytes__FiPvN21
+8006c39c   _SERIALEX_SetDTR__FiT1
+8006c16c   _SERIALEX_SetPort__FiN41
+8006c3e8   _SERIALEX_Status__Fi
+8006c60c   _SERIALEX_WriteBytes__FiPCvT1
+8006c6b8   _SERIALEX__GetChar__Fi
+8006c750   _SERIALEX__GetString__FiPcT1Ui
+8006c670   _SERIALEX__IsRxEmpty__Fi
+8006c694   _SERIALEX__IsTxEmpty__Fi
+8006c6d4   _SERIALEX__PutChar__Fic
+8006c898   _SERIALEX__PutString__FiPcT1
+8006abec   _SERIAL_Enable__FUi
+8006b254   _SERIAL_GenChecksum__FPvi
+8006aa98   _SERIAL_Init__Fv
+8006ae04   _SERIAL_ReadAByte__FPUci
+8006aee4   _SERIAL_ReadBytes__FPviT2
+8006b14c   _SERIAL_ReadStxEtxString__FPciT2
+8006b34c   _SERIAL_ReceiveFile__FP14_SER_FILE_DESCi
+8006a6f0   _SERIAL_ReceivedDataCnt__Fv
+8006ba00   _SERIAL_ReleaseFileDesc__FP14_SER_FILE_DESC
+8006ba14   _SERIAL_SendFile__FPcPUcUii
+8006acd8   _SERIAL_SetPort__FiN31
+8006b2c8   _SERIAL_TestChecksum__FPviUc
+8006b108   _SERIAL_WaitCommand__FUci
+8006b038   _SERIAL_WriteAByte__FUc
+8006b07c   _SERIAL_WriteBytes__FPCvi
+80042504   _SET_Delay__Fv
+8004237c   _SET_IO_Bit__Fv
+80064cc0   _SHORT2INT__Fs
+80040a28   _SPL_Arc_Move__Fv
+80040a20   _SPL_Line_Move__Fv
+80040a30   _SPL_Move__Fv
+8006ed08   _SaperateFileNameAndExt__FPCcPcT2
+80048154   _SaveBootParam__FP10_UBOOTPARA
+80048c48   _SaveLongBlockToEeprom__Fv
+80045348   _Save_Boot_Frame__Fv
+800655a4   _SelectFlashROM__Fv
+80a2374c   _SendQ
+80a25020   _SerialCallback
+8006a908   _SerialChipInit__Fv
+00000400   _SerialISR__Fv
+8006abd8   _SerialSetCallback__FPFi_v
+80058ecc   _SerialTesting__Fv
+80a705e0   _Service
+8006573c   _ServoOff__Fi
+80065640   _ServoOn__Fi
+800426f8   _Servo_Off__Fv
+800426a4   _Servo_On__Fv
+80075414   _SetAbortEvent__Fi
+8007664c   _SetDMAVect__FiPFv_v
+8004aa08   _SetEncoderDirection__Fv
+80065a28   _SetEncoderHwDirection__FiT1
+80061048   _SetEncoderOffset__Fv
+80070c60   _SetFileFormatCallBack__FPFi_v
+800767f4   _SetJtagTCK__Fi
+80076830   _SetJtagTDI__Fi
+80076870   _SetJtagTMS__Fi
+80075734   _SetStopEStopEvent__Fi
+8004ac34   _SetSwPauseCheckBit__Fv
+8004ab24   _SetSwPause__Fv
+80065370   _SetTimer__Fv
+800883c4   _SetUsbDispInterval__Fi
+80076610   _SetVect__FiPFv_v
+8005861c   _SetVelocityRate__Fv
+800581d0   _SetVelocityRate_old__Fv
+800768cc   _SetupEmif__FUi
+800769b8   _SetupL2Cache__Fi
+80077430   _Sign__FUi
+8005a7ac   _SoftwareLimitSetting__Fv
+80045378   _Start_Capture__Fv
+800897b8   _Stepper
+80059994   _StopRateTesting__Fv
+80045498   _Stop_Capture__Fv
+80a26170   _SyncMotion
+80076cd8   _SystemInit__Fv
+80045974   _TMS2IEEE__Ff
+80077330   _TestChkSum__FPUciUc
+80a7091c   _ToggleDbgLed__Fv
+8004274c   _Torque_Limit__Fv
+80a6ff50   _Traj
+809f1ed0   _UDM_Frame
+80a21ed0   _UDM_StartClk
+80a21ed4   _UDM_StartDisp
+809f1ecc   _UDM_bInit
+80a21ed8   _UDM_nDispInterval
+80073eb0   _USB_CheckSetupPacket__Fv
+80a28498   _USB_DESC_TBL
+80073c5c   _USB_ENUM__Fv
+80074c60   _USB_EnableBulkTransfer__FUi
+80074bf0   _USB_EnableInterrupts__FUi
+8007359c   _USB_Enumeration__Fv
+80073180   _USB_ISR__Fv
+80073a7c   _USB_InitBL__Fv
+80073740   _USB_Init__Fv
+800740fc   _USB_IntrPoll__Fv
+800734c4   _USB_ReadCmdRegister__FUc
+80074b1c   _USB_ReadEP0__FPviT2
+800749a0   _USB_ReceiveDataBy__FiPvN21
+80a26d9c   _USB_SETUP_PACKET
+80074390   _USB_SendDataBy__FiPvN21
+80073db0   _USB_SendSX2Registers__Fv
+80074ba0   _USB_SetEP0ByteCnt__Fi
+80073e4c   _USB_WaitForEP0Ready__Fv
+800733bc   _USB_WriteCmdRegister__FUcT1
+80073318   _USB_WriteDelay__Fv
+80074a90   _USB_WriteEP0__FPviT2
+80a70c30   _UpdateDbgStatus__Fi
+80049e90   _UploadParamToIPC__Fv
+800883d8   _UsbDispCheckSetup__Fv
+80042198   _VEL_Move__Fv
+8004c45c   _VMovePos__Fi
+8004c338   _VMove__Fi
+8005a95c   _VelLimitSetting__Fv
+80059440   _Vel_Monitoring__Fv
+80059ea4   _Vel_TorqSetting__Fv
+80a727e0   _VelocityMove_1msec__FP10CONTROLBUFi
+80076720   _WaitDMA__Fi
+8007e4e4   _WaitEepromReady__FUi
+8004a850   _WatchdogOperations__Fv
+800715d4   _WriteBootLoader__FP9FILE_DESC
+80066708   _WriteChannel1__FPcic
+80066740   _WriteChannel2__FPcis
+800667c0   _WriteChannel__FPciT2
+80066244   _WriteDAPort__FiT1
+8007e718   _WriteEepromChar__FUiUc
+8007e6ec   _WriteEepromInt__FUiT1
+8007e6c0   _WriteEepromShort__FUiUs
+8007e580   _WriteEepromString__FUiPci
+80065e68   _WriteEncoder__FiT1
+80071214   _WriteFile__FP9FILE_DESC
+80065ec4   _WriteFlashMemory__FPcc
+80065e2c   _WriteInnerCounter__FiT1
+80066a30   _WriteMem1__FPVciT2
+80066a68   _WriteMem2__FPVciT2
+80066ae8   _WriteMem__FPVciT2
+80066378   _WritePulseCommand__FiT1UiN31
+80080f0c   _WriteSystemData__FPC12_SYSTEM_DATA
+800660d8   _WriteZEnable__Fi
+80045d00   _Write_Block__Fv
+800459a0   _Write_Memory__Fv
+80a269b0   _XIsrTable
+8008e6c0   __CIOBUF_
+8006a514   __IsSendingStopped__Fi
+8004bc18   __Q_vmove_pos__FifN22T1P17STRUCT_MOVEDS_CMD
+80066f08   __ReadServopackPosition__FiN21
+00040000   __STACK_SIZE
+00c00000   __SYSMEM_SIZE
+80048c78   __SaveLongBlockToEeprom__Fv
+8006a550   __SendQueuePush__FiPcT1
+8007bb4c   ___App_First__Fv
+8005f134   ___ClearStatus__Fi
+8005fefc   ___ClearStop__Fi
+8008b9c4   ___ClrWatchdog__Fi
+8008b94c   ___DisableWatchdog__Fi
+8008b8d0   ___EnableWatchdog__Fi
+8007cefc   ___FilterInit
+8007c63c   ___Filtering
+8007ddc0   ___GetAck_eeprom__Fv
+8005fe10   ___GetBufPosition__Fi
+80047efc   ___GetChar__Fi
+8005d4d4   ___GetCurPos__Fi
+8005fbd8   ___GetDacOffset__Fi
+80061010   ___GetEncoderOffset__Fi
+8005d68c   ___GetErrorLimit__FiPiPc
+8005d568   ___GetErrorPls__Fi
+8007c584   ___GetFilteringFreq
+8005cb50   ___GetGain__FiPUiN42
+80065dd8   ___GetIOMode__Fv
+8005d5e0   ___GetInPosition__Fi
+80047d7c   ___GetInt__Fi
+800605d8   ___GetIoInData__FPiT1
+80060574   ___GetIoOutData__FPiT1
+8005e4b0   ___GetMotorType__Fi
+8005d508   ___GetPos__Fi
+80060718   ___GetSWLowerLimit__FiPiPc
+80060480   ___GetSWUpperLimit__FiPiPc
+80047e74   ___GetShort__Fi
+8005d440   ___GetSyncEncoder__FPiT1
+8005cc88   ___GetVGain__FiPUiN42
+8008b8a8   ___GetWatchdogStatus__Fv
+80076068   ___InitGuideBuffer__Fi
+8007c558   ___InitInternalDelay
+8005f86c   ___IsPauseCondition__Fi
+8005f82c   ___IsPauseOn__Fi
+8005c828   ___PtpMove__FiN41f
+80a78dac   ___PtpReMove__FiN41fT1
+80047fd8   ___PutChar__Fic
+80060acc   ___PutCommand__FiT1
+8005fd44   ___PutDacOffset__FiT1
+8005ca14   ___PutGain__FiUiN42
+80047f4c   ___PutInt__FiT1
+800601a4   ___PutIoTrigger__FiT1c
+80060798   ___PutPulseRatio__FiT1
+80060504   ___PutSWLowerLimit__FiT1c
+80047f90   ___PutShort__Fis
+800606c4   ___PutSyncMap__FiT1
+8004bb88   ___Q_Adj_LoadingPos__Fi
+80064ce4   ___ReadEncoder__Fi
+8007e26c   ___Readeeprom__Fi
+8005ef08   ___ResetAlarm__Fi
+80066df8   ___ResetIoBit__Fi
+8005c770   ___RsvrOnOff__FiT1
+8005ec14   ___ServoOff__Fi
+8005e8cc   ___ServoOn__Fi
+8005f038   ___SetAlarm__Fi
+8005c5e8   ___SetClosedLoop__FiT1
+8005e2a0   ___SetDelay__FiN21
+8005f648   ___SetEStopEvent__Fi
+80060f64   ___SetEncoderOffset__FiT1
+8005d618   ___SetErrorLimit__FiT1c
+8005fc10   ___SetFramesClear__Fi
+80065dc0   ___SetIOMode__Fi
+8005d5a0   ___SetInPosition__Fif
+8005f6e4   ___SetIndexReq__FiT1
+8005fa40   ___SetIntEStop__FiN21
+80060e18   ___SetIntPcIRQ__FiN21
+8005f8ac   ___SetIntStop__FiN21
+80060824   ___SetInterpolation__Fv
+80066cf0   ___SetIoBit__Fi
+8005fd84   ___SetIoIntEnable__FiT1
+80066b68   ___SetIoOutData__FiT1
+8005e564   ___SetMotorType__FiT1
+8005e640   ___SetPosLimit__Fi
+8005cefc   ___SetPosition__FiT1
+80060410   ___SetSWUpperLimit__FiT1c
+8005f5ac   ___SetStopEvent__Fi
+8005cdc8   ___SetVGain__FiUiN42
+8008b880   ___SetWatchdogStatus__FUc
+800808cc   ___SetWorkingLimit__FiT1
+80042180   ___Set_Boot_Para__Fi
+8007e1c4   ___Start_eeprom__Fv
+8007e124   ___Stop_eeprom__Fv
+80065838   ___Torque_Limit__FiT1
+8005d70c   ___VelMove__FifT1
+8007df68   ___Writeeeprom__Fc
+80086708   ___acctor
+80086804   ___adelete
+800866f4   ___anew
+80a29408   ___array_new_prefix_size
+80a28f3c   ___bss__
+800867b4   ___cadelete
+800866c0   ___canew
+80a26e38   ___cb
+80a26e98   ___cinit__
+8004ba3c   ___clear_cmd_queue__Fi
+80040000   ___data__
+8008e580   ___dl__FPv
+8008e6a0   ___dla__FPv
+8004fd10   ___dsp_move_ds__FiT1dN23T1
+8004ed88   ___dsp_move_n__FiT1dT3
+8004e4a8   ___dsp_move_p__FiT1dT3
+8004f628   ___dsp_move_s__FiT1d
+8006e924   ___dsp_v_move__FifT1
+8008af50   ___dsplib_call_callback__Fi
+8008afc4   ___dsplib_call_callback_param4__FiPvT1T2Pi
+8008ae20   ___dsplib_callback_init__Fv
+8008ae88   ___dsplib_set_callback__FiPFv_v
+8008af00   ___dsplib_set_callback_param4__FiPFPviT1Pi_v
+80040000   ___edata__
+80a29418   ___end__
+8008e6c0   ___etext__
+80065c1c   ___get_bit__FiPi
+8004c57c   ___move_v_adv__FiT1fT3
+8004c9b0   ___move_vpos_adv__FiT1fT3T1P17STRUCT_MOVEDS_CMD
+80a26b34   ___n5msCnt
+80a26b3c   ___nGuideSensorBits
+80a26b44   ___nRcvCount
+8008df40   ___nw__FUi
+8008e680   ___nwa__FUi
+80085b80   ___otf_Init
+800857dc   ___otf_ing
+800866e0   ___pcanew
+80a26e8c   ___pinit__
+8005c4a0   ___sti__AXISMAIN_C_1aa92128
+80078af8   ___sti__AxisGlb_c_BootPara
+80a2500c   ___sz
+80040260   ___text__
+8004be88   __adv_v_move_pos__FifN22T1
+8008d7c0   __auto_init
+8008cb80   __buff_read
+80086f5c   __cleanup
+80a26ab4   __cleanup_ptr
+80089c40   __crc32_gen_table__Fv
+80089e38   __crc32_get_crc__FPci
+80a28308   __ctypes_
+8008b060   __divd
+8008c440   __divf
+8008d5a0   __divi
+80087400   __divli
+8008e000   __divu
+80087100   __divul
+8008b79c   __doflush
+8008a42c   __dsp_Find_Analog_Channel__Fi
+80061778   __dsp_Find_Bd_Jnt__FiPiT2
+80085058   __dsp_Find_IO_Bit__Fi
+800850c8   __dsp_Find_IO_Port__Fi
+8006ea1c   __dsp_PTP_Move__FidT2N31
+80083ce0   __dsp_amc_init__Fv
+80079930   __dsp_amp_fault_reset__Fi
+8007996c   __dsp_amp_fault_set__Fi
+80084c94   __dsp_amp_fault_switch__Fi
+80085308   __dsp_axis_done__Fi
+800853e8   __dsp_axis_source__Fi
+800853a8   __dsp_axis_state__Fi
+8004b0d4   __dsp_clear_amc_error__Fv
+8008543c   __dsp_clear_status__Fi
+800854c8   __dsp_clear_stop__Fi
+8008ba2c   __dsp_clr_wdt_reason__FUc
+8007a1f4   __dsp_compensation_pos__FiPiPdT2
+80040c5c   __dsp_cp_move__FiT1
+8008b9a8   __dsp_disable_wdt_reason__Fi
+8008dbc0   __dsp_dwell__FiT1
+8008b930   __dsp_enable_wdt_reason__Fi
+80064528   __dsp_fget_closed_loop__FiPi
+80079ba8   __dsp_fget_control__FiPi
+80080c74   __dsp_fget_e_stop_rate__FiPi
+80062da0   __dsp_fget_error_limit__FiPdPi
+8006421c   __dsp_fget_feedback__FiPi
+80062a04   __dsp_fget_in_position__FiPd
+800635f4   __dsp_fget_index_required__FiPi
+8006280c   __dsp_fget_negative_limit__FiPi
+80061f04   __dsp_fget_negative_sw_limit__FiPdPi
+800625f0   __dsp_fget_positive_limit__FiPi
+80061b68   __dsp_fget_positive_sw_limit__FiPdPi
+80079f7c   __dsp_fget_step_mode__FiPi
+800804c0   __dsp_fget_stop_rate__FiPi
+8007a0f0   __dsp_fget_sync_control__FPi
+8007a314   __dsp_fget_tracking_factor__FiPd
+80064068   __dsp_fget_unipolar__FiPi
+800830c4   __dsp_fio_interrupt_enable__FiT1
+800832dc   __dsp_fio_interrupt_on_e_stop__FiT1
+800831d0   __dsp_fio_interrupt_on_stop__FiT1
+800833f4   __dsp_fio_interrupt_pcirq__FiT1
+80085584   __dsp_frames_clear__Fi
+800715cc   __dsp_fs_close__FUi
+800711bc   __dsp_fs_deletefile__FPc
+800715c4   __dsp_fs_files__Fv
+8007157c   __dsp_fs_format__Fv
+80071454   __dsp_fs_getfilename__FiPc
+80071460   __dsp_fs_getfilenamesize__FPcPUl
+800714f0   __dsp_fs_getfilesize__FiPUl
+80071404   __dsp_fs_getsysteminfo__FP12_SYSTEM_DATA
+800712b0   __dsp_fs_makefile__FPcPvi
+800711b0   __dsp_fs_open__FPc
+800711a8   __dsp_fs_read__FUiPvT1
+800710b0   __dsp_fs_setbootfile__FPc
+80079780   __dsp_fset_amp_enable_level__FiT1
+80063634   __dsp_fset_amp_fault__FiT1
+80063828   __dsp_fset_amp_fault_level__FiT1
+80064854   __dsp_fset_amp_reset_level__FiT1
+800643bc   __dsp_fset_closed_loop__FiT1
+80079be8   __dsp_fset_control__FiT1
+80080b70   __dsp_fset_e_stop_rate__FiT1
+80079d10   __dsp_fset_electric_gear__Fid
+8005c6f8   __dsp_fset_encoder_offset__FiT1
+80062b48   __dsp_fset_error_limit__FidT1
+8006425c   __dsp_fset_feedback__FiT1
+8006393c   __dsp_fset_filter__FiPUi
+800633d4   __dsp_fset_home__FiT1
+80063294   __dsp_fset_home_level__FiT1
+800628fc   __dsp_fset_in_position__Fid
+80063564   __dsp_fset_index_required__FiT1
+80089758   __dsp_fset_micro_stepper__Fi
+800630bc   __dsp_fset_negative_level__FiT1
+800626e4   __dsp_fset_negative_limit__FiT1
+80061ce0   __dsp_fset_negative_sw_limit__FidT1
+8007f6f4   __dsp_fset_p_integration__FiT1
+80062ee4   __dsp_fset_positive_level__FiT1
+800624bc   __dsp_fset_positive_limit__FiT1
+80061934   __dsp_fset_positive_sw_limit__FidT1
+80079a08   __dsp_fset_pulse_ratio__FiT1
+80064694   __dsp_fset_servo__Fi
+80079eac   __dsp_fset_step_mode__FiT1
+80089678   __dsp_fset_stepper__Fi
+800803bc   __dsp_fset_stop_rate__FiT1
+80080750   __dsp_fset_sw_pause__FiT1
+80080708   __dsp_fset_sw_pause_checkbit__FiN21
+8007a3a8   __dsp_fset_tracking_factor__Fid
+80063efc   __dsp_fset_unipolar__FiT1
+80063bd0   __dsp_fset_v_filter__FiPUi
+8007f9ac   __dsp_fset_v_integration__FiT1
+80061f4c   __dsp_get_accel_limit__FiPi
+800842cc   __dsp_get_act_velocity__Fi
+800843dc   __dsp_get_act_velocity_rpm__Fi
+800798a8   __dsp_get_amp_enable__FiPi
+800797e8   __dsp_get_amp_enable_level__FiPi
+80063700   __dsp_get_amp_fault__FiPi
+80063890   __dsp_get_amp_fault_level__FiPi
+80064894   __dsp_get_amp_reset_level__FiPi
+8008a1c0   __dsp_get_analog__FiPi
+8008a3e0   __dsp_get_analog_offset__FiPi
+80065cc0   __dsp_get_bit__Fi
+80064480   __dsp_get_closed_loop__FiPi
+80084260   __dsp_get_com_velocity__Fi
+8008433c   __dsp_get_com_velocity_rpm__Fi
+80084134   __dsp_get_command__FiPd
+80079ae8   __dsp_get_control__FiPi
+80083e48   __dsp_get_counter__FiPd
+80085604   __dsp_get_current_acc__Fi
+8008a29c   __dsp_get_dac_output__FiPi
+80080c14   __dsp_get_e_stop_rate__FiPi
+80079ddc   __dsp_get_electric_gear__FiPd
+80065b80   __dsp_get_encoder_direction__Fi
+8005c738   __dsp_get_encoder_offset__Fi
+800841f8   __dsp_get_error__FiPd
+80062c90   __dsp_get_error_limit__FiPdPi
+8004b0f0   __dsp_get_error_status__Fv
+80064170   __dsp_get_feedback__FiPi
+80063b20   __dsp_get_filter__FiPUi
+80063454   __dsp_get_home__FiPi
+800632d4   __dsp_get_home_level__FiPi
+800611f8   __dsp_get_home_sn_event__FiPi
+8006298c   __dsp_get_in_position__FiPd
+800635a4   __dsp_get_index_required__FiPi
+80084f40   __dsp_get_io2__FPiT1
+80065c88   __dsp_get_io64__FPi
+80084ee8   __dsp_get_io__FPi
+80084da4   __dsp_get_io_mode__FiPi
+800896d8   __dsp_get_micro_stepper__Fi
+800630fc   __dsp_get_negative_level__FiPi
+80062770   __dsp_get_negative_limit__FiPi
+80061e48   __dsp_get_negative_sw_limit__FiPdPi
+80064784   __dsp_get_out64__FPi
+80065d40   __dsp_get_outbit__Fi
+8007f838   __dsp_get_p_integration__FiPi
+80084008   __dsp_get_position__FiPd
+800864a0   __dsp_get_position_lpf__FiPi
+8008650c   __dsp_get_position_notch_filter__FiPi
+80062f24   __dsp_get_positive_level__FiPi
+80062548   __dsp_get_positive_limit__FiPi
+80061a9c   __dsp_get_positive_sw_limit__FiPdPi
+80079a88   __dsp_get_pulse_ratio__FiPi
+80064568   __dsp_get_servo__Fi
+80079f2c   __dsp_get_step_mode__FiPi
+8006474c   __dsp_get_stepper__Fi
+80080460   __dsp_get_stop_rate__FiPi
+80080844   __dsp_get_sw_pause__FiPi
+800807dc   __dsp_get_sw_pause_checkbit__FiPiT2
+80080790   __dsp_get_sw_pause_event_st__FiPi
+8007a0a4   __dsp_get_sync_control__FPi
+8007a1a0   __dsp_get_sync_gain__FPf
+80083edc   __dsp_get_sync_position__FPdT1
+8007a2b8   __dsp_get_tracking_factor__FiPd
+80063fc0   __dsp_get_unipolar__FiPi
+80063db0   __dsp_get_v_filter__FiPUi
+8007faa8   __dsp_get_v_integration__FiPi
+80062140   __dsp_get_vel_limit__FiPd
+80086574   __dsp_get_velocity_lpf__FiPi
+800865e0   __dsp_get_velocity_notch_filter__FiPi
+8008b8bc   __dsp_get_wdt_status__Fv
+80084b40   __dsp_home_switch__Fi
+800851d0   __dsp_in_motion__Fi
+80085230   __dsp_in_position__Fi
+80085170   __dsp_in_sequence__Fi
+80083000   __dsp_io_interrupt_enable__FiT1
+8008324c   __dsp_io_interrupt_on_e_stop__FiT1
+80083140   __dsp_io_interrupt_on_stop__FiT1
+80083358   __dsp_io_interrupt_pcirq__FiT1
+80083470   __dsp_io_interrupt_pcirq_eoi__Fi
+8008dc08   __dsp_io_trigger__FiN21
+80085290   __dsp_motion_done__Fi
+8006ca40   __dsp_move__FidT2T1
+8006dc80   __dsp_move_all__FiPiPdT3T2
+8004d94c   __dsp_move_ds__FidN22T1
+8004cd48   __dsp_move_dst__FidN22T1
+8004d834   __dsp_move_n__FidT2
+8004cc2c   __dsp_move_nt__FidT2
+8004d7a0   __dsp_move_p__FidT2
+8004cb98   __dsp_move_pt__FidT2
+8004d8c8   __dsp_move_s__Fid
+8004ccc0   __dsp_move_st__Fid
+80084c20   __dsp_neg_switch__Fi
+8006d1c0   __dsp_p_move__FidT2T1
+8005c62c   __dsp_param_flush__Fv
+80084bb4   __dsp_pos_switch__Fi
+8006cc20   __dsp_r_move__FidT2T1
+80084ff0   __dsp_reset_bit__Fi
+8006cfe0   __dsp_rs_move__FidT2T1
+8006ce00   __dsp_s_move__FidT2T1
+8006df78   __dsp_s_move_all__FiPiPdT3T2
+80061fec   __dsp_set_accel_limit__FiT1
+80079838   __dsp_set_amp_enable__FiT1
+80079718   __dsp_set_amp_enable_level__FiT1
+8006369c   __dsp_set_amp_fault__FiT1
+800637a8   __dsp_set_amp_fault_level__FiT1
+800647d4   __dsp_set_amp_reset_level__FiT1
+8008a380   __dsp_set_analog_offset__FiT1
+80084f84   __dsp_set_bit__Fi
+80064320   __dsp_set_closed_loop__FiT1
+800840ac   __dsp_set_command__Fid
+80079b48   __dsp_set_control__FiT1
+8008a2e8   __dsp_set_dac_output__FiT1
+80080880   __dsp_set_e_stop__Fi
+80080a8c   __dsp_set_e_stop_rate__FiT1
+80079c68   __dsp_set_electric_gear__Fid
+80065b08   __dsp_set_encoder_direction__FiT1
+8005c69c   __dsp_set_encoder_offset__FiT1
+80062a44   __dsp_set_error_limit__FidT1
+800640a8   __dsp_set_feedback__FiT1
+80063a50   __dsp_set_filter__FiPUi
+80063370   __dsp_set_home__FiT1
+80063198   __dsp_set_home_level__FiT1
+800611b4   __dsp_set_home_sn_event__FiT1
+8006284c   __dsp_set_in_position__Fid
+800634fc   __dsp_set_index_required__FiT1
+80084ea4   __dsp_set_io2__FiT1
+80066c30   __dsp_set_io64__FiPi
+80084e58   __dsp_set_io__Fi
+80084d00   __dsp_set_io_mode__FiT1
+80089718   __dsp_set_micro_stepper__Fi
+800645a0   __dsp_set_motor_type__FiT1
+80062fc0   __dsp_set_negative_level__FiT1
+80062648   __dsp_set_negative_limit__FiT1
+80061bb4   __dsp_set_negative_sw_limit__FidT1
+8008664c   __dsp_set_otf_filter__FiT1
+8007f7a8   __dsp_set_p_integration__FiT1
+80083dc0   __dsp_set_position__Fid
+800861a0   __dsp_set_position_lpf__FiT1
+80086260   __dsp_set_position_notch_filter__FiT1
+80062de8   __dsp_set_positive_level__FiT1
+8006241c   __dsp_set_positive_limit__FiT1
+80061814   __dsp_set_positive_sw_limit__FidT1
+800799a8   __dsp_set_pulse_ratio__FiT1
+80064600   __dsp_set_servo__Fi
+80079e4c   __dsp_set_step_mode__FiT1
+80089638   __dsp_set_stepper__Fi
+8008028c   __dsp_set_stop__Fi
+800802c8   __dsp_set_stop_rate__FiT1
+800806a8   __dsp_set_sw_pause__FiT1
+800805e4   __dsp_set_sw_pause_checkbit__FiN21
+80080500   __dsp_set_sw_pause_event_st__FiT1
+8007a060   __dsp_set_sync_control__Fi
+8007a128   __dsp_set_sync_gain__Ff
+80079fbc   __dsp_set_sync_map_axes__FiT1
+8007a358   __dsp_set_tracking_factor__Fid
+80063e5c   __dsp_set_unipolar__FiT1
+80063ce8   __dsp_set_v_filter__FiPUi
+8007f8d4   __dsp_set_v_integration__FiT1
+8006221c   __dsp_set_vel_limit__Fid
+80086320   __dsp_set_velocity_lpf__FiT1
+800863e0   __dsp_set_velocity_notch_filter__FiT1
+8008b894   __dsp_set_wdt_status__FUc
+8006c900   __dsp_start_move__FidT2T1
+8006da20   __dsp_start_move_all__FiPiPdT3T2
+8006d080   __dsp_start_p_move__FidT2T1
+8006cae0   __dsp_start_r_move__FidT2T1
+8006cea0   __dsp_start_rs_move__FidT2T1
+8006ccc0   __dsp_start_s_move__FidT2T1
+8006dd20   __dsp_start_s_move_all__FiPiPdT3T2
+8006d260   __dsp_start_t_move__FidT2N21
+8006e020   __dsp_start_t_move_all__FiPiPdT3N22
+8006d640   __dsp_start_tr_move__FidT2N21
+8006d830   __dsp_start_trs_move__FidT2N21
+8006d450   __dsp_start_ts_move__FidT2N21
+8006e320   __dsp_start_ts_move_all__FiPiPdT3N22
+8006d3ac   __dsp_t_move__FidT2N21
+8006e26c   __dsp_t_move_all__FiPiPdT3N22
+8006d78c   __dsp_tr_move__FidT2N21
+8006d97c   __dsp_trs_move__FidT2N21
+8006d59c   __dsp_ts_move__FidT2N21
+8006e56c   __dsp_ts_move_all__FiPiPdT3N22
+8006e7c8   __dsp_v_move__FifT1
+8007a21c   __dsp_version_chk__FiPi
+8006e6b4   __dsp_wait_for_all__FiPi
+8006e620   __dsp_wait_for_done__Fi
+80a26ab8   __dtors_ptr
+8008e180   __fixdli
+8008e0c0   __fixdu
+8008e380   __fltlif
+80089940   __frcdivd
+8008d6c0   __frcdivf
+80a25da0   __ft_end
+80a25a30   __ftable
+80a26e6c   __lock
+80a26e74   __memory_size
+8008e540   __nop
+800678c0   __printfi
+8006a718   __puthex__Fc
+8008ba60   __rd_ok
+8008e548   __register_lock
+8008e55c   __register_unlock
+8008d8c0   __remi
+80087344   __remli
+8008e240   __remu
+80087040   __remul
+8008b4c0   __round
+80a29418   __stack
+8008dcc0   __strasg
+81000000   __sys_memory
+80a25c60   __tmpnams
+8008e600   __trunc
+80a26e70   __unlock
+8008bb20   __wrt_ok
+8008b4b4   _abort
+80a70210   _acc_time
+80a70190   _acc_traj
+8007a740   _add_device
+80086850   _alloc_array__21__Narray_cpp_61f5e116FUiT1PFUi_Pv
+80a702f0   _amc_error
+80086a38   _array_del__21__Narray_cpp_61f5e116FPvUiT2PFPvi_vbPFPv_vT5
+80086938   _array_new__21__Narray_cpp_61f5e116FPvUiT2PFPv_vPFUi_Pv
+80089f00   _atan
+8008bfa0   _atan2
+8008b3d8   _atexit
+8008c2c0   _atoi
+80a6aa1c   _axis_mov
+80057e84   _bell_curve_acc__Ff
+8008e400   _c_int00
+80047690   _c_int02__Fv
+80077944   _calloc
+8008e4e0   _ceil
+8007b090   _close
+80088b00   _cos
+80926cc0   _dbuf
+8092e9c0   _dbuf_cnt
+80a70220   _dcc_time
+80a701a0   _dcc_traj
+800868e8   _dealloc_array__21__Narray_cpp_61f5e116FPvUiT2PFPv_vb
+8008e5d4   _default_new_handler__3stdFv
+80a700f0   _delt_g_addr
+80a26190   _delt_g_intaddr
+80a70230   _delt_s
+80a700e0   _delt_s_addr
+80a700c0   _delt_s_b
+80a70110   _delt_s_buff
+80a700d0   _delt_s_count
+80a26180   _delt_s_intaddr
+80a261c0   _delt_s_intbuff
+80a261a0   _delt_s_intcount
+80a261b0   _delt_s_interruptcount
+80a700b0   _delt_s_psh
+80076060   _dummy_axisint_c__Fv
+80a26328   _eDumpHdr
+80087e00   _ecvt
+80a26e88   _errno
+8008b2a0   _exit
+8008a700   _exp
+80a701c0   _f_cur_pls
+80a701d0   _f_cur_pls_b
+80a701e0   _f_delt_s
+80a701b0   _f_dest_pls
+8008e640   _fabsf
+8008ce40   _fclose
+80087500   _fcvt
+8008b6a0   _fflush
+8008c5e8   _fgetc
+80086b80   _fopen
+8007c1a0   _forder__FdN41
+8008c76c   _fputc
+800879f4   _fputs
+800420dc   _frames_left__Fi
+80077d90   _free
+80086be8   _freopen
+8008d0c0   _frexp
+8008dac0   _frexpf
+8008d9c0   _fseek
+80a26c7c   _g_FS_ClusterBase
+80a26c50   _g_FS_FileHandle
+80a26c78   _g_FS_FileSystemReady
+80a26c44   _g_FS_ShadowClusterTable
+80a26c40   _g_FS_ShadowFileTable
+80a26c48   _g_FS_TotalNumOfBlocks
+80a26c4c   _g_FS_TotalNumOfCluster
+80a25018   _g_SerHookFunc
+80a26d80   _g_bBusActivity
+80a26d70   _g_bENUMOK
+80a26d7c   _g_bEP0BUFReady
+80a26d94   _g_bEnableTransferFlag
+80a26d88   _g_bFlags
+80a26d74   _g_bGotSetup
+80a26d90   _g_bIsIntr
+80a26d78   _g_bReadIntr
+80a26d84   _g_bReady
+80a26d98   _g_bUSBOpened
+80a26d8c   _g_bWaste
+80926b10   _g_f
+80926b14   _g_ff
+80926b18   _g_fff
+80926b04   _g_i
+80926b08   _g_ii
+80926b0c   _g_iii
+80a25a2c   _g_nDisplayMode
+80a25a28   _g_nNDOKSerialMode
+80a25a24   _g_nNDOKSerialStxEtxStrIndex
+80a21edc   _g_nSerBaudrate
+80a21ee0   _g_nSerDataBit
+80a21ee4   _g_nSerParity
+80a21ee8   _g_nSerStopBit
+80a2501c   _g_pSerParam
+80a25024   _g_sNDOKSerialStxEtxString
+80a21eec   _g_stQueue
+8007a290   _get_axis_var__FiPiPA4_iPA4_f
+8008c5c0   _getc
+8008c5d0   _getchar
+8007da4c   _getenv
+80a70290   _inter_k
+80a70298   _inter_k2
+80a70100   _jnt_run
+80a702b0   _lITPCmd
+80a702c0   _lITPSt
+8008c140   _ldexp
+8008cf80   _ldexpf
+8008a980   _log
+8007af50   _lseek
+8008d200   _ltoa
+80a29410   _m_nAddress
+800860e0   _main
+8007773c   _malloc
+80078148   _memalign
+8008e2e0   _memccpy
+8008abe0   _memcpy
+8008d480   _memset
+800776d4   _minit
+80a26318   _mmHdr
+8008dc54   _mmcDelay__Fi
+80089620   _mmc_all_axes__Fv
+80089600   _mmc_axes__FiPi
+8008dda0   _modf
+80a26b28   _n10msOpFlag
+80a26b20   _n1msOpCount
+80a26b24   _n5msOpFlag
+80a26b38   _nGuideBits
+80a26b30   _nIOCount
+80a702e0   _nITPMode
+80a26b2c   _nSimCount
+80a2940c   _new_handler_fun__3std
+80077438   _nop__Fv
+80926c44   _nothrow__3std
+8007aaa0   _open
+80a281dc   _pBootPara
+80a6a9a4   _pCBuf
+80a28244   _pDownloadDPRAM
+80a6a9a0   _pGBuf
+8008e7e0   _p_offs
+80a26338   _peDumpBody
+80926c48   _plsCmd
+80082140   _pow
+8008de80   _printf
+80a26e64   _ptr_icon_iport
+80a26e68   _ptr_icon_lamp
+80a26e5c   _ptr_icon_oport1
+80a26e60   _ptr_icon_oport2
+80a26c1c   _ptr_sys_sabs
+80a26c14   _ptr_sys_sctrl
+80a26c18   _ptr_sys_sstat
+80a26c04   _ptr_user_iport
+80a26c08   _ptr_user_iport2
+80a26c0c   _ptr_user_iport3
+80a26c10   _ptr_user_iport4
+80a26bf4   _ptr_user_oport
+80a26bf8   _ptr_user_oport2
+80a26bfc   _ptr_user_oport3
+80a26c00   _ptr_user_oport4
+8008c740   _putc
+8008c750   _putchar
+80087980   _puts
+8006a4b8   _queue_datsize__Fi
+8006a354   _queue_initialize__Fi
+8006a420   _queue_pop__FiPUc
+8006a384   _queue_push__FiUc
+8008d340   _rand
+8007acd4   _read
+8008cd8c   _readmsg
+80077a00   _realloc
+809f1ec8   _recording_cnt
+8008e660   _remove
+8007a9d8   _remove_device
+8007b240   _rename
+80a7a9c0   _sDbgCmdBuff
+80a7aa30   _sDbgMsgBuff
+80a26bec   _sen_output
+8008e5c0   _set_new_handler__3stdFPFv_v
+8008bde0   _setvbuf
+80088f00   _sin
+800892c0   _sinh
+8008ca20   _sprintf
+8008a460   _sqrt
+8008bc20   _sqrtf
+8008d404   _srand
+8008e480   _strlen
+8092e9c8   _sum_rec
+800886e0   _tan
+8006a2c0   _toAscii__Fc
+80a26324   _uiEepromSaveAddr
+8007b1a0   _unlink
+80926b40   _userio_ax
+80926b3c   _userio_axis_enable
+80926b34   _userio_axis_int
+80926b38   _userio_global_int_enable
+80926b24   _userio_int_data
+80926b28   _userio_int_data_b
+80926b30   _userio_int_edge
+80926b20   _userio_int_enable
+80926b2c   _userio_int_flag
+80926b1c   _userio_mode_select
+80a70170   _virtual_pos
+80a701f0   _vm_cur_pls
+80a70200   _vm_cur_pls_b
+8007ae10   _write
+8008cce0   _writemsg
+80a26e98   cinit
+80040000   edata
+80a29418   end
+8008e6c0   etext
+80a26e8c   pinit
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address    name
+--------   ----
+00000400   _SerialISR__Fv
+00040000   __STACK_SIZE
+00c00000   __SYSMEM_SIZE
+80040000   _InterruptVectors
+80040000   ___edata__
+80040000   ___data__
+80040000   .data
+80040000   edata
+80040260   .text
+80040260   ___text__
+80040788   _NoOperation__Fv
+80040810   _PTP_Move__Fv
+80040a20   _SPL_Line_Move__Fv
+80040a28   _SPL_Arc_Move__Fv
+80040a30   _SPL_Move__Fv
+80040a38   _CP_Line_Move__Fv
+80040c5c   __dsp_cp_move__FiT1
+80041570   _RECT_Move__Fv
+80041578   _CP_Move__Fv
+80041580   _PUT_Gain__Fv
+800416c4   _GET_Gain__Fv
+80041820   _PUT_VGain__Fv
+80041964   _GET_VGain__Fv
+80041ac0   _GET_Position__Fv
+80041b4c   _Get_Command__Fv
+80041bdc   _PUT_Curr_Pos__Fv
+80041c64   _PUT_Position__Fv
+80041cec   _PUT_Error_Pls__Fv
+80041d90   _GET_In_Position__Fv
+80041e38   _PUT_In_Position__Fv
+80041edc   _GET_Error_Limit__Fv
+80041fa0   _PUT_Error_Limit__Fv
+8004205c   _PUT_Empty_Frame__Fv
+800420dc   _frames_left__Fi
+80042148   _GET_Boot_Memory__Fv
+80042180   ___Set_Boot_Para__Fi
+80042198   _VEL_Move__Fv
+800422e4   _GET_IO_Port__Fv
+8004237c   _SET_IO_Bit__Fv
+800423dc   _RESET_IO_Bit__Fv
+8004243c   _IO_Mode_Set__Fv
+8004249c   _IO_Mode_Put__Fv
+80042504   _SET_Delay__Fv
+80042590   _PUT_Stepper__Fv
+80042618   _GET_Stepper__Fv
+800426a4   _Servo_On__Fv
+800426f8   _Servo_Off__Fv
+8004274c   _Torque_Limit__Fv
+800427d8   _Alarm_Reset__Fv
+80042828   _Alarm_Set__Fv
+80042878   _Clear_Status__Fv
+8004290c   _Get_Stop_Event__Fv
+8004295c   _Get_Stop_Rate__Fv
+800429e4   _Put_Stop_Rate__Fv
+80042a6c   _Get_E_Stop_Event__Fv
+80042abc   _Get_E_Stop_Rate__Fv
+80042b44   _Put_E_Stop_Rate__Fv
+80042bcc   _Get_Pos_Sn_Event__Fv
+80042c54   _Put_Pos_Sn_Event__Fv
+80042cd8   _Get_Neg_Sn_Event__Fv
+80042d5c   _Put_Neg_Sn_Event__Fv
+80042de0   _Get_Pos_Level__Fv
+80042e64   _Put_Pos_Level__Fv
+80042eec   _Get_Neg_Level__Fv
+80042f74   _Put_Neg_Level__Fv
+80042ff8   _Get_Home_Sn_Event__Fv
+8004307c   _Put_Home_Sn_Event__Fv
+80043100   _Get_Home_Level__Fv
+80043184   _Put_Home_Level__Fv
+8004320c   _Get_Index_Req__Fv
+8004329c   _Put_Index_Req__Fv
+80043320   _Get_Int_Stop__Fv
+800433f0   _Get_Int_E_Stop__Fv
+8004347c   _Get_Int_PcIRQ__Fv
+80043508   _Put_Axis_Stat__Fv
+80043594   _Put_Axis_Source__Fv
+8004361c   _Get_Amp_Fault__Fv
+800436a4   _Put_Amp_Fault__Fv
+8004372c   _Get_Amp_Fault_Level__Fv
+800437b4   _Put_Amp_Fault_Level__Fv
+80043838   _Get_Amp_Reset_Level__Fv
+800438bc   _Put_Amp_Reset_Level__Fv
+80043940   _Get_Dac_Offset__Fv
+80043a50   _Put_Dac_Offset__Fv
+80043b38   _Get_Feedback_Device__Fv
+80043bbc   _Put_Feedback_Device__Fv
+80043c40   _Get_Voltage_Device__Fv
+80043cc4   _Put_Voltage_Device__Fv
+80043d4c   _Get_Axis_Boot_Memory__Fv
+80043d9c   _Get_Frames_Clear__Fv
+80043e18   _Get_Closed_Loop__Fv
+80043e9c   _Put_Closed_Loop__Fv
+80043f20   _Get_Amp_On_Level__Fv
+80043fa4   _Put_Amp_On_Level__Fv
+8004402c   _Get_IO_Int_Enable__Fv
+800440bc   _Reserved_Function__Fv
+800440c4   _Get_Userio_Int_Edge__Fv
+80044154   _Put_Userio_Int_Edge__Fv
+800441a0   _Put_Buf_Position__Fv
+8004422c   _Clear_Stop__Fv
+800442c4   _Main_Delay__Fv
+80044354   _Get_IO_Trigger__Fv
+8004441c   _Get_SW_Upper_Limit__Fv
+800444e0   _Put_SW_Upper_Limit__Fv
+8004459c   _Get_SW_Lower_Limit__Fv
+80044660   _Put_SW_Lower_Limit__Fv
+8004471c   _Put_IO_Out_Data__Fv
+800447b0   _Get_Control_Cfg__Fv
+80044834   _Put_Control_Cfg__Fv
+800448b8   _Get_PosImode__Fv
+8004493c   _Put_PosImode__Fv
+800449c0   _Get_VelImode__Fv
+80044a44   _Put_VelImode__Fv
+80044acc   _Get_GearRatio__Fv
+80044b70   _Put_GearRatio__Fv
+80044c14   _Get_SyncMap__Fv
+80044cac   _Get_SyncOn__Fv
+80044ce4   _Get_SyncOff__Fv
+80044d1c   _Get_SyncGain__Fv
+80044db8   _Put_SyncGain__Fv
+80044e44   _Get_Compensation_Pos__Fv
+80044e4c   _Get_Pulse_Mode__Fv
+80044ed4   _Put_Pulse_Mode__Fv
+80044f58   _Put_Encoder__Fv
+80044fe0   _Put_SyncEncoder__Fv
+80045098   _Get_Pulse_Ratio__Fv
+80045124   _Put_Pulse_Ratio__Fv
+800451ac   _Get_Interpolation__Fv
+800451dc   _Put_Empty_Interpolation__Fv
+8004525c   _Get_Abs_Encoder__Fv
+800452c0   _Exist_Check__Fv
+800452c8   _Put_ASIC__Fv
+80045348   _Save_Boot_Frame__Fv
+80045378   _Start_Capture__Fv
+80045498   _Stop_Capture__Fv
+800454c8   _Put_Captured_Position__Fv
+80045660   _Get_Resolution__Fv
+80045844   _Put_Resolution__Fv
+80045948   _IEEE2TMS__Fi
+80045974   _TMS2IEEE__Ff
+800459a0   _Write_Memory__Fv
+80045a74   _PUT_Query__Fv
+80045c74   _Read_Memory__Fv
+80045d00   _Write_Block__Fv
+80045e28   _Copy_Para_2_BootPara__Fv
+80046968   _InitPositionFilter__Fi
+80046a1c   _InitVelocityFilter__Fi
+80046ac4   _InitOtfFilter__Fi
+80046b20   _Copy_BootPara_2_Para__Fv
+80047690   _c_int02__Fv
+800478fc   _InitITPQ__Fi
+80047a5c   _PutITPQ__FiT1
+80047b84   _GetITPQ__Fi
+80047ce4   _GetLeftQ__Fi
+80047d24   _IsQEmpty__Fi
+80047d7c   ___GetInt__Fi
+80047e74   ___GetShort__Fi
+80047efc   ___GetChar__Fi
+80047f4c   ___PutInt__FiT1
+80047f90   ___PutShort__Fis
+80047fd8   ___PutChar__Fic
+80048020   _ReadBootParam__FP10_UBOOTPARA
+80048154   _SaveBootParam__FP10_UBOOTPARA
+80048234   _InitBootParam__FP10_UBOOTPARA
+80048c48   _SaveLongBlockToEeprom__Fv
+80048c78   __SaveLongBlockToEeprom__Fv
+80049070   _LoadLongBlockFromEeprom__FUiPcPUiT3i
+8004917c   _AcceptString__Fv
+80049524   _RunConfigUploadToIPC__Fv
+80049994   _RunConfigSaveFromIPC__Fv
+80049e90   _UploadParamToIPC__Fv
+8004a304   _DnloadParamFromIPC__Fv
+8004a850   _WatchdogOperations__Fv
+8004aa08   _SetEncoderDirection__Fv
+8004aa9c   _GetEncoderDirection__Fv
+8004ab24   _SetSwPause__Fv
+8004abb0   _GetSwPauseEvent__Fv
+8004ac34   _SetSwPauseCheckBit__Fv
+8004acfc   _GetSwPauseCheckBit__Fv
+8004adb4   _GetMovexCmd__Fv
+8004b0d4   __dsp_clear_amc_error__Fv
+8004b0f0   __dsp_get_error_status__Fv
+8004b164   _AMCFilteringSet__Fv
+8004b318   _AMCFilteringGet__Fv
+8004b4cc   _AMCStatusGet__Fv
+8004b524   _InitDbgCmdBuff__Fi
+8004b570   _PushDbgCmdBuff__FiT1fN23T1
+8004b670   _DPRAMTest__Fv
+8004b870   _ReloadEncoderPos__Fv
+8004ba3c   ___clear_cmd_queue__Fi
+8004bb88   ___Q_Adj_LoadingPos__Fi
+8004bc18   __Q_vmove_pos__FifN22T1P17STRUCT_MOVEDS_CMD
+8004be88   __adv_v_move_pos__FifN22T1
+8004c338   _VMove__Fi
+8004c45c   _VMovePos__Fi
+8004c57c   ___move_v_adv__FiT1fT3
+8004c9b0   ___move_vpos_adv__FiT1fT3T1P17STRUCT_MOVEDS_CMD
+8004cb98   __dsp_move_pt__FidT2
+8004cc2c   __dsp_move_nt__FidT2
+8004ccc0   __dsp_move_st__Fid
+8004cd48   __dsp_move_dst__FidN22T1
+8004d7a0   __dsp_move_p__FidT2
+8004d834   __dsp_move_n__FidT2
+8004d8c8   __dsp_move_s__Fid
+8004d94c   __dsp_move_ds__FidN22T1
+8004e4a8   ___dsp_move_p__FiT1dT3
+8004ed88   ___dsp_move_n__FiT1dT3
+8004f628   ___dsp_move_s__FiT1d
+8004fd10   ___dsp_move_ds__FiT1dN23T1
+800543cc   _InitBdParameter__Fv
+80054cd0   _InitPara__Fv
+80055974   _PTPMove__FiT1
+80055b20   _Interpolation__Fv
+80056284   _PlanTrapezoidal__FiN21fT1
+800562dc   _PlanAsymTrapezoidal__FiN31fT1
+8005633c   _PlanTrapezoidal_old__FiN21fT1
+80056f4c   _PlanAsymTrapezoidal_old__FiN31fT1
+80057e84   _bell_curve_acc__Ff
+800581d0   _SetVelocityRate_old__Fv
+8005861c   _SetVelocityRate__Fv
+80058bb0   _NdokOnSerialEvent__FPCUci
+80058bcc   _NdokOnIdleEvent__Fv
+80058bd4   _NdokOnLowIdleEvent__Fv
+80058bdc   _DSPLibTesting__Fv
+80058ecc   _SerialTesting__Fv
+80058ed4   _EncoderOffsetTesting__Fv
+800590b8   _AMPResetLevelTesting__Fv
+800592ac   _GetOutIOTest__Fv
+80059340   _FrameBufferTest__Fv
+80059440   _Vel_Monitoring__Fv
+80059514   _Position_Command_Setting__Fv
+8005980c   _PositionSetting__Fv
+80059994   _StopRateTesting__Fv
+80059bf4   _LimitSwitchTesting__Fv
+80059de4   _MotorTypeSetting__Fv
+80059ea4   _Vel_TorqSetting__Fv
+80059fb0   _ControlLoopSetting__Fv
+8005a0bc   _FeedbackSetting__Fv
+8005a1d0   _DACPolSetting__Fv
+8005a2dc   _PulseRatioSetting__Fv
+8005a478   _GainSetting__Fv
+8005a7ac   _SoftwareLimitSetting__Fv
+8005a95c   _VelLimitSetting__Fv
+8005aad0   _INPositionSetTesting__Fv
+8005ac58   _LimitEventTesting__Fv
+8005ae7c   _HomeSensorTesting__Fv
+8005b118   _AMPFaultTesting__Fv
+8005b270   _AMPEnableTesting__Fv
+8005b5d8   _DACOffsetTesting__Fv
+8005b6f8   _LimitTesting__Fv
+8005b7d4   _GuideTesting__Fv
+8005b828   _InTesting__Fv
+8005b8a8   _OutTesting__Fv
+8005bad4   _ICon_OutTesting__Fv
+8005bbbc   _ICon_IOTesting__Fv
+8005bf10   _Eeprom_Test__Fv
+8005c4a0   ___sti__AXISMAIN_C_1aa92128
+8005c5e8   ___SetClosedLoop__FiT1
+8005c62c   __dsp_param_flush__Fv
+8005c69c   __dsp_set_encoder_offset__FiT1
+8005c6f8   __dsp_fset_encoder_offset__FiT1
+8005c738   __dsp_get_encoder_offset__Fi
+8005c770   ___RsvrOnOff__FiT1
+8005c828   ___PtpMove__FiN41f
+8005ca14   ___PutGain__FiUiN42
+8005cb50   ___GetGain__FiPUiN42
+8005cc88   ___GetVGain__FiPUiN42
+8005cdc8   ___SetVGain__FiUiN42
+8005cefc   ___SetPosition__FiT1
+8005d440   ___GetSyncEncoder__FPiT1
+8005d4d4   ___GetCurPos__Fi
+8005d508   ___GetPos__Fi
+8005d568   ___GetErrorPls__Fi
+8005d5a0   ___SetInPosition__Fif
+8005d5e0   ___GetInPosition__Fi
+8005d618   ___SetErrorLimit__FiT1c
+8005d68c   ___GetErrorLimit__FiPiPc
+8005d70c   ___VelMove__FifT1
+8005e2a0   ___SetDelay__FiN21
+8005e4b0   ___GetMotorType__Fi
+8005e564   ___SetMotorType__FiT1
+8005e640   ___SetPosLimit__Fi
+8005e8cc   ___ServoOn__Fi
+8005ec14   ___ServoOff__Fi
+8005ef08   ___ResetAlarm__Fi
+8005f038   ___SetAlarm__Fi
+8005f134   ___ClearStatus__Fi
+8005f5ac   ___SetStopEvent__Fi
+8005f648   ___SetEStopEvent__Fi
+8005f6e4   ___SetIndexReq__FiT1
+8005f82c   ___IsPauseOn__Fi
+8005f86c   ___IsPauseCondition__Fi
+8005f8ac   ___SetIntStop__FiN21
+8005fa40   ___SetIntEStop__FiN21
+8005fbd8   ___GetDacOffset__Fi
+8005fc10   ___SetFramesClear__Fi
+8005fd44   ___PutDacOffset__FiT1
+8005fd84   ___SetIoIntEnable__FiT1
+8005fe10   ___GetBufPosition__Fi
+8005fefc   ___ClearStop__Fi
+800601a4   ___PutIoTrigger__FiT1c
+80060410   ___SetSWUpperLimit__FiT1c
+80060480   ___GetSWUpperLimit__FiPiPc
+80060504   ___PutSWLowerLimit__FiT1c
+80060574   ___GetIoOutData__FPiT1
+800605d8   ___GetIoInData__FPiT1
+800606c4   ___PutSyncMap__FiT1
+80060718   ___GetSWLowerLimit__FiPiPc
+80060798   ___PutPulseRatio__FiT1
+80060824   ___SetInterpolation__Fv
+80060acc   ___PutCommand__FiT1
+80060e18   ___SetIntPcIRQ__FiN21
+80060f64   ___SetEncoderOffset__FiT1
+80061010   ___GetEncoderOffset__Fi
+80061048   _SetEncoderOffset__Fv
+80061128   _GetEncoderOffset__Fv
+800611b4   __dsp_set_home_sn_event__FiT1
+800611f8   __dsp_get_home_sn_event__FiPi
+80061778   __dsp_Find_Bd_Jnt__FiPiT2
+80061814   __dsp_set_positive_sw_limit__FidT1
+80061934   __dsp_fset_positive_sw_limit__FidT1
+80061a9c   __dsp_get_positive_sw_limit__FiPdPi
+80061b68   __dsp_fget_positive_sw_limit__FiPdPi
+80061bb4   __dsp_set_negative_sw_limit__FidT1
+80061ce0   __dsp_fset_negative_sw_limit__FidT1
+80061e48   __dsp_get_negative_sw_limit__FiPdPi
+80061f04   __dsp_fget_negative_sw_limit__FiPdPi
+80061f4c   __dsp_get_accel_limit__FiPi
+80061fec   __dsp_set_accel_limit__FiT1
+80062140   __dsp_get_vel_limit__FiPd
+8006221c   __dsp_set_vel_limit__Fid
+8006241c   __dsp_set_positive_limit__FiT1
+800624bc   __dsp_fset_positive_limit__FiT1
+80062548   __dsp_get_positive_limit__FiPi
+800625f0   __dsp_fget_positive_limit__FiPi
+80062648   __dsp_set_negative_limit__FiT1
+800626e4   __dsp_fset_negative_limit__FiT1
+80062770   __dsp_get_negative_limit__FiPi
+8006280c   __dsp_fget_negative_limit__FiPi
+8006284c   __dsp_set_in_position__Fid
+800628fc   __dsp_fset_in_position__Fid
+8006298c   __dsp_get_in_position__FiPd
+80062a04   __dsp_fget_in_position__FiPd
+80062a44   __dsp_set_error_limit__FidT1
+80062b48   __dsp_fset_error_limit__FidT1
+80062c90   __dsp_get_error_limit__FiPdPi
+80062da0   __dsp_fget_error_limit__FiPdPi
+80062de8   __dsp_set_positive_level__FiT1
+80062ee4   __dsp_fset_positive_level__FiT1
+80062f24   __dsp_get_positive_level__FiPi
+80062fc0   __dsp_set_negative_level__FiT1
+800630bc   __dsp_fset_negative_level__FiT1
+800630fc   __dsp_get_negative_level__FiPi
+80063198   __dsp_set_home_level__FiT1
+80063294   __dsp_fset_home_level__FiT1
+800632d4   __dsp_get_home_level__FiPi
+80063370   __dsp_set_home__FiT1
+800633d4   __dsp_fset_home__FiT1
+80063454   __dsp_get_home__FiPi
+800634fc   __dsp_set_index_required__FiT1
+80063564   __dsp_fset_index_required__FiT1
+800635a4   __dsp_get_index_required__FiPi
+800635f4   __dsp_fget_index_required__FiPi
+80063634   __dsp_fset_amp_fault__FiT1
+8006369c   __dsp_set_amp_fault__FiT1
+80063700   __dsp_get_amp_fault__FiPi
+800637a8   __dsp_set_amp_fault_level__FiT1
+80063828   __dsp_fset_amp_fault_level__FiT1
+80063890   __dsp_get_amp_fault_level__FiPi
+8006393c   __dsp_fset_filter__FiPUi
+80063a50   __dsp_set_filter__FiPUi
+80063b20   __dsp_get_filter__FiPUi
+80063bd0   __dsp_fset_v_filter__FiPUi
+80063ce8   __dsp_set_v_filter__FiPUi
+80063db0   __dsp_get_v_filter__FiPUi
+80063e5c   __dsp_set_unipolar__FiT1
+80063efc   __dsp_fset_unipolar__FiT1
+80063fc0   __dsp_get_unipolar__FiPi
+80064068   __dsp_fget_unipolar__FiPi
+800640a8   __dsp_set_feedback__FiT1
+80064170   __dsp_get_feedback__FiPi
+8006421c   __dsp_fget_feedback__FiPi
+8006425c   __dsp_fset_feedback__FiT1
+80064320   __dsp_set_closed_loop__FiT1
+800643bc   __dsp_fset_closed_loop__FiT1
+80064480   __dsp_get_closed_loop__FiPi
+80064528   __dsp_fget_closed_loop__FiPi
+80064568   __dsp_get_servo__Fi
+800645a0   __dsp_set_motor_type__FiT1
+80064600   __dsp_set_servo__Fi
+80064694   __dsp_fset_servo__Fi
+8006474c   __dsp_get_stepper__Fi
+80064784   __dsp_get_out64__FPi
+800647d4   __dsp_set_amp_reset_level__FiT1
+80064854   __dsp_fset_amp_reset_level__FiT1
+80064894   __dsp_get_amp_reset_level__FiPi
+80064900   _GetVersionString__Fv
+80064a14   _InitHardware__Fv
+80064cc0   _SHORT2INT__Fs
+80064ce4   ___ReadEncoder__Fi
+80064d34   _ReadInnerCounter__Fi
+80064d68   _InitMotorParameters__Fv
+80064dcc   _ResetEncCounter__Fv
+80064e70   _ControlIdle__Fv
+80064efc   _ClearDPRInt__Fv
+80064f44   _ResetPulseOut__Fv
+80064fa4   _InitPIDGain__Fv
+800650cc   _InitDA__Fv
+80065130   _InitPosition__Fv
+80065370   _SetTimer__Fv
+8006559c   _RearmZInt__Fv
+800655a4   _SelectFlashROM__Fv
+80065640   _ServoOn__Fi
+8006573c   _ServoOff__Fi
+80065838   ___Torque_Limit__FiT1
+800658f4   _ReadCommand__Fv
+8006594c   _ReadCommandAxis__Fv
+80065970   _EchoCommand__Fi
+800659b8   _GetEncoderHwDirection__Fi
+80065a28   _SetEncoderHwDirection__FiT1
+80065b08   __dsp_set_encoder_direction__FiT1
+80065b80   __dsp_get_encoder_direction__Fi
+80065bc0   _ReadUserIn__Fv
+80065c1c   ___get_bit__FiPi
+80065c88   __dsp_get_io64__FPi
+80065cc0   __dsp_get_bit__Fi
+80065d40   __dsp_get_outbit__Fi
+80065dc0   ___SetIOMode__Fi
+80065dd8   ___GetIOMode__Fv
+80065e2c   _WriteInnerCounter__FiT1
+80065e68   _WriteEncoder__FiT1
+80065ec4   _WriteFlashMemory__FPcc
+800660b8   _ReadZValue__Fv
+800660d8   _WriteZEnable__Fi
+800660f0   _ReadServoAlarm__Fi
+8006614c   _ReadServoSRdy__Fi
+800661a8   _ReadSensor__Fi
+80066244   _WriteDAPort__FiT1
+80066378   _WritePulseCommand__FiT1UiN31
+800663d8   _ReadInPos__Fi
+80066430   _GetAxisStatus__Fi
+8006652c   _ReadChannel1__FPci
+80066578   _ReadChannel2__FPci
+80066648   _ReadChannel__FPci
+80066708   _WriteChannel1__FPcic
+80066740   _WriteChannel2__FPcis
+800667c0   _WriteChannel__FPciT2
+80066840   _ReadMem1__FPci
+80066880   _ReadMem2__FPci
+80066958   _ReadMem__FPci
+80066a30   _WriteMem1__FPVciT2
+80066a68   _WriteMem2__FPVciT2
+80066ae8   _WriteMem__FPVciT2
+80066b68   ___SetIoOutData__FiT1
+80066c30   __dsp_set_io64__FiPi
+80066cf0   ___SetIoBit__Fi
+80066df8   ___ResetIoBit__Fi
+80066f08   __ReadServopackPosition__FiN21
+800676e0   _ResetEncoderTiming__Fi
+800678c0   __printfi
+8006a2c0   _toAscii__Fc
+8006a2e8   _Conv__FcUc
+8006a354   _queue_initialize__Fi
+8006a384   _queue_push__FiUc
+8006a420   _queue_pop__FiPUc
+8006a4b8   _queue_datsize__Fi
+8006a514   __IsSendingStopped__Fi
+8006a550   __SendQueuePush__FiPcT1
+8006a6f0   _SERIAL_ReceivedDataCnt__Fv
+8006a718   __puthex__Fc
+8006a740   _PutHexa8__FPci
+8006a7a0   _PutHexa2__Fc
+8006a874   _PutHexa8__Fi
+8006a908   _SerialChipInit__Fv
+8006aa98   _SERIAL_Init__Fv
+8006abd8   _SerialSetCallback__FPFi_v
+8006abec   _SERIAL_Enable__FUi
+8006acd8   _SERIAL_SetPort__FiN31
+8006ae04   _SERIAL_ReadAByte__FPUci
+8006aee4   _SERIAL_ReadBytes__FPviT2
+8006b038   _SERIAL_WriteAByte__FUc
+8006b07c   _SERIAL_WriteBytes__FPCvi
+8006b108   _SERIAL_WaitCommand__FUci
+8006b14c   _SERIAL_ReadStxEtxString__FPciT2
+8006b254   _SERIAL_GenChecksum__FPvi
+8006b2c8   _SERIAL_TestChecksum__FPviUc
+8006b34c   _SERIAL_ReceiveFile__FP14_SER_FILE_DESCi
+8006ba00   _SERIAL_ReleaseFileDesc__FP14_SER_FILE_DESC
+8006ba14   _SERIAL_SendFile__FPcPUcUii
+8006c120   _SERIALEX_Open__Fi
+8006c140   _SERIALEX_Close__Fi
+8006c16c   _SERIALEX_SetPort__FiN41
+8006c380   _SERIALEX_Control__Fi
+8006c39c   _SERIALEX_SetDTR__FiT1
+8006c3e8   _SERIALEX_Status__Fi
+8006c404   _SERIALEX_GetStatus__FiPUc
+8006c450   _SERIALEX_ReadBytes__FiPvN21
+8006c5a4   _GetLength__FPc
+8006c60c   _SERIALEX_WriteBytes__FiPCvT1
+8006c670   _SERIALEX__IsRxEmpty__Fi
+8006c694   _SERIALEX__IsTxEmpty__Fi
+8006c6b8   _SERIALEX__GetChar__Fi
+8006c6d4   _SERIALEX__PutChar__Fic
+8006c750   _SERIALEX__GetString__FiPcT1Ui
+8006c898   _SERIALEX__PutString__FiPcT1
+8006c900   __dsp_start_move__FidT2T1
+8006ca40   __dsp_move__FidT2T1
+8006cae0   __dsp_start_r_move__FidT2T1
+8006cc20   __dsp_r_move__FidT2T1
+8006ccc0   __dsp_start_s_move__FidT2T1
+8006ce00   __dsp_s_move__FidT2T1
+8006cea0   __dsp_start_rs_move__FidT2T1
+8006cfe0   __dsp_rs_move__FidT2T1
+8006d080   __dsp_start_p_move__FidT2T1
+8006d1c0   __dsp_p_move__FidT2T1
+8006d260   __dsp_start_t_move__FidT2N21
+8006d3ac   __dsp_t_move__FidT2N21
+8006d450   __dsp_start_ts_move__FidT2N21
+8006d59c   __dsp_ts_move__FidT2N21
+8006d640   __dsp_start_tr_move__FidT2N21
+8006d78c   __dsp_tr_move__FidT2N21
+8006d830   __dsp_start_trs_move__FidT2N21
+8006d97c   __dsp_trs_move__FidT2N21
+8006da20   __dsp_start_move_all__FiPiPdT3T2
+8006dc80   __dsp_move_all__FiPiPdT3T2
+8006dd20   __dsp_start_s_move_all__FiPiPdT3T2
+8006df78   __dsp_s_move_all__FiPiPdT3T2
+8006e020   __dsp_start_t_move_all__FiPiPdT3N22
+8006e26c   __dsp_t_move_all__FiPiPdT3N22
+8006e320   __dsp_start_ts_move_all__FiPiPdT3N22
+8006e56c   __dsp_ts_move_all__FiPiPdT3N22
+8006e620   __dsp_wait_for_done__Fi
+8006e6b4   __dsp_wait_for_all__FiPi
+8006e7c8   __dsp_v_move__FifT1
+8006e924   ___dsp_v_move__FifT1
+8006ea1c   __dsp_PTP_Move__FidT2N31
+8006ed00   _FormatBlankFunc__Fi
+8006ed08   _SaperateFileNameAndExt__FPCcPcT2
+8006ef10   _MakeFullFileName__FPCcT1Pc
+8006f074   _RearrangeFileTable__Fv
+8006f194   _RearrangeCluster__Fv
+8006f57c   _FindEmptyCluster__Fv
+8006f6b0   _FindEmptyFileDesc__Fv
+8006f7e0   _GetRemainSpace__Fv
+8006f894   _InitFileSystem__Fv
+8006fad8   _FormatFileSystem__Fv
+8006fb84   _FindFile__FPCc
+8006fcdc   _FileDelete__FPCc
+8006fe28   _FileOpen__FPCcUi
+8007021c   _IsEndOfFile__FUi
+8007027c   _FileWrite__FUiPCvT1
+80070500   _FileRead__FUiPvT1
+80070748   _FileClose__FUi
+80070c54   _FileGetSize__FUi
+80070c60   _SetFileFormatCallBack__FPFi_v
+80070c88   _GetNumberOfFile__Fv
+80070d4c   _GetNumberOfDeletedFile__Fv
+80070e10   _GetFileName__FiPcT1
+80071040   _FlashWriteEnable__Fi
+800710b0   __dsp_fs_setbootfile__FPc
+800711a8   __dsp_fs_read__FUiPvT1
+800711b0   __dsp_fs_open__FPc
+800711bc   __dsp_fs_deletefile__FPc
+80071214   _WriteFile__FP9FILE_DESC
+800712b0   __dsp_fs_makefile__FPcPvi
+80071404   __dsp_fs_getsysteminfo__FP12_SYSTEM_DATA
+80071454   __dsp_fs_getfilename__FiPc
+80071460   __dsp_fs_getfilenamesize__FPcPUl
+800714f0   __dsp_fs_getfilesize__FiPUl
+8007157c   __dsp_fs_format__Fv
+800715c4   __dsp_fs_files__Fv
+800715cc   __dsp_fs_close__FUi
+800715d4   _WriteBootLoader__FP9FILE_DESC
+800716e4   _PushAck__FP11FILECMD_ACK
+8007181c   _InitializeFileSystemFunction__Fv
+80071850   _DumpFat__Fv
+80071858   _DumpFileTbl__Fv
+80071860   _DumpSysData__Fv
+80071a28   _FSExchange__Fv
+80073180   _USB_ISR__Fv
+80073318   _USB_WriteDelay__Fv
+800733bc   _USB_WriteCmdRegister__FUcT1
+800734c4   _USB_ReadCmdRegister__FUc
+8007359c   _USB_Enumeration__Fv
+80073740   _USB_Init__Fv
+80073a7c   _USB_InitBL__Fv
+80073c5c   _USB_ENUM__Fv
+80073db0   _USB_SendSX2Registers__Fv
+80073e4c   _USB_WaitForEP0Ready__Fv
+80073eb0   _USB_CheckSetupPacket__Fv
+800740fc   _USB_IntrPoll__Fv
+80074390   _USB_SendDataBy__FiPvN21
+800749a0   _USB_ReceiveDataBy__FiPvN21
+80074a90   _USB_WriteEP0__FPviT2
+80074b1c   _USB_ReadEP0__FPviT2
+80074ba0   _USB_SetEP0ByteCnt__Fi
+80074bf0   _USB_EnableInterrupts__FUi
+80074c60   _USB_EnableBulkTransfer__FUi
+80074c94   _CheckAndClear_PauseRst__FP10CONTROLBUFi
+80074cdc   _RestartFromPause__Fi
+80075008   _ClearSWPauseFlag__Fi
+800751fc   _ClearPauseFlag__Fi
+80075414   _SetAbortEvent__Fi
+80075734   _SetStopEStopEvent__Fi
+80076060   _dummy_axisint_c__Fv
+80076068   ___InitGuideBuffer__Fi
+80076110   _InitGuideSensorPort__Fi
+800761e0   _DummyIsr__Fv
+800761e8   _ExtIsr__Fv
+80076380   _DumXIsr__Fv
+80076388   _DMA_ISR__Fv
+800764a4   _Delay__Fi
+80076558   _MicroDelay__Fi
+80076610   _SetVect__FiPFv_v
+8007664c   _SetDMAVect__FiPFv_v
+80076668   _EnableInterrupt__FiT1
+80076720   _WaitDMA__Fi
+80076784   _InitJtagPort__Fv
+800767f4   _SetJtagTCK__Fi
+80076830   _SetJtagTDI__Fi
+80076870   _SetJtagTMS__Fi
+800768b0   _ReadJtagTDO__Fv
+800768cc   _SetupEmif__FUi
+800769b8   _SetupL2Cache__Fi
+80076b10   _InitPLL__Fv
+80076cd8   _SystemInit__Fv
+80076df0   _GIdisable__Fv
+80076e04   _GIenable__Fv
+80076e18   _InitSystem__FUi
+80077330   _TestChkSum__FPUciUc
+800773b0   _GenChkSum__FPUci
+80077428   _Beep__Fi
+80077430   _Sign__FUi
+80077438   _nop__Fv
+800776d4   _minit
+8007773c   _malloc
+80077944   _calloc
+80077a00   _realloc
+80077d90   _free
+80078148   _memalign
+80078af8   ___sti__AxisGlb_c_BootPara
+80079718   __dsp_set_amp_enable_level__FiT1
+80079780   __dsp_fset_amp_enable_level__FiT1
+800797e8   __dsp_get_amp_enable_level__FiPi
+80079838   __dsp_set_amp_enable__FiT1
+800798a8   __dsp_get_amp_enable__FiPi
+80079930   __dsp_amp_fault_reset__Fi
+8007996c   __dsp_amp_fault_set__Fi
+800799a8   __dsp_set_pulse_ratio__FiT1
+80079a08   __dsp_fset_pulse_ratio__FiT1
+80079a88   __dsp_get_pulse_ratio__FiPi
+80079ae8   __dsp_get_control__FiPi
+80079b48   __dsp_set_control__FiT1
+80079ba8   __dsp_fget_control__FiPi
+80079be8   __dsp_fset_control__FiT1
+80079c68   __dsp_set_electric_gear__Fid
+80079d10   __dsp_fset_electric_gear__Fid
+80079ddc   __dsp_get_electric_gear__FiPd
+80079e4c   __dsp_set_step_mode__FiT1
+80079eac   __dsp_fset_step_mode__FiT1
+80079f2c   __dsp_get_step_mode__FiPi
+80079f7c   __dsp_fget_step_mode__FiPi
+80079fbc   __dsp_set_sync_map_axes__FiT1
+8007a060   __dsp_set_sync_control__Fi
+8007a0a4   __dsp_get_sync_control__FPi
+8007a0f0   __dsp_fget_sync_control__FPi
+8007a128   __dsp_set_sync_gain__Ff
+8007a1a0   __dsp_get_sync_gain__FPf
+8007a1f4   __dsp_compensation_pos__FiPiPdT2
+8007a21c   __dsp_version_chk__FiPi
+8007a290   _get_axis_var__FiPiPA4_iPA4_f
+8007a2b8   __dsp_get_tracking_factor__FiPd
+8007a314   __dsp_fget_tracking_factor__FiPd
+8007a358   __dsp_set_tracking_factor__Fid
+8007a3a8   __dsp_fset_tracking_factor__Fid
+8007a740   _add_device
+8007a9d8   _remove_device
+8007aaa0   _open
+8007acd4   _read
+8007ae10   _write
+8007af50   _lseek
+8007b090   _close
+8007b1a0   _unlink
+8007b240   _rename
+8007b360   _Appl_Int1__Fv
+8007bb3c   _Appl_Body_Main__Fv
+8007bb44   _Appl_Int10__Fv
+8007bb4c   ___App_First__Fv
+8007bbe4   _Appl_Prev_Main__Fv
+8007c1a0   _forder__FdN41
+8007c558   ___InitInternalDelay
+8007c584   ___GetFilteringFreq
+8007c63c   ___Filtering
+8007cefc   ___FilterInit
+8007cfe0   _HOSTopen
+8007d180   _HOSTclose
+8007d274   _HOSTread
+8007d3c4   _HOSTwrite
+8007d504   _HOSTlseek
+8007d668   _HOSTunlink
+8007d7b8   _HOSTrename
+8007da4c   _getenv
+8007dbec   _HOSTtime
+8007dcd4   _HOSTclock
+8007ddc0   ___GetAck_eeprom__Fv
+8007df68   ___Writeeeprom__Fc
+8007e124   ___Stop_eeprom__Fv
+8007e1c4   ___Start_eeprom__Fv
+8007e26c   ___Readeeprom__Fi
+8007e470   _EepromReady__FUi
+8007e4e4   _WaitEepromReady__FUi
+8007e580   _WriteEepromString__FUiPci
+8007e6c0   _WriteEepromShort__FUiUs
+8007e6ec   _WriteEepromInt__FUiT1
+8007e718   _WriteEepromChar__FUiUc
+8007e744   _ReadEepromString__FUiPci
+8007e8f8   _ReadEepromShort__FUi
+8007e924   _ReadEepromInt__FUi
+8007e950   _ReadEepromChar__FUi
+8007e97c   _Init_eeprom__Fv
+8007ea00   _PowerOffState__FP10CONTROLBUF
+8007ec90   _ChkNegReset__FP10CONTROLBUF
+8007ecd8   _ChkNegSet__FP10CONTROLBUF
+8007ed54   _ChkHomeLimit__FP10CONTROLBUFi
+8007ee28   _ChkHomeReset__FP10CONTROLBUF
+8007ee74   _ChkHomeSet__FP10CONTROLBUF
+8007eef8   _ControlStepper__FP10CONTROLBUF
+8007f194   _CheckInPosSignal__FP10CONTROLBUFi
+8007f22c   _ConvertTorque__FP10CONTROLBUF
+8007f354   _CheckUserIOInt__Fi
+8007f6f4   __dsp_fset_p_integration__FiT1
+8007f7a8   __dsp_set_p_integration__FiT1
+8007f838   __dsp_get_p_integration__FiPi
+8007f8d4   __dsp_set_v_integration__FiT1
+8007f9ac   __dsp_fset_v_integration__FiT1
+8007faa8   __dsp_get_v_integration__FiPi
+8007fb44   _Gain_RW
+8008028c   __dsp_set_stop__Fi
+800802c8   __dsp_set_stop_rate__FiT1
+800803bc   __dsp_fset_stop_rate__FiT1
+80080460   __dsp_get_stop_rate__FiPi
+800804c0   __dsp_fget_stop_rate__FiPi
+80080500   __dsp_set_sw_pause_event_st__FiT1
+800805e4   __dsp_set_sw_pause_checkbit__FiN21
+800806a8   __dsp_set_sw_pause__FiT1
+80080708   __dsp_fset_sw_pause_checkbit__FiN21
+80080750   __dsp_fset_sw_pause__FiT1
+80080790   __dsp_get_sw_pause_event_st__FiPi
+800807dc   __dsp_get_sw_pause_checkbit__FiPiT2
+80080844   __dsp_get_sw_pause__FiPi
+80080880   __dsp_set_e_stop__Fi
+800808cc   ___SetWorkingLimit__FiT1
+80080a8c   __dsp_set_e_stop_rate__FiT1
+80080b70   __dsp_fset_e_stop_rate__FiT1
+80080c14   __dsp_get_e_stop_rate__FiPi
+80080c74   __dsp_fget_e_stop_rate__FiPi
+80080cc0   _InitialSystemDataDesc__FP14_SYS_DATA_DESC
+80080d6c   _FormatSystemData__Fv
+80080e08   _GetSystemData__Fv
+80080f0c   _WriteSystemData__FPC12_SYSTEM_DATA
+80081720   _CAP_Init__Fv
+80081894   _CAP_SetBitNo__Fi
+800818c0   _CAP_SetFlag__Fi
+800818ec   _CAP_GetBitNo__Fv
+80081904   _CAP_SetAx__Fi
+80081930   _CAP_GetAx__Fv
+80081948   _CAP_PutPt__Fic
+80081a18   _CAP_GetPt__FPiPc
+80081b38   _CAP_GetFilledQ__Fv
+80081b50   _CAP_GetLeftQ__Fv
+80081b84   _CAP_IsFull__Fv
+80081bbc   _CAP_IsEmpty__Fv
+80081c0c   _CAP_ClearPtBuf__Fv
+80081ccc   _CAP_Enable__Fv
+80081ce8   _CAP_Disable__Fv
+80081d04   _CAP_ReadIO__Fv
+80081dc0   _CAP_GetFilteredSig__Fc
+80081e4c   _CAP_DoCapture__Fv
+80082140   _pow
+80082b40   _ProcessBootPara__FiN21
+80083000   __dsp_io_interrupt_enable__FiT1
+800830c4   __dsp_fio_interrupt_enable__FiT1
+80083140   __dsp_io_interrupt_on_stop__FiT1
+800831d0   __dsp_fio_interrupt_on_stop__FiT1
+8008324c   __dsp_io_interrupt_on_e_stop__FiT1
+800832dc   __dsp_fio_interrupt_on_e_stop__FiT1
+80083358   __dsp_io_interrupt_pcirq__FiT1
+800833f4   __dsp_fio_interrupt_pcirq__FiT1
+80083470   __dsp_io_interrupt_pcirq_eoi__Fi
+800834c0   _ControlFLASH__FiT1
+800835a4   _FLASH_Init__Fv
+800835e8   _FLASH_Erase__FUi
+800837e4   _FLASH_EraseBlock__Fi
+80083ad8   _FLASH_Write__FUiPCvi
+80083c38   _FLASH_Read__FUiPvi
+80083c8c   _FLASH_GetPhysicalAddr__FUi
+80083ca4   _FLASH_BeginRead__FUi
+80083ce0   __dsp_amc_init__Fv
+80083dc0   __dsp_set_position__Fid
+80083e48   __dsp_get_counter__FiPd
+80083edc   __dsp_get_sync_position__FPdT1
+80084008   __dsp_get_position__FiPd
+800840ac   __dsp_set_command__Fid
+80084134   __dsp_get_command__FiPd
+800841f8   __dsp_get_error__FiPd
+80084260   __dsp_get_com_velocity__Fi
+800842cc   __dsp_get_act_velocity__Fi
+8008433c   __dsp_get_com_velocity_rpm__Fi
+800843dc   __dsp_get_act_velocity_rpm__Fi
+80084480   _I2C_Triggering1__Fv
+80084578   _I2C_Triggering0__Fv
+80084678   _I2C_IsrSendBytes1__Fv
+800847b0   _I2C_IsrSendBytes0__Fv
+800848e4   _I2C_Init1__Fv
+80084a04   _I2C_Init0__Fv
+80084b40   __dsp_home_switch__Fi
+80084bb4   __dsp_pos_switch__Fi
+80084c20   __dsp_neg_switch__Fi
+80084c94   __dsp_amp_fault_switch__Fi
+80084d00   __dsp_set_io_mode__FiT1
+80084da4   __dsp_get_io_mode__FiPi
+80084e58   __dsp_set_io__Fi
+80084ea4   __dsp_set_io2__FiT1
+80084ee8   __dsp_get_io__FPi
+80084f40   __dsp_get_io2__FPiT1
+80084f84   __dsp_set_bit__Fi
+80084ff0   __dsp_reset_bit__Fi
+80085058   __dsp_Find_IO_Bit__Fi
+800850c8   __dsp_Find_IO_Port__Fi
+80085170   __dsp_in_sequence__Fi
+800851d0   __dsp_in_motion__Fi
+80085230   __dsp_in_position__Fi
+80085290   __dsp_motion_done__Fi
+80085308   __dsp_axis_done__Fi
+800853a8   __dsp_axis_state__Fi
+800853e8   __dsp_axis_source__Fi
+8008543c   __dsp_clear_status__Fi
+800854c8   __dsp_clear_stop__Fi
+80085584   __dsp_frames_clear__Fi
+80085604   __dsp_get_current_acc__Fi
+800857dc   ___otf_ing
+80085b80   ___otf_Init
+80085c80   _ProcessUserCommand__FPc
+80085e50   _ReadSerialPort__Fv
+800860e0   _main
+800861a0   __dsp_set_position_lpf__FiT1
+80086260   __dsp_set_position_notch_filter__FiT1
+80086320   __dsp_set_velocity_lpf__FiT1
+800863e0   __dsp_set_velocity_notch_filter__FiT1
+800864a0   __dsp_get_position_lpf__FiPi
+8008650c   __dsp_get_position_notch_filter__FiPi
+80086574   __dsp_get_velocity_lpf__FiPi
+800865e0   __dsp_get_velocity_notch_filter__FiPi
+8008664c   __dsp_set_otf_filter__FiT1
+800866c0   ___canew
+800866e0   ___pcanew
+800866f4   ___anew
+80086708   ___acctor
+800867b4   ___cadelete
+80086804   ___adelete
+80086850   _alloc_array__21__Narray_cpp_61f5e116FUiT1PFUi_Pv
+800868e8   _dealloc_array__21__Narray_cpp_61f5e116FPvUiT2PFPv_vb
+80086938   _array_new__21__Narray_cpp_61f5e116FPvUiT2PFPv_vPFUi_Pv
+80086a38   _array_del__21__Narray_cpp_61f5e116FPvUiT2PFPvi_vbPFPv_vT5
+80086b80   _fopen
+80086be8   _freopen
+80086f5c   __cleanup
+80087040   __remul
+80087100   __divul
+80087344   __remli
+80087400   __divli
+80087500   _fcvt
+80087980   _puts
+800879f4   _fputs
+80087e00   _ecvt
+80088280   _InitUsbDispModule__Fv
+800883c4   _SetUsbDispInterval__Fi
+800883d8   _UsbDispCheckSetup__Fv
+80088580   _RunUsbDispModule__Fv
+800886a0   _IsDispConnect__Fv
+800886b4   _GetDisplayFrame__Fv
+800886c4   _GetDisplayWidth__Fv
+800886d0   _GetDisplayHeight__Fv
+800886e0   _tan
+80088b00   _cos
+80088f00   _sin
+800892c0   _sinh
+80089600   _mmc_axes__FiPi
+80089620   _mmc_all_axes__Fv
+80089638   __dsp_set_stepper__Fi
+80089678   __dsp_fset_stepper__Fi
+800896d8   __dsp_get_micro_stepper__Fi
+80089718   __dsp_set_micro_stepper__Fi
+80089758   __dsp_fset_micro_stepper__Fi
+800897b8   _Stepper
+80089940   __frcdivd
+80089c40   __crc32_gen_table__Fv
+80089e38   __crc32_get_crc__FPci
+80089f00   _atan
+8008a1c0   __dsp_get_analog__FiPi
+8008a29c   __dsp_get_dac_output__FiPi
+8008a2e8   __dsp_set_dac_output__FiT1
+8008a380   __dsp_set_analog_offset__FiT1
+8008a3e0   __dsp_get_analog_offset__FiPi
+8008a42c   __dsp_Find_Analog_Channel__Fi
+8008a460   _sqrt
+8008a700   _exp
+8008a980   _log
+8008abe0   _memcpy
+8008ae20   ___dsplib_callback_init__Fv
+8008ae88   ___dsplib_set_callback__FiPFv_v
+8008af00   ___dsplib_set_callback_param4__FiPFPviT1Pi_v
+8008af50   ___dsplib_call_callback__Fi
+8008afc4   ___dsplib_call_callback_param4__FiPvT1T2Pi
+8008b060   __divd
+8008b2a0   _exit
+8008b3d8   _atexit
+8008b4b4   _abort
+8008b4b4   C$$EXIT
+8008b4c0   __round
+8008b6a0   _fflush
+8008b79c   __doflush
+8008b880   ___SetWatchdogStatus__FUc
+8008b894   __dsp_set_wdt_status__FUc
+8008b8a8   ___GetWatchdogStatus__Fv
+8008b8bc   __dsp_get_wdt_status__Fv
+8008b8d0   ___EnableWatchdog__Fi
+8008b930   __dsp_enable_wdt_reason__Fi
+8008b94c   ___DisableWatchdog__Fi
+8008b9a8   __dsp_disable_wdt_reason__Fi
+8008b9c4   ___ClrWatchdog__Fi
+8008ba2c   __dsp_clr_wdt_reason__FUc
+8008ba60   __rd_ok
+8008bb20   __wrt_ok
+8008bc20   _sqrtf
+8008bde0   _setvbuf
+8008bfa0   _atan2
+8008c140   _ldexp
+8008c2c0   _atoi
+8008c440   __divf
+8008c5c0   _getc
+8008c5d0   _getchar
+8008c5e8   _fgetc
+8008c740   _putc
+8008c750   _putchar
+8008c76c   _fputc
+8008c8c0   _FMMU_GetBlockSize__Fv
+8008c8d0   _FMMU_GetBootLoaderBase__Fv
+8008c8e4   _FMMU_WriteBootLoader__FPvUi
+8008c8ec   _FMMU_GetFPGABase__Fv
+8008c904   _FMMU_WriteFPGA__FPvUi
+8008c90c   _FMMU_GetSystemDataBase__Fv
+8008c924   _FMMU_EraseSystemDataBlock__Fv
+8008c938   _FMMU_WriteSystemDataMem__FUiPCvi
+8008c950   _FMMU_InitializeFileSystem__Fv
+8008c9bc   _FMMU_ReadFileSystemMem__FUiPvi
+8008c9d8   _FMMU_WriteFileSystemMem__FUiPCvi
+8008c9f4   _FMMU_EraseFileSystemBlock__FUi
+8008ca20   _sprintf
+8008cb80   __buff_read
+8008cce0   _writemsg
+8008cd80   C$$IO$$
+8008cd8c   _readmsg
+8008ce40   _fclose
+8008cf80   _ldexpf
+8008d0c0   _frexp
+8008d200   _ltoa
+8008d340   _rand
+8008d404   _srand
+8008d480   _memset
+8008d5a0   __divi
+8008d6c0   __frcdivf
+8008d7c0   __auto_init
+8008d8c0   __remi
+8008d9c0   _fseek
+8008dac0   _frexpf
+8008dbc0   __dsp_dwell__FiT1
+8008dc08   __dsp_io_trigger__FiN21
+8008dc54   _mmcDelay__Fi
+8008dcc0   __strasg
+8008dda0   _modf
+8008de80   _printf
+8008df40   ___nw__FUi
+8008e000   __divu
+8008e0c0   __fixdu
+8008e180   __fixdli
+8008e240   __remu
+8008e2e0   _memccpy
+8008e380   __fltlif
+8008e400   _c_int00
+8008e480   _strlen
+8008e4e0   _ceil
+8008e540   __nop
+8008e548   __register_lock
+8008e55c   __register_unlock
+8008e580   ___dl__FPv
+8008e5c0   _set_new_handler__3stdFPFv_v
+8008e5d4   _default_new_handler__3stdFv
+8008e600   __trunc
+8008e640   _fabsf
+8008e660   _remove
+8008e680   ___nwa__FUi
+8008e6a0   ___dla__FPv
+8008e6c0   __CIOBUF_
+8008e6c0   ___etext__
+8008e6c0   etext
+8008e7e0   _p_offs
+80926b04   _g_i
+80926b08   _g_ii
+80926b0c   _g_iii
+80926b10   _g_f
+80926b14   _g_ff
+80926b18   _g_fff
+80926b1c   _userio_mode_select
+80926b20   _userio_int_enable
+80926b24   _userio_int_data
+80926b28   _userio_int_data_b
+80926b2c   _userio_int_flag
+80926b30   _userio_int_edge
+80926b34   _userio_axis_int
+80926b38   _userio_global_int_enable
+80926b3c   _userio_axis_enable
+80926b40   _userio_ax
+80926c40   _Boot_Checksum_Flag
+80926c44   _nothrow__3std
+80926c48   _plsCmd
+80926cc0   _dbuf
+8092e9c0   _dbuf_cnt
+8092e9c8   _sum_rec
+809f1ec8   _recording_cnt
+809f1ecc   _UDM_bInit
+809f1ed0   _UDM_Frame
+80a21ed0   _UDM_StartClk
+80a21ed4   _UDM_StartDisp
+80a21ed8   _UDM_nDispInterval
+80a21edc   _g_nSerBaudrate
+80a21ee0   _g_nSerDataBit
+80a21ee4   _g_nSerParity
+80a21ee8   _g_nSerStopBit
+80a21eec   _g_stQueue
+80a2374c   _SendQ
+80a2500c   ___sz
+80a25018   _g_SerHookFunc
+80a2501c   _g_pSerParam
+80a25020   _SerialCallback
+80a25024   _g_sNDOKSerialStxEtxString
+80a25a24   _g_nNDOKSerialStxEtxStrIndex
+80a25a28   _g_nNDOKSerialMode
+80a25a2c   _g_nDisplayMode
+80a25a30   __ftable
+80a25c60   __tmpnams
+80a25da0   __ft_end
+80a25da4   _CAP_bOn
+80a25da8   _CAP_lPtNo
+80a25dac   _CAP_nAx
+80a25db0   _CAP_nBit
+80a25db4   _CAP_lPt
+80a25f44   _CAP_bEdge
+80a25fa8   _CAP_nHead
+80a25fac   _CAP_nTail
+80a25fb0   _CAP_nFlag
+80a25fb4   _CAP_bUserIOState
+80a25fb8   _CAP_nCount
+80a25fbc   _CAP_bSignal
+80a25fc0   _Active_Axis_Num
+80a25fc4   _CommDpram
+80a25fc8   _AxisDpram
+80a25fd8   _Mf
+80a26050   _Mdisp
+80a26170   _SyncMotion
+80a26180   _delt_s_intaddr
+80a26190   _delt_g_intaddr
+80a261a0   _delt_s_intcount
+80a261b0   _delt_s_interruptcount
+80a261c0   _delt_s_intbuff
+80a26300   _ABS_command
+80a26318   _mmHdr
+80a26324   _uiEepromSaveAddr
+80a26328   _eDumpHdr
+80a26338   _peDumpBody
+80a2696c   _DMA_STATUS_REG
+80a26970   _IsrTable
+80a269b0   _XIsrTable
+80a269f0   _DMAIsrTable
+80a26ab4   __cleanup_ptr
+80a26ab8   __dtors_ptr
+80a26b20   _n1msOpCount
+80a26b24   _n5msOpFlag
+80a26b28   _n10msOpFlag
+80a26b2c   _nSimCount
+80a26b30   _nIOCount
+80a26b34   ___n5msCnt
+80a26b38   _nGuideBits
+80a26b3c   ___nGuideSensorBits
+80a26b44   ___nRcvCount
+80a26bec   _sen_output
+80a26bf0   _MOTOR_DIRECTION_CONTROL
+80a26bf4   _ptr_user_oport
+80a26bf8   _ptr_user_oport2
+80a26bfc   _ptr_user_oport3
+80a26c00   _ptr_user_oport4
+80a26c04   _ptr_user_iport
+80a26c08   _ptr_user_iport2
+80a26c0c   _ptr_user_iport3
+80a26c10   _ptr_user_iport4
+80a26c14   _ptr_sys_sctrl
+80a26c18   _ptr_sys_sstat
+80a26c1c   _ptr_sys_sabs
+80a26c3c   _FormatCallBack
+80a26c40   _g_FS_ShadowFileTable
+80a26c44   _g_FS_ShadowClusterTable
+80a26c48   _g_FS_TotalNumOfBlocks
+80a26c4c   _g_FS_TotalNumOfCluster
+80a26c50   _g_FS_FileHandle
+80a26c78   _g_FS_FileSystemReady
+80a26c7c   _g_FS_ClusterBase
+80a26d70   _g_bENUMOK
+80a26d74   _g_bGotSetup
+80a26d78   _g_bReadIntr
+80a26d7c   _g_bEP0BUFReady
+80a26d80   _g_bBusActivity
+80a26d84   _g_bReady
+80a26d88   _g_bFlags
+80a26d8c   _g_bWaste
+80a26d90   _g_bIsIntr
+80a26d94   _g_bEnableTransferFlag
+80a26d98   _g_bUSBOpened
+80a26d9c   _USB_SETUP_PACKET
+80a26e38   ___cb
+80a26e5c   _ptr_icon_oport1
+80a26e60   _ptr_icon_oport2
+80a26e64   _ptr_icon_iport
+80a26e68   _ptr_icon_lamp
+80a26e6c   __lock
+80a26e70   __unlock
+80a26e74   __memory_size
+80a26e88   _errno
+80a26e8c   ___pinit__
+80a26e8c   pinit
+80a26e98   ___cinit__
+80a26e98   cinit
+80a281dc   _pBootPara
+80a28230   _CommDPRAM
+80a28234   _AxisDPRAM
+80a28244   _pDownloadDPRAM
+80a28250   _AxisInfo
+80a28308   __ctypes_
+80a28498   _USB_DESC_TBL
+80a28f3c   ___bss__
+80a28f3c   .bss
+80a28f3c   $bss
+80a29408   ___array_new_prefix_size
+80a2940c   _new_handler_fun__3std
+80a29410   _m_nAddress
+80a29418   ___end__
+80a29418   end
+80a29418   __stack
+80a69420   _BootPara
+80a696c4   _G_fSampling_Time
+80a696c8   _GBuf
+80a69700   _CBuf
+80a6a9a0   _pGBuf
+80a6a9a4   _pCBuf
+80a6a9b4   _JpcMovSt
+80a6aa1c   _axis_mov
+80a6aaa0   _Pause
+80a6aaf0   _Q_Buf
+80a6ff50   _Traj
+80a6fff0   _PauseRstrt
+80a700a0   _Last_Pos
+80a700b0   _delt_s_psh
+80a700c0   _delt_s_b
+80a700d0   _delt_s_count
+80a700e0   _delt_s_addr
+80a700f0   _delt_g_addr
+80a70100   _jnt_run
+80a70110   _delt_s_buff
+80a70160   _M_J_Command
+80a70170   _virtual_pos
+80a70190   _acc_traj
+80a701a0   _dcc_traj
+80a701b0   _f_dest_pls
+80a701c0   _f_cur_pls
+80a701d0   _f_cur_pls_b
+80a701e0   _f_delt_s
+80a701f0   _vm_cur_pls
+80a70200   _vm_cur_pls_b
+80a70210   _acc_time
+80a70220   _dcc_time
+80a70230   _delt_s
+80a70240   _Q_out_num
+80a70250   _Q_in_num
+80a70260   _Interpolation_Flag
+80a70270   _Dwell_Flag
+80a70280   _Dwell_Value
+80a70290   _inter_k
+80a70298   _inter_k2
+80a702a0   _Max_Smpcnt
+80a702a4   _Pid_Dividend
+80a702a8   _Pos_Limit
+80a702ac   _Pos_Stepper_Limit
+80a702b0   _lITPCmd
+80a702c0   _lITPSt
+80a702e0   _nITPMode
+80a702f0   _amc_error
+80a70300   _Dpr_Int__Fv
+80a70414   _DoCmdIfExist__Fv
+80a705e0   _Service
+80a708c0   _InitDbgLed__Fv
+80a7091c   _ToggleDbgLed__Fv
+80a70990   _AMC_Int5ms__Fv
+80a70c30   _UpdateDbgStatus__Fi
+80a71338   _AMC_Int1ms__Fv
+80a727e0   _VelocityMove_1msec__FP10CONTROLBUFi
+80a7338c   _CheckInPos__Fv
+80a73af4   _CheckPause__Fi
+80a73e4c   _Interpolation_10msec__FP10CONTROLBUFi
+80a74608   _CheckGuideSensor__Fv
+80a74840   _Control_Int200us__Fv
+80a74e78   _GetValueWithLimit__FfT1
+80a74f00   _ControlVelocity__FP10CONTROLBUFi
+80a7596c   _CheckSWLimit__FP10CONTROLBUFiT2
+80a75e70   _CheckSWPauseCondition__FP10CONTROLBUFi
+80a75ed4   _GetGoalDist__FP10CONTROLBUF
+80a75fb8   _ControlPosition__FP10CONTROLBUFi
+80a76548   _LinearInterpolation__FP10CONTROLBUFi
+80a76964   _CheckEnvelope__FP10CONTROLBUF
+80a76ac8   _CheckServo__FP10CONTROLBUFi
+80a76e18   _AmpFaultReset__FP10CONTROLBUF
+80a76e60   _AmpFaultSet__FP10CONTROLBUF
+80a76edc   _CheckSensor__FP10CONTROLBUFi
+80a77030   _ChkPosLimit__FP10CONTROLBUFi
+80a77104   _ChkPosReset__FP10CONTROLBUF
+80a77150   _ChkPosSet__FP10CONTROLBUF
+80a771d4   _ChkNegLimit__FP10CONTROLBUFi
+80a772a8   _ReadCurPos__FP10CONTROLBUFi
+80a774d0   _ControlServo__FP10CONTROLBUF
+80a777dc   _GenerateOutput__FP10CONTROLBUFi
+80a77e50   _CheckSWInPos__FP10CONTROLBUFi
+80a77fe0   _NdokMain__Fv
+80a78378   _CommandQueueParsing__Fi
+80a78dac   ___PtpReMove__FiN41fT1
+80a7980c   _Generation_Profile__FiN31f
+80a7a3fc   _GetDS__Fi
+80a7a9c0   _sDbgCmdBuff
+80a7aa30   _sDbgMsgBuff
+81000000   __sys_memory
+
+[1247 symbols]

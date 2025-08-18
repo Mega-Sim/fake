@@ -1,0 +1,6 @@
+-z -q -c -m"./Debug/Appl.map" -o"./Debug/Appl.out" -x -i"c:/ti/c6000/bios/lib" -i"c:/ti/c6000/rtdx/lib" -i"c:/ti/c6000/xdais/lib" -i"c:/ti/c6000/cgtools/lib"
+"Z:\SSMR-Lib\examples\pause\Debug\Appl-Main.obj"
+"C:\ti\c6000\cgtools\lib\rts6701.lib"
+"Z:\SSMR-Lib\examples\Lib\CTS_SMR.lib"
+"Z:\SSMR-Lib\examples\Lib\IconLabKernel1714.lib"
+"Z:\SSMR-Lib\examples\pause\Appl.cmd"

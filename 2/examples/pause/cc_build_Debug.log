@@ -1,0 +1,8 @@
+------------------------------  Appl.pjt - Debug  ------------------------------
+"c:\ti\c6000\cgtools\bin\cl6x" -g -q -fg -fr"Z:/SSMR-Lib/examples/pause/Debug" -i"../include" -i"../../include" -i"../dsp-include" -i"../../dsp-include" -i"../../Appl-include" -d"_DEBUG" -mv6710 -@"Debug.lkf" "Appl-Main.c"
+"Appl-Main.c", line 56: warning: variable "cnt" was declared but never referenced
+
+"c:\ti\c6000\cgtools\bin\cl6x" -@"Debug.lkf"
+
+Build Complete,
+  0 Errors, 1 Warnings, 0 Remarks.

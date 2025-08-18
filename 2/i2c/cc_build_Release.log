@@ -1,0 +1,9 @@
+-----------------------------  i2c.pjt - Release  -----------------------------
+"c:\ti\c6000\cgtools\bin\cl6x" -q -o3 -fg -fr"D:/project/SMR/SSMR-Lib/i2c/Release" -i"../Include" -i"../dsp-include" -i"../../Include" -i"../../dsp-include" -mv6700 -@"../../i2c/Release.lkf" "i2c.c"
+
+"c:\ti\c6000\cgtools\bin\ar6x" @"Release.lkf"
+  ==>  new archive 'D:\project\SMR\SSMR-Lib\Lib\cts_i2c.lib'
+  ==>  building archive 'D:\project\SMR\SSMR-Lib\Lib\cts_i2c.lib'
+
+Build Complete,
+  0 Errors, 0 Warnings, 0 Remarks.

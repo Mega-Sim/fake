@@ -1,0 +1,7 @@
+---------------------------  FileSystem.pjt - Debug  ---------------------------
+"c:\ti\c6000\cgtools\bin\ar6x" @"Debug.lkf"
+  ==>  new archive 'C:\proj\dsp\2.5&2.8\SSMR-Lib-2.5.23-2.8.05-20111026\lib\cts_fs.lib'
+  ==>  building archive 'C:\proj\dsp\2.5&2.8\SSMR-Lib-2.5.23-2.8.05-20111026\lib\cts_fs.lib'
+
+Build Complete,
+  0 Errors, 0 Warnings, 0 Remarks.

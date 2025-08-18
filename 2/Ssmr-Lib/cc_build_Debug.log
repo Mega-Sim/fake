@@ -1,0 +1,33 @@
+------------------------  MakeLib_2.11.02.pjt - Debug  ------------------------
+"c:\ti\c6000\cgtools\bin\cl6x" -g -q -fg -fr"D:/BackUp/KKS/work/AMC_7_0_DSP/Ssmr-Lib/Debug" -i"../Include" -i"../dsp-include" -i"../../Include" -i"../../dsp-include" -d"_DEBUG" -ml3 -mv6710 -@"../Ssmr-Lib/Debug.lkf" "axisctrl.c"
+
+"c:\ti\c6000\cgtools\bin\cl6x" -g -q -fg -fr"D:/BackUp/KKS/work/AMC_7_0_DSP/Ssmr-Lib/Debug" -i"../Include" -i"../dsp-include" -i"../../Include" -i"../../dsp-include" -d"_DEBUG" -ml3 -mv6710 -@"../Ssmr-Lib/Debug.lkf" "AXISDPR.C"
+
+"c:\ti\c6000\cgtools\bin\cl6x" -g -q -fg -fr"D:/BackUp/KKS/work/AMC_7_0_DSP/Ssmr-Lib/Debug" -i"../Include" -i"../dsp-include" -i"../../Include" -i"../../dsp-include" -d"_DEBUG" -ml3 -mv6710 -@"../Ssmr-Lib/Debug.lkf" "AxisGlb.c"
+
+"c:\ti\c6000\cgtools\bin\cl6x" -g -q -fg -fr"D:/BackUp/KKS/work/AMC_7_0_DSP/Ssmr-Lib/Debug" -i"../Include" -i"../dsp-include" -i"../../Include" -i"../../dsp-include" -d"_DEBUG" -ml3 -mv6710 -@"../Ssmr-Lib/Debug.lkf" "AXISINT.C"
+
+"c:\ti\c6000\cgtools\bin\cl6x" -g -q -fg -fr"D:/BackUp/KKS/work/AMC_7_0_DSP/Ssmr-Lib/Debug" -i"../Include" -i"../dsp-include" -i"../../Include" -i"../../dsp-include" -d"_DEBUG" -ml3 -mv6710 -@"../Ssmr-Lib/Debug.lkf" "AXISMAIN.C"
+
+"c:\ti\c6000\cgtools\bin\cl6x" -g -q -fg -fr"D:/BackUp/KKS/work/AMC_7_0_DSP/Ssmr-Lib/Debug" -i"../Include" -i"../dsp-include" -i"../../Include" -i"../../dsp-include" -d"_DEBUG" -ml3 -mv6710 -@"../Ssmr-Lib/Debug.lkf" "dsp_if_adv.c"
+
+"c:\ti\c6000\cgtools\bin\cl6x" -g -q -fg -fr"D:/BackUp/KKS/work/AMC_7_0_DSP/Ssmr-Lib/Debug" -i"../Include" -i"../dsp-include" -i"../../Include" -i"../../dsp-include" -d"_DEBUG" -ml3 -mv6710 -@"../Ssmr-Lib/Debug.lkf" "dsp_if_petc.c"
+
+"c:\ti\c6000\cgtools\bin\cl6x" -g -q -fg -fr"D:/BackUp/KKS/work/AMC_7_0_DSP/Ssmr-Lib/Debug" -i"../Include" -i"../dsp-include" -i"../../Include" -i"../../dsp-include" -d"_DEBUG" -ml3 -mv6710 -@"../Ssmr-Lib/Debug.lkf" "dsp_if_plimit.c"
+
+"c:\ti\c6000\cgtools\bin\cl6x" -g -q -fg -fr"D:/BackUp/KKS/work/AMC_7_0_DSP/Ssmr-Lib/Debug" -i"../Include" -i"../dsp-include" -i"../../Include" -i"../../dsp-include" -d"_DEBUG" -ml3 -mv6710 -@"../Ssmr-Lib/Debug.lkf" "dsp_if_status.c"
+
+"c:\ti\c6000\cgtools\bin\cl6x" -g -q -fg -fr"D:/BackUp/KKS/work/AMC_7_0_DSP/Ssmr-Lib/Debug" -i"../Include" -i"../dsp-include" -i"../../Include" -i"../../dsp-include" -d"_DEBUG" -ml3 -mv6710 -@"../Ssmr-Lib/Debug.lkf" "Follows.c"
+
+"c:\ti\c6000\cgtools\bin\cl6x" -g -q -fg -fr"D:/BackUp/KKS/work/AMC_7_0_DSP/Ssmr-Lib/Debug" -i"../Include" -i"../dsp-include" -i"../../Include" -i"../../dsp-include" -d"_DEBUG" -ml3 -mv6710 -@"../Ssmr-Lib/Debug.lkf" "hardware.c"
+
+"c:\ti\c6000\cgtools\bin\cl6x" -g -q -fg -fr"D:/BackUp/KKS/work/AMC_7_0_DSP/Ssmr-Lib/Debug" -i"../Include" -i"../dsp-include" -i"../../Include" -i"../../dsp-include" -d"_DEBUG" -ml3 -mv6710 -@"../Ssmr-Lib/Debug.lkf" "internalFuncs.c"
+
+"c:\ti\c6000\cgtools\bin\cl6x" -g -q -fg -fr"D:/BackUp/KKS/work/AMC_7_0_DSP/Ssmr-Lib/Debug" -i"../Include" -i"../dsp-include" -i"../../Include" -i"../../dsp-include" -d"_DEBUG" -ml3 -mv6710 -@"../Ssmr-Lib/Debug.lkf" "trace.c"
+
+"c:\ti\c6000\cgtools\bin\ar6x" @"Debug.lkf"
+  ==>  new archive 'D:\BackUp\KKS\work\AMC_7_0_DSP\Lib\cts_smr.lib'
+  ==>  building archive 'D:\BackUp\KKS\work\AMC_7_0_DSP\Lib\cts_smr.lib'
+
+Build Complete,
+  0 Errors, 0 Warnings, 0 Remarks.

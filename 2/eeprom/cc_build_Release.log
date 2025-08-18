@@ -1,0 +1,11 @@
+----------------------------  eeprom.pjt - Release  ----------------------------
+"c:\ti\c6000\cgtools\bin\cl6x" -q -o3 -fg -fr"D:/project/SMR/SSMR-Lib/eeprom/Release" -i"../Include" -i"../dsp-include" -i"../../Include" -i"../../dsp-include" -mv6700 -@"../../eeprom/Release.lkf" "crc32.c"
+
+"c:\ti\c6000\cgtools\bin\cl6x" -q -o3 -fg -fr"D:/project/SMR/SSMR-Lib/eeprom/Release" -i"../Include" -i"../dsp-include" -i"../../Include" -i"../../dsp-include" -mv6700 -@"../../eeprom/Release.lkf" "eeprom.c"
+
+"c:\ti\c6000\cgtools\bin\ar6x" @"Release.lkf"
+  ==>  new archive 'D:\project\SMR\SSMR-Lib\Lib\cts_eeprom.lib'
+  ==>  building archive 'D:\project\SMR\SSMR-Lib\Lib\cts_eeprom.lib'
+
+Build Complete,
+  0 Errors, 0 Warnings, 0 Remarks.

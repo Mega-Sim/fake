@@ -1,0 +1,10 @@
+----------------------------  callback.pjt - Debug  ----------------------------
+"c:\ti\c6000\cgtools\bin\cl6x" -g -q -fg -fr"D:/project/SMR/SSMR-Lib/callback/Debug" -i"../Include" -i"../dsp-include" -i"../../Include" -i"../../dsp-include" -d"_DEBUG" -ml3 -mv6700 -@"../callback/Debug.lkf" "callback.c"
+"callback.c", line 28: warning: return value type does not match the function type
+
+"c:\ti\c6000\cgtools\bin\ar6x" @"Debug.lkf"
+  ==>  new archive 'D:\project\SMR\SSMR-Lib\Lib\cts_callback.lib'
+  ==>  building archive 'D:\project\SMR\SSMR-Lib\Lib\cts_callback.lib'
+
+Build Complete,
+  0 Errors, 1 Warnings, 0 Remarks.

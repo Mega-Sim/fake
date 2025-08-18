@@ -1,0 +1,10 @@
+----------------------------  OntheFly.pjt - Debug  ----------------------------
+"c:\ti\c6000\cgtools\bin\cl6x" -g -q -fg -fr"D:/project/SMR/SSMR-Lib/OntheFly/Debug" -d"_DEBUG" -mv6710 -@"Debug.lkf" "otf_filter.c"
+"otf_filter.c", line 52: warning: variable "beta" was declared but never referenced
+
+"c:\ti\c6000\cgtools\bin\ar6x" @"Debug.lkf"
+  ==>  new archive 'D:\project\SMR\SSMR-Lib\Lib\amc_otf.lib'
+  ==>  building archive 'D:\project\SMR\SSMR-Lib\Lib\amc_otf.lib'
+
+Build Complete,
+  0 Errors, 1 Warnings, 0 Remarks.

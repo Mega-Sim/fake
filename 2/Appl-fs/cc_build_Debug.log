@@ -1,0 +1,7 @@
+----------------------------  Appl-fs.pjt - Debug  ----------------------------
+"c:\ti\c6000\cgtools\bin\cl6x" -g -q -fg -fr"D:/project/SMR/SSMR-Lib/Appl-fs/Debug" -i"../Appl-include" -d"_DEBUG" -ml3 -mv6710 -@"Debug.lkf" "Appl-fs.c"
+
+"c:\ti\c6000\cgtools\bin\cl6x" -@"Debug.lkf"
+
+Build Complete,
+  0 Errors, 0 Warnings, 0 Remarks.

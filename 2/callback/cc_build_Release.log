@@ -1,0 +1,10 @@
+---------------------------  callback.pjt - Release  ---------------------------
+"c:\ti\c6000\cgtools\bin\cl6x" -q -o3 -fg -fr"Z:/SSMR-Lib/callback/Release" -i"../Include" -i"../dsp-include" -i"../../Include" -i"../../dsp-include" -ml3 -mv6700 -@"../callback/Release.lkf" "callback.c"
+"callback.c", line 28: warning: return value type does not match the function type
+
+"c:\ti\c6000\cgtools\bin\ar6x" @"Release.lkf"
+  ==>  new archive 'Z:\SSMR-Lib\Lib\cts_callback.lib'
+  ==>  building archive 'Z:\SSMR-Lib\Lib\cts_callback.lib'
+
+Build Complete,
+  0 Errors, 1 Warnings, 0 Remarks.

@@ -1,0 +1,4 @@
+-r
+"Z:\SSMR-Lib\eeprom\Debug\eeprom.lib"
+"Z:\SSMR-Lib\eeprom\Debug\crc32.obj"
+"Z:\SSMR-Lib\eeprom\Debug\eeprom.obj"

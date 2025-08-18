@@ -1,0 +1,418 @@
+#include <stdio.h>
+
+#include "callback.h"
+#include "amc_app.h"
+#include "watchdog.h"
+
+
+//#include "hardware.h"//2007.11.16(¿À)
+
+#include "dsp_if_filter.h"//2008.3.5(¿À)
+#include "amc_filter.h"
+
+
+void Appl_Body_Main();
+void Appl_Prev_Main();
+
+int check_loop=0;
+extern DBG_CNT_BUFFER sDbgCntBuff;
+int loop_count=1615;
+
+#define		TM_VMOVE
+//#define		TM_ENCODER_DIRECTION
+//#define		TM_MOVE_X
+
+//int nSimCount = -1;
+extern int check_200us;
+extern int nSimCount;
+int motion1_end=0;
+int motion2_end=0;
+int motion3_end=0;
+int motion4_end=0;
+int motion5_end=0;
+int motion6_end=0;
+extern int motion_go;
+int err;
+int body_on_motion=0;
+int body_on_motion_count=0;
+int motion_start=0;
+	double position_t=0.;
+extern int check_1ms;
+int base = 55;	
+int change_pos = 25868;
+int change_pos1 = 26900;//26950;
+
+
+int inout_check =0;
+int main_count=0;
+int motion_act= -1;
+void Appl_Int1()//200us ÀÎÅÍ·´Æ®
+//void Appl_Body_Main()
+{
+    static int PosCount = 163840, sign = -1, nLoopCount=298;
+    static int nstate = 0;
+
+	float com_vel, pos_data;
+
+	char str[100];
+
+	if(motion_go ==0) return;
+	motion_start=0;	
+#if 1
+	static double pos1_int=6654438,pos3_int;
+	static double pos2_int, ms1_max_vel=0.0, ms1_min_vel=0.0;
+	
+	//AMC ºÎÆÃÀÌ ¿Ï·áµÇ¾ú´ÂÁö È®ÀÎÇÏ±â À§ÇÔ
+//	unsigned char *puc = (unsigned char *) ALIVE_CHK_ADDR1;
+//	if (*puc ++ != ALIVE_CHK_BYTE1 && *puc != ALIVE_CHK_BYTE2) return;
+
+//	com_vel = _dsp_get_com_velocity(0);
+//	if( com_vel > ms1_max_vel ) ms1_max_vel = com_vel;
+//	if( com_vel < ms1_min_vel ) ms1_min_vel = com_vel;
+	
+/*	_dsp_set_analog_offset(0,PosCount);
+	if(PosCount++ > 32767) PosCount= -32767;
+	return;
+*/
+
+/*	char str[100];
+	int out_data[2];
+	PosCount = ++nSimCount%64;
+	_dsp_set_bit(PosCount);
+	nLoopCount = _dsp_get_outbit(PosCount) + _dsp_get_bit(PosCount);
+	_dsp_get_out64(out_data);
+	sprintf(str, "Out No=%d, In Data=%d, L=%x, H=%x\r\n", PosCount, nLoopCount, out_data[0], out_data[1]);
+	SERIAL_WriteBytes(str, strlen(str));
+	Delay(100);
+	_dsp_reset_bit(PosCount);
+*/	
+/*	int acc_state;
+	acc_state = _dsp_get_current_acc(0);//0ÃàÀÇ »óÅÂ¸¦ ÀÐÀ½.
+	if( acc_state == 1) 
+	{//+°¡¼Ó »óÅÂ
+		_dsp_set_bit(1);
+		_dsp_reset_bit(2);
+		_dsp_reset_bit(3);
+	}
+	else if( acc_state == 0) 
+	{//µî¼Ó »óÅÂ
+		_dsp_set_bit(2);
+		_dsp_reset_bit(1);
+		_dsp_reset_bit(3);
+	}
+	else//-1ÀÎ °æ¿ì
+	{//-°¡¼Ó »óÅÂ
+		_dsp_set_bit(3);
+		_dsp_reset_bit(1);
+		_dsp_reset_bit(2);
+	}
+	
+	if(_dsp_in_motion(0))	_dsp_set_bit(0);
+	else	_dsp_reset_bit(0);
+	
+	return;
+	
+*/	
+//	float vel_buffer[30000];
+//	if(nSimCount < 29900) vel_buffer[nSimCount] = pCBuf[0]->dtBox;
+
+//	_dsp_get_position(0, &position_t);
+
+	if (nSimCount++ == 0)	
+	{
+		if(motion_act==-1)	motion_act=1;	
+		else if(motion_act==1)	motion_act=-1;			
+	}
+	else if (nSimCount == 2)	
+	{
+		_dsp_set_amp_enable(0, 0);	
+		_dsp_set_amp_enable(1, 0);		//Servo On=1			
+	}
+	else if (nSimCount == 20)
+	{
+		_dsp_clear_status(0);			//Clear StatusÇ
+		_dsp_set_position(0, 0);
+		_dsp_set_command(0, 0);	
+		
+		_dsp_clear_status(1);			//Clear StatusÇ
+		_dsp_set_position(1, 0);
+		_dsp_set_command(1, 0);		
+	}	
+	
+	
+	
+	else if (nSimCount == 49)
+	{
+
+
+//	 	_dsp_set_encoder_direction(0, CIR_CCW);
+//		_dsp_set_vel_limit(0, 614400);
+//		_dsp_set_control(0, 0);			// 0:velocity mode, 1:torque mode
+//		_dsp_set_closed_loop(0, 0);		// 1=closed loop, 0=open
+//		_dsp_set_unipolar(0, 0);		// bi-polar
+//		_dsp_set_feedback(0, 0);		// 0=Encoder
+//		_dsp_set_servo(0);				// servo motor typeü
+//		_dsp_set_stepper(0);			// Step Motor
+//		_dsp_set_error_limit(0, 350000, NO_EVENT);
+
+
+		_dsp_set_amp_enable(0, 1);		//Servo On=1
+
+
+//		_dsp_set_control(1, 0);			// 0:velocity mode, 1:torque mode
+//		_dsp_set_closed_loop(1, 0);		// 1=closed loop, 0=open
+//		_dsp_set_unipolar(1, 0);		// bi-polar
+//		_dsp_set_feedback(1, 0);		// 0=Encoder
+//		_dsp_set_servo(1);				// servo motor typeü
+//		_dsp_set_stepper(1);			// Step Motor
+
+
+		_dsp_set_amp_enable(1, 1);		//Servo On
+		
+		_dsp_set_sync_map_axes(0, 1);	//µ¿±â Á¦¾îÇÒ ÃàÀ» ÁöÁ¤ÇÏ±â À§ÇÑ ¼³Á¤
+		_dsp_set_sync_control(TRUE); 
+//		nLoopCount++;
+//		sign *=-1; //ºÎÈ£ ¹ÝÀü
+//		PosCount = 4600*5+sign*(230*5*rand())/RAND_MAX;//+/-10% Á¤µµ·Î À§Ä¡¸¦ º¯°æÇÏ¸é¼­ ÇÁ·ÎÆÄÀÏ »ý»ó
+//		PosCount += 50;
+//		if( PosCount > 450000 ) PosCount = 450000;
+	}
+	else if (nSimCount == base)	//¼­º¸ OnÈÄ ÃÖ¼Ò 40mS Áö¿¬ ÇÊ¿ä
+	{
+//		err= _dsp_move_ds(0, 85073.0,249548.593750,147460.54, 521330.07);
+		err= _dsp_move_ds(0, 113431.0,249548.593750,56715.59 , (521330.07*motion_act));
+		if(err) 
+		{
+			sprintf(str, "*err =%d\r\n",err); 
+			SERIAL_WriteBytes(str, strlen(str));
+			nSimCount =0;
+		}		
+
+	}
+	else if (nSimCount == (base + 350))	//¼­º¸ OnÈÄ ÃÖ¼Ò 40mS Áö¿¬ ÇÊ¿ä
+	{	
+
+		err= _dsp_move_ds(0, 113431.0,249548.593750,147460.54, (578385.95*motion_act));
+		if(err) 
+		{
+			sprintf(str, "*err =%d\r\n",err); 
+			SERIAL_WriteBytes(str, strlen(str));
+			nSimCount =0;			
+		}	
+	}					
+	else if (nSimCount == (base + 22250))	//¼­º¸ OnÈÄ ÃÖ¼Ò 40mS Áö¿¬ ÇÊ¿ä
+	{
+
+		err= _dsp_move_ds(0, 170146.77 ,340293.55,226862.36 ,(582691.49*motion_act));
+		if(err) 
+		{
+			sprintf(str, "*err =%d\r\n",err); 
+			SERIAL_WriteBytes(str, strlen(str));
+			nSimCount =0;				
+		}	
+	
+
+	}	
+	else if (nSimCount == (base + 22650))	//¼­º¸ OnÈÄ ÃÖ¼Ò 40mS Áö¿¬ ÇÊ¿ä
+	{
+	
+		err=_dsp_move_ds(0, 113431.0,249548.593750,56715.59  ,(629304.42*motion_act));
+		if(err) 
+		{
+			sprintf(str, "*err =%d\r\n",err); 
+			SERIAL_WriteBytes(str, strlen(str));
+			nSimCount =0;			
+		}
+
+	}	
+	else if (nSimCount == (base + change_pos))	//¼­º¸ OnÈÄ ÃÖ¼Ò 40mS Áö¿¬ ÇÊ¿ä
+	{
+
+		
+		err=_dsp_move_ds(0, 226862.36,340293.55,11343.12,(612318.00*motion_act));
+		if(err) 
+		{
+			sprintf(str, "*err =%d\r\n",err); 
+			SERIAL_WriteBytes(str, strlen(str));
+			nSimCount =0;			
+		}	
+		
+//		nSimCount == (base + 100000)-1;
+				
+	}	
+	else if (nSimCount == (base + change_pos1))	//¼­º¸ OnÈÄ ÃÖ¼Ò 40mS Áö¿¬ ÇÊ¿ä
+	{
+		if(inout_check==0)
+		{
+			main_count = sDbgCntBuff.loop_main;	
+			inout_check =1;		
+		}
+#if 0		
+		err=_dsp_move_ds(0, 85073.0,249548.593750,147460.54,(853799.56*motion_act));
+		sprintf(str, "*change_pos1 =%d\r\n",change_pos1); 
+		SERIAL_WriteBytes(str, strlen(str));		
+		if(err) 
+		{
+			sprintf(str, "*err =%d\r\n",err); 
+			SERIAL_WriteBytes(str, strlen(str));
+			nSimCount =0;				
+		}	
+#endif		
+	}			
+	else if (nSimCount == (base + 27300))	//¼­º¸ OnÈÄ ÃÖ¼Ò 40mS Áö¿¬ ÇÊ¿ä
+	{
+		err=_dsp_move_ds(0, 1474605.45,1474605.45, 147460.54,(1284497.64*motion_act));
+		if(err) 
+		{
+			sprintf(str, "~ok~~~~err =%d\r\n",err); 
+			SERIAL_WriteBytes(str, strlen(str));
+			_dsp_get_position(0,&position_t);
+			if(position_t <	612318.00)
+			{
+				sprintf(str, ">smpcnt[%d,%f]>position =%f,%f \r\n",pCBuf[0]->vm_count,pCBuf[0]->smpcnt, position_t,virtual_pos[0]); 
+				motion_go =0;
+			}
+									
+		}					
+	}		
+	else if (nSimCount == (base + 30000))	//¼­º¸ OnÈÄ ÃÖ¼Ò 40mS Áö¿¬ ÇÊ¿ä
+	{
+	
+		nSimCount = (base + 30000) -1;
+		if(_dsp_axis_done(0)) 
+		{
+
+			nSimCount =(base + 30001);
+
+
+			
+			if( change_pos1	 > 26910) 	change_pos1 =26900;	
+			else						change_pos1++; 						
+		
+		}
+
+	}		
+
+		
+	else if(nSimCount == (base + 30010))//20000
+	{
+		nSimCount =0;
+	}
+
+#endif
+
+}
+
+int main_motion_s=0;
+void Appl_Body_Main()
+//void Appl_Int10()
+{
+	char str[100];
+	if(inout_check ==1)
+	{
+		if(((sDbgCntBuff.loop_main-main_count) >main_motion_s) && (pCBuf[0]->vm_count <3) &&(check_200us == pCBuf[0] ->smpcnt))
+		{
+			sprintf(str, "*[%d]main_motion[%d,%d,%d]- %d,%d\r\n",motion_act,change_pos, change_pos1,pCBuf[0]->vm_count,check_200us,main_motion_s); 
+			SERIAL_WriteBytes(str, strlen(str));					
+			err=_dsp_move_ds(0, 85073.0,249548.593750,147460.54,(853799.56*motion_act));
+
+			
+		
+			if(err) 
+			{
+				sprintf(str, "*err =%d\r\n",err); 
+				SERIAL_WriteBytes(str, strlen(str));
+				nSimCount =0;				
+			}		
+			
+			if(main_motion_s >54)
+			{ 	
+				if(change_pos == 25858)	change_pos=25868;
+				if(change_pos == 25868) change_pos=25869;
+				if(change_pos == 25869) change_pos=25858;	
+				
+				main_motion_s=0;
+			}
+			else				main_motion_s++;
+		
+			inout_check =0;
+		}
+		else if(pCBuf[0]->vm_count >2)
+		{
+		
+			main_count = sDbgCntBuff.loop_main;
+		}
+		
+	}
+
+
+
+
+
+
+
+
+#if 0
+	char str[100];
+	
+	if(body_on_motion ==1) return;
+	
+	if(motion_start ==1)
+	{
+		int i=(int)pCBuf[0]->smpcnt;	
+//		sprintf(str, ">cnt[%d]",i); 	
+//			SERIAL_WriteBytes(str, strlen(str));
+	
+		if(((body_on_motion_count%5)+1) == i)
+		{
+		
+			body_on_motion =1;
+			body_on_motion_count++;
+			_dsp_get_position(0,&position_t);		
+			sprintf(str, ">smpcnt[%d,%f]>position =%f,%f \r\n",pCBuf[0]->vm_count,pCBuf[0]->smpcnt, position_t,virtual_pos[0]); 
+			SERIAL_WriteBytes(str, strlen(str));	
+						
+			err=_dsp_move_ds(0, 85073.0,249548.593750,147460.54,(853799.56*motion_act));
+			
+			if(err) 
+			{
+				sprintf(str, "*err =%d\r\n",err); 
+				SERIAL_WriteBytes(str, strlen(str));	
+				motion4_end =0;
+				motion6_end =1;						
+			}	
+			else
+			{
+				motion4_end =0;
+				motion5_end =1;					
+			}	
+		}
+		
+				
+	}
+#endif	
+	
+}
+
+//void Appl_Body_Main()
+void Appl_Int10()//200us ÀÎÅÍ·´Æ®
+{
+	return;
+}
+
+
+void __App_First()
+{
+	__dsplib_set_callback(CALLBACK_PREV_MAIN_LOOP, Appl_Prev_Main);//main ·çÇÁ¿¡ ¹Ù·Î µé¾î°¡±â Àü¿¡ ÇÑ¹ø ºÒ·ÁÁö´Â ÇÔ¼ö
+	__dsplib_set_callback(CALLBACK_BODY_MAIN_LOOP, Appl_Body_Main);//main ·çÇÁÀÇ while¹® ¾È¿¡¼­ °è¼Ó ºÒ·ÁÁö´Â ÇÔ¼ö
+	__dsplib_set_callback(CALLBACK_INT10, Appl_Int10);
+	__dsplib_set_callback(CALLBACK_INT1, Appl_Int1);
+//	__dsplib_set_callback(WDT_SUBCONTROL, Appl_Int1);
+}
+
+
+void Appl_Prev_Main()
+{
+
+}
+

@@ -1,0 +1,3 @@
+-r
+"D:\project\SMR\SSMR-Lib\Lib\cts_i2c.lib"
+"D:\project\SMR\SSMR-Lib\i2c\Release\i2c.obj"

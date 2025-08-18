@@ -1,0 +1,32 @@
+#ifndef __DSP_IF_STATUS_H
+#define __DSP_IF_STATUS_H
+
+#ifdef DSP_IF_STATUS_GLOBALS
+#define DSP_IF_STATUS_EXT
+#else
+#define DSP_IF_STATUS_EXT extern
+#endif
+
+////////////////////////////////////////////////////////////////////////
+// Define
+////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////
+// Variable
+////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////
+// Function
+////////////////////////////////////////////////////////////////////////
+DSP_IF_STATUS_EXT int _dsp_in_sequence(int ax);
+DSP_IF_STATUS_EXT int _dsp_in_motion(int ax);
+DSP_IF_STATUS_EXT int _dsp_in_position(int ax);
+DSP_IF_STATUS_EXT int _dsp_motion_done(int ax);
+DSP_IF_STATUS_EXT int _dsp_axis_done(int ax);
+DSP_IF_STATUS_EXT int _dsp_axis_state(int ax);
+DSP_IF_STATUS_EXT int _dsp_axis_source(int ax);
+DSP_IF_STATUS_EXT int _dsp_clear_status(int ax);
+DSP_IF_STATUS_EXT int _dsp_frames_clear(int ax);
+
+#endif
+

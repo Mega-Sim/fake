@@ -1,0 +1,7 @@
+--------------------------  Appl-None.pjt - Release  --------------------------
+"c:\ti\c6000\cgtools\bin\cl6x" -q -fg -fr"D:/jsh/180830/A78/Appl-None/Release" -i"../Appl-include" -i"../Include" -i"../dsp-include" -ml3 -mv6710 -@"Release.lkf" "Appl-None.cpp"
+
+"c:\ti\c6000\cgtools\bin\cl6x" -@"Release.lkf"
+
+Build Complete,
+  0 Errors, 0 Warnings, 0 Remarks.

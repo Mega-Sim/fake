@@ -1,0 +1,60 @@
+; Code Composer Project File, Version 2.0 (do not modify or remove this line)
+
+[Project Settings]
+ProjectDir="D:\BackUp\KKS\work\AMC_7_0_DSP\Ssmr-Lib\"
+ProjectType=Library
+CPUFamily=TMS320C67XX
+Tool="Archiver"
+Tool="Compiler"
+Tool="DspBiosBuilder"
+Config="Debug"
+Config="Release"
+
+[Source Files]
+Source="..\Src\axisctrl.c"
+Source="..\Src\AXISDPR.C"
+Source="..\Src\AxisGlb.c"
+Source="..\Src\AXISINT.C"
+Source="..\Src\AXISMAIN.C"
+Source="..\Src\dsp_if_adv.c"
+Source="..\Src\dsp_if_petc.c"
+Source="..\Src\dsp_if_plimit.c"
+Source="..\Src\dsp_if_status.c"
+Source="..\Src\Follows.c"
+Source="..\Src\hardware.c"
+Source="..\Src\internalFuncs.c"
+Source="..\Src\trace.c"
+
+[Generated Files]
+Source="Debug\axisctrl.obj"
+Source="Debug\AXISDPR.obj"
+Source="Debug\AxisGlb.obj"
+Source="Debug\AXISINT.obj"
+Source="Debug\AXISMAIN.obj"
+Source="Debug\dsp_if_adv.obj"
+Source="Debug\dsp_if_petc.obj"
+Source="Debug\dsp_if_plimit.obj"
+Source="Debug\dsp_if_status.obj"
+Source="Debug\Follows.obj"
+Source="Debug\hardware.obj"
+Source="Debug\internalFuncs.obj"
+Source="Debug\trace.obj"
+
+["Archiver" Settings: "Debug"]
+Options=-r -o"..\Lib\cts_smr.lib"
+
+["Archiver" Settings: "Release"]
+Options=-r -o"..\Lib\cts_smr.lib"
+
+["Compiler" Settings: "Debug"]
+Options=-g -q -fg -fr"$(Proj_dir)\Debug" -i"..\Include" -i"..\dsp-include" -i"..\..\Include" -i"..\..\dsp-include" -d"_DEBUG" -ml3 -mv6710
+
+["Compiler" Settings: "Release"]
+Options=-fg -fr"$(Proj_dir)\Release" -i"..\Include" -i"..\dsp-include" -i"..\..\Include" -i"..\..\dsp-include" -ml3 -mv6710
+
+["DspBiosBuilder" Settings: "Debug"]
+Options=-v6x
+
+["DspBiosBuilder" Settings: "Release"]
+Options=-v6x
+

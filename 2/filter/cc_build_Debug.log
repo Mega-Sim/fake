@@ -1,0 +1,12 @@
+-----------------------------  filter.pjt - Debug  -----------------------------
+"c:\ti\c6000\cgtools\bin\cl6x" -g -q -fg -fr"D:/project/SMR/SSMR-Lib/filter/Debug" -d"_DEBUG" -ml3 -mv6710 -@"Debug.lkf" "amc_filter.c"
+"amc_filter.c", line 52: warning: variable "beta" was declared but never referenced
+"amc_filter.c", line 174: warning: variable "temp0" was set but never used
+"amc_filter.c", line 174: warning: variable "temp1" was set but never used
+
+"c:\ti\c6000\cgtools\bin\ar6x" @"Debug.lkf"
+  ==>  new archive 'D:\project\SMR\SSMR-Lib\Lib\amc_filter.lib'
+  ==>  building archive 'D:\project\SMR\SSMR-Lib\Lib\amc_filter.lib'
+
+Build Complete,
+  0 Errors, 3 Warnings, 0 Remarks.

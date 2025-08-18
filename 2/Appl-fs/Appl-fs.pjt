@@ -1,0 +1,52 @@
+; Code Composer Project File, Version 2.0 (do not modify or remove this line)
+
+[Project Settings]
+ProjectDir="Z:\SSMR-Lib\Appl-fs\"
+ProjectType=Executable
+CPUFamily=TMS320C67XX
+Tool="Compiler"
+Tool="DspBiosBuilder"
+Tool="Linker"
+Config="Debug"
+Config="Library"
+Config="Release"
+
+[Source Files]
+Source="..\Lib\cts_callback.lib"
+Source="..\Lib\cts_eeprom.lib"
+Source="..\Lib\cts_fs.lib"
+Source="..\Lib\cts_i2c.lib"
+Source="..\Lib\cts_smr.lib"
+Source="..\Lib\cts_softdog.lib"
+Source="..\Lib\IconLabKernel1714.lib"
+Source="Appl-fs.c"
+Source="C:\ti\c6000\cgtools\lib\rts6701.lib"
+Source="Appl.cmd"
+
+["Compiler" Settings: "Debug"]
+Options=-g -q -fg -fr"Z:\SSMR-Lib\Appl-fs\Debug" -i"../Appl-include" -d"_DEBUG" -ml3 -mv6710
+
+["Compiler" Settings: "Library"]
+Options=-g -q -fr"Z:\SSMR-Lib\Appl-fs\Library" -d"_DEBUG" -mv6700
+
+["Compiler" Settings: "Release"]
+Options=-q -o3 -fg -fr"Z:\SSMR-Lib\Appl-fs\Release" -i"../include" -i"../../include" -i"../dsp-include" -i"../../dsp-include" -i"../Appl-include" -ml3 -mv6700
+
+["DspBiosBuilder" Settings: "Debug"]
+Options=-v6x
+
+["DspBiosBuilder" Settings: "Library"]
+Options=-v6x
+
+["DspBiosBuilder" Settings: "Release"]
+Options=-v6x
+
+["Linker" Settings: "Debug"]
+Options=-q -c -m".\Debug\Appl.map" -o".\Debug\Appl.out" -x
+
+["Linker" Settings: "Library"]
+Options=-q -c -m".\Library\Appl.map" -o".\Library\Appl.out" -x
+
+["Linker" Settings: "Release"]
+Options=-q -c -m".\Release\Appl.map" -o".\Release\Appl.out" -x
+

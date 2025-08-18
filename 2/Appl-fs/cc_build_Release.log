@@ -1,0 +1,10 @@
+-----------------------------  Appl.pjt - Release  -----------------------------
+"c:\ti\c6000\cgtools\bin\cl6x" -q -o3 -fg -fr"D:/project/SMR/SSMR-Lib/Appl/Release" -i"../include" -i"../../include" -i"../dsp-include" -i"../../dsp-include" -i"../Appl-include" -ml3 -mv6700 -@"Release.lkf" "Appl-Main.c"
+"Appl-Main.c", line 177: warning: variable "cnt" was declared but never referenced
+"Appl-Main.c", line 190: warning: variable "gain_close_vel" was declared but never referenced
+"Appl-Main.c", line 191: warning: variable "gain_close_torq" was declared but never referenced
+
+"c:\ti\c6000\cgtools\bin\cl6x" -@"Release.lkf"
+
+Build Complete,
+  0 Errors, 3 Warnings, 0 Remarks.

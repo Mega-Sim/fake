@@ -1,0 +1,38 @@
+; Code Composer Project File, Version 2.0 (do not modify or remove this line)
+
+[Project Settings]
+ProjectDir="C:\proj\dsp\2.5&2.8\SSMR-Lib-2.5.23-2.8.05-20111026\fs\"
+ProjectType=Library
+CPUFamily=TMS320C67XX
+Tool="Archiver"
+Tool="Compiler"
+Tool="DspBiosBuilder"
+Config="Debug"
+Config="Release"
+
+[Source Files]
+Source="..\..\OHT_BK\Sources\device\i28f128x16.c"
+Source="fs.cpp"
+
+[Generated Files]
+Source="Debug\fs.obj"
+Source="Debug\i28f128x16.obj"
+
+["Archiver" Settings: "Debug"]
+Options=-r -o../lib/cts_fs.lib
+
+["Archiver" Settings: "Release"]
+Options=-r -o../lib/cts_fs.lib
+
+["Compiler" Settings: "Debug"]
+Options=-g -q -fg -fr"C:\proj\dsp\2.5&2.8\SSMR-Lib-2.5.23-2.8.05-20111026\fs\Debug" -i"../dsp-include" -i"../Include" -d"_DEBUG" -ml3 -mv6710
+
+["Compiler" Settings: "Release"]
+Options=-q -o3 -fg -fr"C:\proj\dsp\2.5&2.8\SSMR-Lib-2.5.23-2.8.05-20111026\fs\Release" -i"../dsp-include" -i"../Include" -mv6710
+
+["DspBiosBuilder" Settings: "Debug"]
+Options=-v6x
+
+["DspBiosBuilder" Settings: "Release"]
+Options=-v6x
+

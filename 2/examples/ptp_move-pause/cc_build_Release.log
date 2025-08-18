@@ -1,0 +1,7 @@
+-----------------------------  Appl.pjt - Release  -----------------------------
+"c:\ti\c6000\cgtools\bin\cl6x" -q -o3 -fg -fr"Z:/SSMR-Lib/Appl/Release" -i"../include" -i"../../include" -i"../dsp-include" -i"../../dsp-include" -mv6700 -@"Release.lkf" "Appl-Main.c"
+
+"c:\ti\c6000\cgtools\bin\cl6x" -@"Release.lkf"
+
+Build Complete,
+  0 Errors, 0 Warnings, 0 Remarks.

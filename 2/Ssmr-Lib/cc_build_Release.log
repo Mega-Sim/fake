@@ -1,0 +1,33 @@
+-----------------------  MakeLib_2.11.02.pjt - Release  -----------------------
+"c:\ti\c6000\cgtools\bin\cl6x" -fg -fr"D:/jsh/180830/A78/Ssmr-Lib/Release" -i"../Include" -i"../dsp-include" -i"../../Include" -i"../../dsp-include" -ml3 -mv6710 -@"../Ssmr-Lib/Release.lkf" "axisctrl.c"
+
+"c:\ti\c6000\cgtools\bin\cl6x" -fg -fr"D:/jsh/180830/A78/Ssmr-Lib/Release" -i"../Include" -i"../dsp-include" -i"../../Include" -i"../../dsp-include" -ml3 -mv6710 -@"../Ssmr-Lib/Release.lkf" "AXISDPR.C"
+
+"c:\ti\c6000\cgtools\bin\cl6x" -fg -fr"D:/jsh/180830/A78/Ssmr-Lib/Release" -i"../Include" -i"../dsp-include" -i"../../Include" -i"../../dsp-include" -ml3 -mv6710 -@"../Ssmr-Lib/Release.lkf" "AxisGlb.c"
+
+"c:\ti\c6000\cgtools\bin\cl6x" -fg -fr"D:/jsh/180830/A78/Ssmr-Lib/Release" -i"../Include" -i"../dsp-include" -i"../../Include" -i"../../dsp-include" -ml3 -mv6710 -@"../Ssmr-Lib/Release.lkf" "AXISINT.C"
+
+"c:\ti\c6000\cgtools\bin\cl6x" -fg -fr"D:/jsh/180830/A78/Ssmr-Lib/Release" -i"../Include" -i"../dsp-include" -i"../../Include" -i"../../dsp-include" -ml3 -mv6710 -@"../Ssmr-Lib/Release.lkf" "AXISMAIN.C"
+
+"c:\ti\c6000\cgtools\bin\cl6x" -fg -fr"D:/jsh/180830/A78/Ssmr-Lib/Release" -i"../Include" -i"../dsp-include" -i"../../Include" -i"../../dsp-include" -ml3 -mv6710 -@"../Ssmr-Lib/Release.lkf" "dsp_if_adv.c"
+
+"c:\ti\c6000\cgtools\bin\cl6x" -fg -fr"D:/jsh/180830/A78/Ssmr-Lib/Release" -i"../Include" -i"../dsp-include" -i"../../Include" -i"../../dsp-include" -ml3 -mv6710 -@"../Ssmr-Lib/Release.lkf" "dsp_if_petc.c"
+
+"c:\ti\c6000\cgtools\bin\cl6x" -fg -fr"D:/jsh/180830/A78/Ssmr-Lib/Release" -i"../Include" -i"../dsp-include" -i"../../Include" -i"../../dsp-include" -ml3 -mv6710 -@"../Ssmr-Lib/Release.lkf" "dsp_if_plimit.c"
+
+"c:\ti\c6000\cgtools\bin\cl6x" -fg -fr"D:/jsh/180830/A78/Ssmr-Lib/Release" -i"../Include" -i"../dsp-include" -i"../../Include" -i"../../dsp-include" -ml3 -mv6710 -@"../Ssmr-Lib/Release.lkf" "dsp_if_status.c"
+
+"c:\ti\c6000\cgtools\bin\cl6x" -fg -fr"D:/jsh/180830/A78/Ssmr-Lib/Release" -i"../Include" -i"../dsp-include" -i"../../Include" -i"../../dsp-include" -ml3 -mv6710 -@"../Ssmr-Lib/Release.lkf" "Follows.c"
+
+"c:\ti\c6000\cgtools\bin\cl6x" -fg -fr"D:/jsh/180830/A78/Ssmr-Lib/Release" -i"../Include" -i"../dsp-include" -i"../../Include" -i"../../dsp-include" -ml3 -mv6710 -@"../Ssmr-Lib/Release.lkf" "hardware.c"
+
+"c:\ti\c6000\cgtools\bin\cl6x" -fg -fr"D:/jsh/180830/A78/Ssmr-Lib/Release" -i"../Include" -i"../dsp-include" -i"../../Include" -i"../../dsp-include" -ml3 -mv6710 -@"../Ssmr-Lib/Release.lkf" "internalFuncs.c"
+
+"c:\ti\c6000\cgtools\bin\cl6x" -fg -fr"D:/jsh/180830/A78/Ssmr-Lib/Release" -i"../Include" -i"../dsp-include" -i"../../Include" -i"../../dsp-include" -ml3 -mv6710 -@"../Ssmr-Lib/Release.lkf" "trace.c"
+
+"c:\ti\c6000\cgtools\bin\ar6x" @"Release.lkf"
+  ==>  new archive 'D:\jsh\180830\A78\Lib\cts_smr.lib'
+  ==>  building archive 'D:\jsh\180830\A78\Lib\cts_smr.lib'
+
+Build Complete,
+  0 Errors, 0 Warnings, 0 Remarks.

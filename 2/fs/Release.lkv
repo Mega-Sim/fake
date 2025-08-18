@@ -1,0 +1,4 @@
+-r
+"C:\proj\dsp\2.5&2.8\SSMR-Lib-2.5.23-2.8.05-20111026\lib\cts_fs.lib"
+"C:\proj\dsp\2.5&2.8\SSMR-Lib-2.5.23-2.8.05-20111026\fs\Release\fs.obj"
+"C:\proj\dsp\2.5&2.8\SSMR-Lib-2.5.23-2.8.05-20111026\fs\Release\i28f128x16.obj"
