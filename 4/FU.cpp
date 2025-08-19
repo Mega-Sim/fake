@@ -1974,17 +1974,27 @@ int main(int argc, char *argv[])
 			else
 				printf("Controller = %d Reset success! \n", argslave);
 		}
-		else if((strcmp(argv[1], "/t") == 0) || (strcmp(argv[1], "/T") == 0))
-		{
-			printf("Developer test... [1]opt=%s [2]net=%s [3]slave=%d \n",
-					argv[1], argv[2], argslave);
-			dev_debug(argv[2], argslave);	
-		}
-		else
-		{
-			printf("\n Command error(4)! Please check command! \n");
-			print_usage();
-		}
+                else if((strcmp(argv[1], "/t") == 0) || (strcmp(argv[1], "/T") == 0))
+                {
+                        printf("Developer test... [1]opt=%s [2]net=%s [3]slave=%d \n",
+                                        argv[1], argv[2], argslave);
+                        dev_debug(argv[2], argslave);
+                }
+                else if((strcmp(argv[1], "/x") == 0) || (strcmp(argv[1], "/X") == 0))
+                {
+#if PARAM_EXTRACTION_ON
+                        iResult = param_extract(argv[2], argslave);
+#else
+                        printf("parameter extraction.... [1]opt=%s [2]net=%s [3]slave=%d \n",
+                                        argv[1], argv[2], argslave);
+                        iResult = RESULT_SUCCESS;
+#endif
+                }
+                else
+                {
+                        printf("\n Command error(4)! Please check command! \n");
+                        print_usage();
+                }
 	}
 
 // =================================================================

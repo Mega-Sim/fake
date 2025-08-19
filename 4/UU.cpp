@@ -1017,8 +1017,12 @@ void update_uiFrame::OnButtonClick( wxCommandEvent& event )
     // (1) Extraction of Current Parameters
     if (id == wxID_BUTTON_PARAM_EXTRACTION)
     {
-        makeCommand = makeCommand + "/x enp2s0 1 " + FILE_LOCATION.PARAM.extraction;
-        int iRunResult = shell_0_or_1(makeCommand);
+        // 파라미터 추출은 추가 인자 없이 /x 옵션만 전달하면 된다.
+        // 이전 구현은 불필요한 파일 경로를 함께 전달하여
+        // firm_update 실행 시 인자 개수가 맞지 않아 비정상 종료가 발생하였다.
+
+        makeCommand += "/x enp2s0 1";
+        iRunResult = shell_0_or_1(makeCommand);
 
         if (iRunResult == RESULT_SUCCESS)
         {
