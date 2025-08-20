@@ -1003,7 +1003,18 @@ int param_extract(char *ifname, uint16 slave)
                 /* The file should contain lines in the format expected by
                  * parameter_load(), i.e. comma separated values with six
                  * fields.  Only the first five fields are used here. */
-                if (parameter_load("parameter_drive_cable.txt") == RESULT_FAIL)
+
+                /* Select the correct parameter description file based on the
+                 * slave axis.  This allows extraction to work for all motion
+                 * axes and also fixes the previous typo in the filename. */
+                const char *param_file = "param_driving_cable.txt";
+
+                if (slave == AXIS_HOIST)
+                        param_file = "param_hoist_cable.txt";
+                else if (slave == AXIS_SLIDE)
+                        param_file = "param_slide_cable.txt";
+
+                if (parameter_load(param_file) == RESULT_FAIL)
                 {
                         printf("Parameter list load failed... \n");
                         fclose(fp);
