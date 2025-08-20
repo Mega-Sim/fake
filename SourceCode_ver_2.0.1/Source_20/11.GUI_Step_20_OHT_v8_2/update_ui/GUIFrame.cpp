@@ -50,6 +50,12 @@ GUIFrame::GUIFrame( wxWindow* parent, wxWindowID id, const wxString& title, cons
     m_button_param_extraction = new wxButton(this, wxID_BUTTON_PARAM_EXTRACTION, wxT("Extraction"), wxDefaultPosition, wxDefaultSize, 0);
     horizontalSizer->Add(m_button_param_extraction, 0, wxALIGN_CENTER_VERTICAL);
 
+    // 결과 표시를 위한 텍스트 박스 추가
+    m_text_result_param = new wxTextCtrl(this, wxID_ANY, wxEmptyString,
+                                        wxDefaultPosition, wxDefaultSize,
+                                        wxTE_READONLY);
+    horizontalSizer->Add(m_text_result_param, 0, wxALIGN_CENTER_VERTICAL | wxLEFT, 5);
+
     topSizer->Add(horizontalSizer, 0, wxEXPAND | wxALL, 5);
 
 	wxBoxSizer* bSizer1;
