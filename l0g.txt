@@ -1,0 +1,114 @@
+semes@semes-cExpress-AL:~/Desktop/Update_Package_2.0.6$ ./update_ui
+[firm_update] chmod 755 result = 0 
+[slave info] chmod 755 result = 0 
+
+	 NET_02 = 0  NET_03 = 0 
+Network port (02) auto open 
+Network port (03) auto open 
+Waiting for network openning.....
+##### Network Manager CMD : sudo ip link set enp2s0 up 
+Waiting for port -> enp2s0.....
+
+>>> SEMES Firmware update utility. Version : 2.0 
+Slave no check ok = 1 
+Firmware version file open... 
+ec_init on enp2s0 succeeded.
+ec_config_init() func fail!! 
+
+>>> SEMES Firmware update utility. Version : 2.0 
+Slave no check ok = 2 
+Firmware version file open... 
+ec_init on enp2s0 succeeded.
+ec_config_init() func fail!! 
+
+>>> SEMES Firmware update utility. Version : 2.0 
+Slave no check ok = 3 
+Firmware version file open... 
+ec_init on enp2s0 succeeded.
+ec_config_init() func fail!! 
+
+>>> SEMES Firmware update utility. Version : 2.0 
+Slave no check ok = 1 
+Get common parameter view.... [1]opt=/g [2]net=enp2s0 [3]slave=1 [4]Index=0x683f [5]SubIndex=0x00 [6]DataLen=2 
+(TYPE_UINT) 2Byte 
+Common Read file open... 
+ec_init on enp2s0 succeeded.
+Get Common => Idx : 0x683F (Hex) Sub : 0x0000 (Hex) => result : 0(Dec) 0x0000 (Hex) 
+
+>>> SEMES Firmware update utility. Version : 2.0 
+Slave no check ok = 1 
+Get common parameter view.... [1]opt=/g [2]net=enp2s0 [3]slave=1 [4]Index=0x603f [5]SubIndex=0x00 [6]DataLen=2 
+(TYPE_UINT) 2Byte 
+Common Read file open... 
+ec_init on enp2s0 succeeded.
+Get Common => Idx : 0x603F (Hex) Sub : 0x0000 (Hex) => result : 0(Dec) 0x0000 (Hex) 
+
+>>> SEMES Firmware update utility. Version : 2.0 
+Slave no check ok = 2 
+Get common parameter view.... [1]opt=/g [2]net=enp2s0 [3]slave=2 [4]Index=0x603f [5]SubIndex=0x00 [6]DataLen=2 
+(TYPE_UINT) 2Byte 
+Common Read file open... 
+ec_init on enp2s0 succeeded.
+Get Common => Idx : 0x603F (Hex) Sub : 0x0000 (Hex) => result : 0(Dec) 0x0000 (Hex) 
+
+>>> SEMES Firmware update utility. Version : 2.0 
+Slave no check ok = 3 
+Get common parameter view.... [1]opt=/g [2]net=enp2s0 [3]slave=3 [4]Index=0x603f [5]SubIndex=0x00 [6]DataLen=2 
+(TYPE_UINT) 2Byte 
+Common Read file open... 
+ec_init on enp2s0 succeeded.
+Get Common => Idx : 0x603F (Hex) Sub : 0x0000 (Hex) => result : 0(Dec) 0x0000 (Hex) 
+Set Firmware refresh time = 6 
+Set Parameter refresh time = 5 
+
+
+>>> SEMES Firmware update utility. Version : 2.0 
+Slave no check ok = 1 
+Parameter file not found! Check please!
+Parameter list load failed... 
+
+>>> SEMES Firmware update utility. Version : 2.0 
+Slave no check ok = 1 
+Get common parameter view.... [1]opt=/g [2]net=enp2s0 [3]slave=1 [4]Index=0x683f [5]SubIndex=0x00 [6]DataLen=2 
+(TYPE_UINT) 2Byte 
+Common Read file open... 
+ec_init on enp2s0 succeeded.
+Request PRE OP state for slave 1
+Slave 1 state to PREOP.
+Common read(TYPE_UINT) = 0  0x00000000 
+Get Common => Idx : 0x683F (Hex) Sub : 0x0000 (Hex) => result : 1(Dec) 0x0001 (Hex) 
+
+>>> SEMES Firmware update utility. Version : 2.0 
+Slave no check ok = 1 
+Get common parameter view.... [1]opt=/g [2]net=enp2s0 [3]slave=1 [4]Index=0x603f [5]SubIndex=0x00 [6]DataLen=2 
+(TYPE_UINT) 2Byte 
+Common Read file open... 
+ec_init on enp2s0 succeeded.
+Request PRE OP state for slave 1
+Slave 1 state to PREOP.
+Common read(TYPE_UINT) = 0  0x00000000 
+Get Common => Idx : 0x603F (Hex) Sub : 0x0000 (Hex) => result : 1(Dec) 0x0001 (Hex) 
+
+>>> SEMES Firmware update utility. Version : 2.0 
+Slave no check ok = 2 
+Get common parameter view.... [1]opt=/g [2]net=enp2s0 [3]slave=2 [4]Index=0x603f [5]SubIndex=0x00 [6]DataLen=2 
+(TYPE_UINT) 2Byte 
+Common Read file open... 
+ec_init on enp2s0 succeeded.
+Request PRE OP state for slave 2
+Slave 2 state to PREOP.
+Common read(TYPE_UINT) = 0  0x00000000 
+Get Common => Idx : 0x603F (Hex) Sub : 0x0000 (Hex) => result : 1(Dec) 0x0001 (Hex) 
+
+>>> SEMES Firmware update utility. Version : 2.0 
+Slave no check ok = 3 
+Get common parameter view.... [1]opt=/g [2]net=enp2s0 [3]slave=3 [4]Index=0x603f [5]SubIndex=0x00 [6]DataLen=2 
+(TYPE_UINT) 2Byte 
+Common Read file open... 
+ec_init on enp2s0 succeeded.
+Request PRE OP state for slave 3
+Slave 3 state to PREOP.
+Common read(TYPE_UINT) = 0  0x00000000 
+Get Common => Idx : 0x603F (Hex) Sub : 0x0000 (Hex) => result : 1(Dec) 0x0001 (Hex) 
+
+
