@@ -1115,6 +1115,9 @@ int param_extract(char *ifname, uint16 slave)
                 fclose(fp);
         }
 
+        /* 기존 파라미터 정보는 재사용되지 않으므로 메모리를 정리한다. */
+        memset(&Param_Raw, 0, sizeof(Param_Raw));
+
         return iResult;
 }
 
