@@ -1,4 +1,4 @@
-semes@semes-cExpress-AL:~/Desktop/Update_Package_2.0.6$ ./update_ui
+Corporation@Corporation-cExpress-AL:~/Desktop/Update_Package_2.0.6$ ./update_ui
 [firm_update] chmod 755 result = 0 
 [slave info] chmod 755 result = 0 
 
@@ -9,65 +9,31 @@ Waiting for network openning.....
 ##### Network Manager CMD : sudo ip link set enp2s0 up 
 Waiting for port -> enp2s0.....
 
->>> SEMES Firmware update utility. Version : 2.0 
+>>> Corporation Firmware update utility. Version : 2.0 
 Slave no check ok = 1 
 Firmware version file open... 
 ec_init on enp2s0 succeeded.
-ec_config_init() func fail!! 
+Request PRE OP state for slave 1
+Slave 1 state to PREOP.
+F/W Version : V1.02.00.00
 
->>> SEMES Firmware update utility. Version : 2.0 
+>>> Corporation Firmware update utility. Version : 2.0 
 Slave no check ok = 2 
 Firmware version file open... 
 ec_init on enp2s0 succeeded.
-ec_config_init() func fail!! 
+Request PRE OP state for slave 2
+Slave 2 state to PREOP.
+F/W Version : 12004002
 
->>> SEMES Firmware update utility. Version : 2.0 
+>>> Corporation Firmware update utility. Version : 2.0 
 Slave no check ok = 3 
 Firmware version file open... 
 ec_init on enp2s0 succeeded.
-ec_config_init() func fail!! 
+Request PRE OP state for slave 3
+Slave 3 state to PREOP.
+F/W Version : 11004002
 
->>> SEMES Firmware update utility. Version : 2.0 
-Slave no check ok = 1 
-Get common parameter view.... [1]opt=/g [2]net=enp2s0 [3]slave=1 [4]Index=0x683f [5]SubIndex=0x00 [6]DataLen=2 
-(TYPE_UINT) 2Byte 
-Common Read file open... 
-ec_init on enp2s0 succeeded.
-Get Common => Idx : 0x683F (Hex) Sub : 0x0000 (Hex) => result : 0(Dec) 0x0000 (Hex) 
-
->>> SEMES Firmware update utility. Version : 2.0 
-Slave no check ok = 1 
-Get common parameter view.... [1]opt=/g [2]net=enp2s0 [3]slave=1 [4]Index=0x603f [5]SubIndex=0x00 [6]DataLen=2 
-(TYPE_UINT) 2Byte 
-Common Read file open... 
-ec_init on enp2s0 succeeded.
-Get Common => Idx : 0x603F (Hex) Sub : 0x0000 (Hex) => result : 0(Dec) 0x0000 (Hex) 
-
->>> SEMES Firmware update utility. Version : 2.0 
-Slave no check ok = 2 
-Get common parameter view.... [1]opt=/g [2]net=enp2s0 [3]slave=2 [4]Index=0x603f [5]SubIndex=0x00 [6]DataLen=2 
-(TYPE_UINT) 2Byte 
-Common Read file open... 
-ec_init on enp2s0 succeeded.
-Get Common => Idx : 0x603F (Hex) Sub : 0x0000 (Hex) => result : 0(Dec) 0x0000 (Hex) 
-
->>> SEMES Firmware update utility. Version : 2.0 
-Slave no check ok = 3 
-Get common parameter view.... [1]opt=/g [2]net=enp2s0 [3]slave=3 [4]Index=0x603f [5]SubIndex=0x00 [6]DataLen=2 
-(TYPE_UINT) 2Byte 
-Common Read file open... 
-ec_init on enp2s0 succeeded.
-Get Common => Idx : 0x603F (Hex) Sub : 0x0000 (Hex) => result : 0(Dec) 0x0000 (Hex) 
-Set Firmware refresh time = 6 
-Set Parameter refresh time = 5 
-
-
->>> SEMES Firmware update utility. Version : 2.0 
-Slave no check ok = 1 
-Parameter file not found! Check please!
-Parameter list load failed... 
-
->>> SEMES Firmware update utility. Version : 2.0 
+>>> Corporation Firmware update utility. Version : 2.0 
 Slave no check ok = 1 
 Get common parameter view.... [1]opt=/g [2]net=enp2s0 [3]slave=1 [4]Index=0x683f [5]SubIndex=0x00 [6]DataLen=2 
 (TYPE_UINT) 2Byte 
@@ -78,7 +44,7 @@ Slave 1 state to PREOP.
 Common read(TYPE_UINT) = 0  0x00000000 
 Get Common => Idx : 0x683F (Hex) Sub : 0x0000 (Hex) => result : 1(Dec) 0x0001 (Hex) 
 
->>> SEMES Firmware update utility. Version : 2.0 
+>>> Corporation Firmware update utility. Version : 2.0 
 Slave no check ok = 1 
 Get common parameter view.... [1]opt=/g [2]net=enp2s0 [3]slave=1 [4]Index=0x603f [5]SubIndex=0x00 [6]DataLen=2 
 (TYPE_UINT) 2Byte 
@@ -89,7 +55,7 @@ Slave 1 state to PREOP.
 Common read(TYPE_UINT) = 0  0x00000000 
 Get Common => Idx : 0x603F (Hex) Sub : 0x0000 (Hex) => result : 1(Dec) 0x0001 (Hex) 
 
->>> SEMES Firmware update utility. Version : 2.0 
+>>> Corporation Firmware update utility. Version : 2.0 
 Slave no check ok = 2 
 Get common parameter view.... [1]opt=/g [2]net=enp2s0 [3]slave=2 [4]Index=0x603f [5]SubIndex=0x00 [6]DataLen=2 
 (TYPE_UINT) 2Byte 
@@ -100,7 +66,90 @@ Slave 2 state to PREOP.
 Common read(TYPE_UINT) = 0  0x00000000 
 Get Common => Idx : 0x603F (Hex) Sub : 0x0000 (Hex) => result : 1(Dec) 0x0001 (Hex) 
 
->>> SEMES Firmware update utility. Version : 2.0 
+>>> Corporation Firmware update utility. Version : 2.0 
+Slave no check ok = 3 
+Get common parameter view.... [1]opt=/g [2]net=enp2s0 [3]slave=3 [4]Index=0x603f [5]SubIndex=0x00 [6]DataLen=2 
+(TYPE_UINT) 2Byte 
+Common Read file open... 
+ec_init on enp2s0 succeeded.
+Request PRE OP state for slave 3
+Slave 3 state to PREOP.
+Common read(TYPE_UINT) = 0  0x00000000 
+Get Common => Idx : 0x603F (Hex) Sub : 0x0000 (Hex) => result : 1(Dec) 0x0001 (Hex) 
+Set Firmware refresh time = 6 
+Set Parameter refresh time = 5 
+
+
+>>> Corporation Firmware update utility. Version : 2.0 
+Slave no check ok = 1 
+Starting firmware update example
+ec_init on enp2s0 succeeded.
+3 slaves found and configured.
+Request init state for slave 1
+Slave 1 state to INIT.
+ SM0 A:1600 L: 268 F:00010026
+ SM1 A:1400 L: 268 F:00010022
+Request BOOT state for slave 1
+Slave 1 state to BOOT.
+File read OK, 1212712 bytes.
+FoE write....Log file open failed... 
+ 
+  Log Pass(1) : 1020304 
+ 
+  Log Pass(2) : 1020304 
+#(02) begin wkc = 1 
+#(03) ecx_mbxreceive Return = 1 
+#(04) ECT_MBXT_FOE  
+#(05) ECT_FOE_ACK 
+#(30) packetnumber = 0 sendpacket = 0 
+#(32)  psize = 1212712  maxdata = 256 
+#(32) psize = 1212712  segmentdata = 256 maxdata = 256 
+#(06) wkc = 1  
+#(03) ecx_mbxreceive Return = 1 
+#(04) ECT_MBXT_FOE  
+#(12)  ECT_FOE_ERROR  
+#(14) >> EC_ERR_TYPE_FOE_ERROR  
+#(20) exit wkr = -5 
+>>>>>>>>>>  Firmware update fail... ErrCode = -5 
+
+result -5.
+Request init state for slave 1
+End firmware update example, close socket
+
+>>> Corporation Firmware update utility. Version : 2.0 
+Slave no check ok = 1 
+Get common parameter view.... [1]opt=/g [2]net=enp2s0 [3]slave=1 [4]Index=0x683f [5]SubIndex=0x00 [6]DataLen=2 
+(TYPE_UINT) 2Byte 
+Common Read file open... 
+ec_init on enp2s0 succeeded.
+Request PRE OP state for slave 1
+Slave 1 state to PREOP.
+Common read(TYPE_UINT) = 0  0x00000000 
+Get Common => Idx : 0x683F (Hex) Sub : 0x0000 (Hex) => result : 1(Dec) 0x0001 (Hex) 
+
+>>> Corporation Firmware update utility. Version : 2.0 
+Slave no check ok = 1 
+Get common parameter view.... [1]opt=/g [2]net=enp2s0 [3]slave=1 [4]Index=0x603f [5]SubIndex=0x00 [6]DataLen=2 
+(TYPE_UINT) 2Byte 
+Common Read file open... 
+ec_init on enp2s0 succeeded.
+Request PRE OP state for slave 1
+Slave 1 state to PREOP.
+Common read(TYPE_UINT) = 0  0x00000000 
+Get Common => Idx : 0x603F (Hex) Sub : 0x0000 (Hex) => result : 1(Dec) 0x0001 (Hex) 
+
+>>> Corporation Firmware update utility. Version : 2.0 
+Slave no check ok = 2 
+Get common parameter view.... [1]opt=/g [2]net=enp2s0 [3]slave=2 [4]Index=0x603f [5]SubIndex=0x00 [6]DataLen=2 
+(TYPE_UINT) 2Byte 
+Common Read file open... 
+ec_init on enp2s0 succeeded.
+Request PRE OP state for slave 2
+Slave 2 state to PREOP.
+Common read(TYPE_UINT) = 0  0x00000000 
+Get Common => Idx : 0x603F (Hex) Sub : 0x0000 (Hex) => result : 1(Dec) 0x0001 (Hex) 
+
+>>> Corporation Firmware update utility. Version : 2.0 
 Slave no check ok = 3 
 Get common parameter view.... [1]opt=/g [2]net=enp2s0 [3]slave=3 [4]Index=0x603f [5]SubIndex=0x00 [6]DataLen=2 
 (TYPE_UINT) 2Byte 
