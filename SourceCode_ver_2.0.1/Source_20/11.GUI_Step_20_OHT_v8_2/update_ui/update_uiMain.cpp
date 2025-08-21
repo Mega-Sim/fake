@@ -1008,7 +1008,8 @@ void update_uiFrame::OnButtonClick( wxCommandEvent& event )
 {
     int iRunResult = 0; // 0 = fail. 1 = success
     auto id = event.GetId();
-    std::string makeCommand = "sudo ./firm_update ";
+    const std::string baseCommand = "sudo ./firm_update";
+    std::string makeCommand = baseCommand + " ";
 
     int iGetValue = -1;
     char cTempBuffer[50];
@@ -1036,80 +1037,40 @@ void update_uiFrame::OnButtonClick( wxCommandEvent& event )
     // (2) Firmware - New
     if (id == wxID_BUTTON_NEW_DRIVING)
     {
-        makeCommand = makeCommand + "/f enp2s0 1 " + FILE_LOCATION.NEW_ROM.driving;
+        struct AxisInfo { int axis; std::string file; } axes[] = {
+            {AXIS_DRIVING, FILE_LOCATION.NEW_ROM.driving},
+            {AXIS_HOIST,   FILE_LOCATION.NEW_ROM.hoist},
+            {AXIS_SLIDE,   FILE_LOCATION.NEW_ROM.slide}
+        };
 
-        iRunResult = shell_0_or_1(makeCommand);
-        if(iRunResult == RESULT_SUCCESS)
+        bool success = true;
+
+        for (const auto& a : axes)
         {
-            resetController(AXIS_DRIVING);
+            makeCommand = baseCommand + "/f enp2s0 " + std::to_string(a.axis) + " " + a.file;
 
-            sleep(FIRM_REFRESH_TIME);
-            chkFirm_version();
+            iRunResult = shell_0_or_1(makeCommand);
+            if(iRunResult == RESULT_SUCCESS)
+            {
+                resetController(a.axis);
+                sleep(FIRM_REFRESH_TIME);
+            }
+            else
+            {
+                success = false;
+                break;
+            }
+        }
 
-            sleep(1);
-            getErrCode_All();
+        chkFirm_version();
+        sleep(1);
+        getErrCode_All();
 
+        if(success)
             wxMessageBox(wxT("Running Ok"),  wxEmptyString, wxITEM_NORMAL);
-        }
         else
-        {
-            sleep(1);
-            getErrCode_All();
-
             wxMessageBox(wxT("Update fail!!"), wxT("ERROR"), wxITEM_CHECK);
-        }
 
-
-    }
-    else if(id == wxID_BUTTON_NEW_HOIST)
-    {
-        makeCommand = makeCommand + "/f enp2s0 2 " + FILE_LOCATION.NEW_ROM.hoist;
-
-        iRunResult = shell_0_or_1(makeCommand);
-        if(iRunResult == RESULT_SUCCESS)
-        {
-            resetController(AXIS_HOIST);
-
-            sleep(FIRM_REFRESH_TIME);
-            chkFirm_version();
-
-            sleep(1);
-            getErrCode_All();
-
-            wxMessageBox(wxT("Running Ok"),  wxEmptyString, wxITEM_NORMAL);
-        }
-        else
-        {
-            sleep(1);
-            getErrCode_All();
-
-            wxMessageBox(wxT("Update fail!!"), wxT("ERROR"), wxITEM_CHECK);
-        }
-    }
-    else if(id == wxID_BUTTON_NEW_SLIDE)
-    {
-        makeCommand = makeCommand + "/f enp2s0 3 " + FILE_LOCATION.NEW_ROM.slide;
-
-        iRunResult = shell_0_or_1(makeCommand);
-        if(iRunResult == RESULT_SUCCESS)
-        {
-            resetController(AXIS_SLIDE);
-
-            sleep(FIRM_REFRESH_TIME);
-            chkFirm_version();
-
-            sleep(1);
-            getErrCode_All();
-
-            wxMessageBox(wxT("Running Ok"),  wxEmptyString, wxITEM_NORMAL);
-        }
-        else
-        {
-            sleep(1);
-            getErrCode_All();
-
-            wxMessageBox(wxT("Update fail!!"), wxT("ERROR"), wxITEM_CHECK);
-        }
     }
 
     // (3) Parameter update
