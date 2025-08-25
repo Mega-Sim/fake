@@ -1923,16 +1923,17 @@ int main(int argc, char *argv[])
 			printf("version view.... [1]opt=%s [2]net=%s [3]slave=%d \n",
 					argv[1], argv[2], argslave);
 
-			// ---------- save log dummy 
-			   FILE *fp;
-			   fp = fopen("firm_version.txt", "w");
-			   if(fp == NULL)
-			       printf("Log file open failed... \n");					   
-			   else
-				   printf("Firmware version file open... \n");		   
-
-			   fprintf(fp, "%s\n", "1.01.60.07");
-     		   fclose(fp);
+                        // ---------- save log dummy
+                           FILE *fp;
+                           fp = fopen("firm_version.txt", "w");
+                           if(fp == NULL)
+                               printf("Log file open failed... \n");
+                           else
+                           {
+                                   printf("Firmware version file open... \n");
+                                   fprintf(fp, "%s\n", "1.01.60.07");
+                                   fclose(fp);
+                           }
 
 #endif			
 		}

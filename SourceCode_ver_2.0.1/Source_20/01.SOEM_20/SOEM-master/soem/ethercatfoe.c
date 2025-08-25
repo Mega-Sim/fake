@@ -212,10 +212,11 @@ int ecx_FOEwrite(ecx_contextt *context, uint16 slave, char *filename, uint32 pas
      // ---------- save log
         FILE *fp;
         fp = fopen("firm_update.log", "w");
+#define FW_LOG(...) do { if(fp) fprintf(fp, __VA_ARGS__); } while (0)
         if(fp == NULL)
-                printf("Firmware update progress  ->  firm_update.log save... \n");
-        else
                 printf("Log file open failed... \n");
+        else
+                printf("Firmware update progress  ->  firm_update.log save... \n");
         // -------------------------
 
    ec_clearmbx(&MbxIn);
@@ -230,7 +231,7 @@ int ecx_FOEwrite(ecx_contextt *context, uint16 slave, char *filename, uint32 pas
    if (fnsize > maxdata)
    {
 	   printf("#(01) fnsize = maxdata; Case.  fnsize = %d  maxdata = %d \n", fnsize, maxdata);
-                  fprintf(fp, "#(01) fnsize = maxdata; Case.  fnsize = %d  maxdata = %d \n", fnsize, maxdata);
+                  FW_LOG("#(01) fnsize = maxdata; Case.  fnsize = %d  maxdata = %d \n", fnsize, maxdata);
 
       fnsize = maxdata;
    }
@@ -244,11 +245,11 @@ int ecx_FOEwrite(ecx_contextt *context, uint16 slave, char *filename, uint32 pas
    FOEp->OpCode = ECT_FOE_WRITE;
 
      printf(" \n  Log Pass(1) : %x \n", password);
-        fprintf(fp, " \n  Log Pass(1) : %x \n", password);
+        FW_LOG(" \n  Log Pass(1) : %x \n", password);
 
    FOEp->Password = htoel(password);
      printf(" \n  Log Pass(2) : %x \n", FOEp->Password);
-        fprintf(fp, " \n  Log Pass(2) : %x \n", FOEp->Password);
+        FW_LOG(" \n  Log Pass(2) : %x \n", FOEp->Password);
 
    /* copy filename in mailbox */
    memcpy(&FOEp->FileName[0], filename, fnsize);
@@ -257,7 +258,7 @@ int ecx_FOEwrite(ecx_contextt *context, uint16 slave, char *filename, uint32 pas
    if (wkc > 0) /* succeeded to place mailbox in slave ? */
    {
 	   printf("#(02) begin wkc = %d \n", wkc);
-                 fprintf(fp, "#(02) begin wkc = %d \n", wkc);
+                 FW_LOG("#(02) begin wkc = %d \n", wkc);
 
       do
       {
@@ -267,7 +268,7 @@ int ecx_FOEwrite(ecx_contextt *context, uint16 slave, char *filename, uint32 pas
          /* read slave response */
          wkc = ecx_mbxreceive(context, slave, (ec_mbxbuft *)&MbxIn, timeout);
 		 printf("#(03) ecx_mbxreceive Return = %d \n", wkc);
-                           fprintf(fp, "#(03) ecx_mbxreceive Return = %d \n", wkc);
+                           FW_LOG("#(03) ecx_mbxreceive Return = %d \n", wkc);
 
 
          if (wkc > 0) /* succeeded to read slave response ? */
@@ -276,7 +277,7 @@ int ecx_FOEwrite(ecx_contextt *context, uint16 slave, char *filename, uint32 pas
             if ((aFOEp->MbxHeader.mbxtype & 0x0f) == ECT_MBXT_FOE)
             {
 			   printf("#(04) ECT_MBXT_FOE  \n");
-                                           fprintf(fp, "#(04) ECT_MBXT_FOE  \n");
+                                           FW_LOG("#(04) ECT_MBXT_FOE  \n");
                switch (aFOEp->OpCode)
                {
                   case ECT_FOE_ACK:
@@ -285,7 +286,7 @@ int ecx_FOEwrite(ecx_contextt *context, uint16 slave, char *filename, uint32 pas
                      packetnumber = etohl(aFOEp->PacketNumber);
 
 		        printf("#(30) packetnumber = %d sendpacket = %d \n", packetnumber, sendpacket);
-                                 fprintf(fp, "#(30) packetnumber = %d sendpacket = %d \n", packetnumber, sendpacket);
+                                 FW_LOG("#(30) packetnumber = %d sendpacket = %d \n", packetnumber, sendpacket);
 
                      if (packetnumber == sendpacket)
                      {
@@ -293,11 +294,11 @@ int ecx_FOEwrite(ecx_contextt *context, uint16 slave, char *filename, uint32 pas
                         {
                            context->FOEhook(slave, packetnumber, psize);
 			     printf("#(31) slave = %d packetnumber = %d psize = %d  \n", slave, packetnumber, psize);
-                                           fprintf(fp, "#(31) slave = %d packetnumber = %d psize = %d  \n", slave, packetnumber, psize);
+                                           FW_LOG("#(31) slave = %d packetnumber = %d psize = %d  \n", slave, packetnumber, psize);
                         }
 
 		             printf("#(32)  psize = %d  maxdata = %d \n",  psize, maxdata);
-                                      fprintf(fp, "#(32)  psize = %d  maxdata = %d \n",  psize, maxdata);
+                                      FW_LOG("#(32)  psize = %d  maxdata = %d \n",  psize, maxdata);
 
                         tsize = psize;
                         if (tsize > maxdata)
@@ -311,7 +312,7 @@ int ecx_FOEwrite(ecx_contextt *context, uint16 slave, char *filename, uint32 pas
                            segmentdata = tsize;
 
 			     printf("#(32) psize = %d  segmentdata = %d maxdata = %d \n", psize, segmentdata, maxdata);
-                                           fprintf(fp, "#(32) psize = %d  segmentdata = %d maxdata = %d \n", psize, segmentdata, maxdata);
+                                           FW_LOG("#(32) psize = %d  segmentdata = %d maxdata = %d \n", psize, segmentdata, maxdata);
 
                            psize -= segmentdata;
                            /* if last packet was full size, add a zero size packet as final */
@@ -335,13 +336,13 @@ int ecx_FOEwrite(ecx_contextt *context, uint16 slave, char *filename, uint32 pas
                            /* send FoE data to slave */
                            wkc = ecx_mbxsend(context, slave, (ec_mbxbuft *)&MbxOut, EC_TIMEOUTTXM);
 			     printf("#(06) wkc = %d  \n", wkc);
-                                           fprintf(fp, "#(06) wkc = %d  \n", wkc);
+                                           FW_LOG("#(06) wkc = %d  \n", wkc);
 
 
                            if (wkc <= 0)
                            {
 			         printf("#(07) wkc <= 0  \n");
-                                               fprintf(fp, "#(07) wkc <= 0  \n");
+                                               FW_LOG("#(07) wkc <= 0  \n");
 
                               worktodo = FALSE;
                            }
@@ -351,7 +352,7 @@ int ecx_FOEwrite(ecx_contextt *context, uint16 slave, char *filename, uint32 pas
                      {
                         /* FoE error */
 			printf("#(08) packetnumber <> sendpacket... EC_ERR_TYPE_FOE_PACKETNUMBER!!  \n");
-                                      fprintf(fp, "#(08) packetnumber <> sendpacket... EC_ERR_TYPE_FOE_PACKETNUMBER!!  \n");
+                                      FW_LOG("#(08) packetnumber <> sendpacket... EC_ERR_TYPE_FOE_PACKETNUMBER!!  \n");
                         wkc = -EC_ERR_TYPE_FOE_PACKETNUMBER;
                      }
                      break;
@@ -359,7 +360,7 @@ int ecx_FOEwrite(ecx_contextt *context, uint16 slave, char *filename, uint32 pas
                   case ECT_FOE_BUSY:
                   {
 		        printf("#(09) ECT_FOE_BUSY \n");
-                                 fprintf(fp, "#(09) ECT_FOE_BUSY \n");
+                                 FW_LOG("#(09) ECT_FOE_BUSY \n");
 
                      /* resend if data has been send before */
                      /* otherwise ignore */
@@ -380,20 +381,20 @@ int ecx_FOEwrite(ecx_contextt *context, uint16 slave, char *filename, uint32 pas
                   case ECT_FOE_ERROR:
                   {
 		        printf("#(12)  ECT_FOE_ERROR  \n");
-                                  fprintf(fp, "#(12)  ECT_FOE_ERROR  \n");
+                                  FW_LOG("#(12)  ECT_FOE_ERROR  \n");
 
                      /* FoE error */
                      if (aFOEp->ErrorCode == 0x8001)
                      {
 		            printf("#(13) >> aFOEp->ErrorCode == 0x8001  \n");
-                                      fprintf(fp, "#(13) >> aFOEp->ErrorCode == 0x8001  \n");
+                                      FW_LOG("#(13) >> aFOEp->ErrorCode == 0x8001  \n");
 
                         wkc = -EC_ERR_TYPE_FOE_FILE_NOTFOUND;
                      }
                      else
                      {
 			printf("#(14) >> EC_ERR_TYPE_FOE_ERROR  \n");
-                                      fprintf(fp, "#(14) >> EC_ERR_TYPE_FOE_ERROR  \n");
+                                      FW_LOG("#(14) >> EC_ERR_TYPE_FOE_ERROR  \n");
 
                         wkc = -EC_ERR_TYPE_FOE_ERROR;
                      }
@@ -403,7 +404,7 @@ int ecx_FOEwrite(ecx_contextt *context, uint16 slave, char *filename, uint32 pas
                   {
                      /* unexpected mailbox received */
 		        printf("#(15) EC_ERR_TYPE_PACKET_ERROR   \n");
-                                 fprintf(fp, "#(15) EC_ERR_TYPE_PACKET_ERROR   \n");
+                                 FW_LOG("#(15) EC_ERR_TYPE_PACKET_ERROR   \n");
                      wkc = -EC_ERR_TYPE_PACKET_ERROR;
                      break;
                   }
@@ -413,7 +414,7 @@ int ecx_FOEwrite(ecx_contextt *context, uint16 slave, char *filename, uint32 pas
             {
                /* unexpected mailbox received */
 	           printf("#(16) NOT --> slave response should be FoE >> Inverse  \n");
-                        fprintf(fp, "#(16) NOT --> slave response should be FoE >> Inverse  \n");
+                        FW_LOG("#(16) NOT --> slave response should be FoE >> Inverse  \n");
                wkc = -EC_ERR_TYPE_PACKET_ERROR;
             }
          }
@@ -421,8 +422,9 @@ int ecx_FOEwrite(ecx_contextt *context, uint16 slave, char *filename, uint32 pas
    }
 
    printf("#(20) exit wkr = %d \n", wkc);
-     fprintf(fp, "#(20) exit wkr = %d \n", wkc);
-     fclose(fp);
+     FW_LOG("#(20) exit wkr = %d \n", wkc);
+    if(fp) fclose(fp);
+#undef FW_LOG
 
     if(wkc > 0)
       {
