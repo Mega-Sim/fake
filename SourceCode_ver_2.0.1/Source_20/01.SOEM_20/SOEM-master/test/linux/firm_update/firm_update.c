@@ -322,11 +322,11 @@ int input_bin(char *fname, int *length)
 /* 
 	return value : 1 - success, 0 - fail
 */
-int boottest(char *ifname, uint16 slave, char *filename)
+int boottest(char *ifname, uint16 slave, char **filenames, int filecnt)
 {
     int iResult = RESULT_FAIL;
-	
-	printf("Starting firmware update example\n");
+
+        printf("Starting firmware update example\n");
 
 	/* initialise SOEM, bind socket to ifname */
 	if (ec_init(ifname))
@@ -339,13 +339,17 @@ int boottest(char *ifname, uint16 slave, char *filename)
 		{
 			printf("%d slaves found and configured.\n",ec_slavecount);
 
-			/* wait for all slaves to reach PRE_OP state */
-			// shkim. windows - linux diff
-			ec_statecheck(0, EC_STATE_PRE_OP,  EC_TIMEOUTSTATE * 4);
+                        /* wait for all slaves to reach PRE_OP state */
+                        // shkim. windows - linux diff
+                        ec_statecheck(0, EC_STATE_PRE_OP,  EC_TIMEOUTSTATE * 4);
 
-			printf("Request init state for slave %d\n", slave);
-			ec_slave[slave].state = EC_STATE_INIT;
-			ec_writestate(slave);
+                        for(int f = 0; f < filecnt; f++)
+                        {
+                                char *filename = filenames[f];
+
+                                printf("Request init state for slave %d\n", slave);
+                                ec_slave[slave].state = EC_STATE_INIT;
+                                ec_writestate(slave);
 
 			/* wait for slave to reach INIT state */
 			ec_statecheck(slave, EC_STATE_INIT,  EC_TIMEOUTSTATE * 4);
@@ -399,22 +403,27 @@ int boottest(char *ifname, uint16 slave, char *filename)
 					else
 						iResult = RESULT_FAIL;	// fail
 					
-					printf("Request init state for slave %d\n", slave);
-					ec_slave[slave].state = EC_STATE_INIT;
-					ec_writestate(slave);
-				}
-				else
-				    printf("File not read OK.\n");
-			}
+                                }
+                                else
+                                    printf("File not read OK.\n");
+                        }
 
-		}
-		else
-		{
-			printf("No slaves found!\n");
-		}
-		printf("End firmware update example, close socket\n");
-		/* stop SOEM, close socket */
-		ec_close();
+                                if(f < (filecnt - 1))
+                                {
+                                        printf("Request PRE_OP state for slave %d\n", slave);
+                                        ec_slave[slave].state = EC_STATE_PRE_OP;
+                                        ec_writestate(slave);
+                                        ec_statecheck(slave, EC_STATE_PRE_OP,  EC_TIMEOUTSTATE * 4);
+                                }
+                        }
+                }
+                else
+                {
+                        printf("No slaves found!\n");
+                }
+                printf("End firmware update example, close socket\n");
+                /* stop SOEM, close socket */
+                ec_close();
 	}
 	else
 	{
@@ -2004,15 +2013,16 @@ int main(int argc, char *argv[])
 
 	else if (argc == 5)	// firmware update OR parameter update
 	{		
-		if((strcmp(argv[1], "/f") == 0) || (strcmp(argv[1], "/F") == 0))
-		{			
-#if FIRM_UPDATE_ON			
-			iResult = boottest(argv[2], argslave, argv[4]);
+                if((strcmp(argv[1], "/f") == 0) || (strcmp(argv[1], "/F") == 0))
+                {
+#if FIRM_UPDATE_ON
+                        char *files[] = {argv[4]};
+                        iResult = boottest(argv[2], argslave, files, 1);
 #else
-			printf("firmware update.... [1]opt=%s [2]net=%s [3]slave=%d [4]file=%s \n",
-					argv[1], argv[2], argslave, argv[4]);
+                        printf("firmware update.... [1]opt=%s [2]net=%s [3]slave=%d [4]file=%s \n",
+                                        argv[1], argv[2], argslave, argv[4]);
 #endif
-		}
+                }
 		else if((strcmp(argv[1], "/p") == 0) || (strcmp(argv[1], "/P") == 0))
 		{
 		    iResult = parameter_load(argv[4]);	// 0 : fail, 1 : success
@@ -2035,6 +2045,16 @@ int main(int argc, char *argv[])
 			printf("\n Command error(5)! Please check command! \n");
 			print_usage();
 		}
+	}
+	else if ((argc == 7) && ((strcmp(argv[1], "/f") == 0) || (strcmp(argv[1], "/F") == 0)))
+	{
+#if FIRM_UPDATE_ON
+		char *files[] = {argv[4], argv[5], argv[6]};
+		iResult = boottest(argv[2], argslave, files, 3);
+#else
+		printf("firmware update.... [1]opt=%s [2]net=%s [3]slave=%d [4]=%s [5]=%s [6]=%s \n",
+				argv[1], argv[2], argslave, argv[4], argv[5], argv[6]);
+#endif
 	}
 	else if (argc == 7)	// get common value
 	{
