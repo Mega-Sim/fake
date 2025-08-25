@@ -1038,9 +1038,10 @@ void update_uiFrame::OnButtonClick( wxCommandEvent& event )
     if (id == wxID_BUTTON_NEW_DRIVING)
     {
         struct AxisInfo { int axis; std::string file; } axes[] = {
-            {AXIS_DRIVING, FILE_LOCATION.NEW_ROM.driving},
-            {AXIS_HOIST,   FILE_LOCATION.NEW_ROM.hoist},
-            {AXIS_SLIDE,   FILE_LOCATION.NEW_ROM.slide}
+            {1, FILE_LOCATION.NEW_ROM.driving},
+            {2, FILE_LOCATION.NEW_ROM.driving},
+            {3, FILE_LOCATION.NEW_ROM.hoist},
+            {4, FILE_LOCATION.NEW_ROM.slide}
         };
 
         bool success = true;
@@ -1048,28 +1049,27 @@ void update_uiFrame::OnButtonClick( wxCommandEvent& event )
         for (const auto& a : axes)
         {
             makeCommand = baseCommand + "/f enp2s0 " + std::to_string(a.axis) + " " + a.file;
-
             iRunResult = shell_0_or_1(makeCommand);
-            if(iRunResult == RESULT_SUCCESS)
-            {
-                resetController(a.axis);
-                sleep(FIRM_REFRESH_TIME);
-            }
-            else
+            if (iRunResult != RESULT_SUCCESS)
             {
                 success = false;
                 break;
             }
         }
 
-        chkFirm_version();
-        sleep(1);
-        getErrCode_All();
-
-        if(success)
+        if (success)
+        {
+            resetController(axes[0].axis);
+            sleep(FIRM_REFRESH_TIME);
+            chkFirm_version();
+            sleep(1);
+            getErrCode_All();
             wxMessageBox(wxT("Running Ok"),  wxEmptyString, wxITEM_NORMAL);
+        }
         else
+        {
             wxMessageBox(wxT("Update fail!!"), wxT("ERROR"), wxITEM_CHECK);
+        }
 
     }
 
